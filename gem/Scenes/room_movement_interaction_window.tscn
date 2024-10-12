@@ -25,7 +25,7 @@ texture = ExtResource("2_k35ny")
 [node name="Furniture" type="StaticBody2D" parent="BG/Hitboxes"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
-polygon = PackedVector2Array(-174, 88, 11, -5, 218, 117, 277, 90, 649, 311, 12, -224, -652, 113, -651, 238, -552, 179, -285, 344, -138, 264, -136, 174, -237, 118)
+polygon = PackedVector2Array(-174, 88, 11, -5, 218, 117, 277, 90, 649, 311, 12, -224, -652, 113, -651, 238, -552, 179, -285, 344, -133, 261, -131, 168, -223, 117)
 
 [node name="Void" type="StaticBody2D" parent="BG/Hitboxes"]
 
