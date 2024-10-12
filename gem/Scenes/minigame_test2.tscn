@@ -8,16 +8,15 @@
 [node name="MinigameTest2" type="Node2D"]
 
 [node name="BG" type="Sprite2D" parent="."]
-position = Vector2(345, 239)
 texture = ExtResource("1_utttn")
 
 [node name="Button" type="Sprite2D" parent="."]
-position = Vector2(285, 239)
+position = Vector2(-60, 0)
 texture = ExtResource("2_r882d")
 script = ExtResource("3_kpyhm")
 
 [node name="Button2" type="Sprite2D" parent="."]
-position = Vector2(405, 239)
+position = Vector2(60, 0)
 texture = ExtResource("2_r882d")
 script = ExtResource("3_kpyhm")
 
