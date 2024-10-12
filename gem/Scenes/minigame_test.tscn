@@ -1,3 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://mgayqgy1t2xn"]
+
+[ext_resource type="Texture2D" uid="uid://kat4hpmpdgcf" path="res://Sprites/Background/bggamewindowtest.png" id="1_c1dy0"]
+[ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="1_o8jcm"]
+[ext_resource type="PackedScene" uid="uid://c08h887ims0t" path="res://Scenes/HighlightTrigger.tscn" id="2_1x5gk"]
+
+[node name="Room" type="Node2D"]
+
+[node name="WindowBackground" type="Sprite2D" parent="."]
+position = Vector2(427, 240)
+texture = ExtResource("1_c1dy0")
+
+[node name="Player" parent="." instance=ExtResource("1_o8jcm")]
+position = Vector2(391, 276)
+
+[node name="HighlightTest" parent="." instance=ExtResource("2_1x5gk")]
+position = Vector2(529, 301)
+
+[node name="Node2D" parent="." instance=ExtResource("2_1x5gk")]
+position = Vector2(148, 244)
+=======
 [gd_scene load_steps=4 format=3 uid="uid://dsr0fx64qqgex"]
 
 [ext_resource type="Texture2D" uid="uid://cbwlvigh22f50" path="res://Sprites/TestTask/TestTaskBG.png" id="1_p46ee"]

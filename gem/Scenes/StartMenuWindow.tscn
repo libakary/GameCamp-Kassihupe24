@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5bb4ognyul83"]
+
+[ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="1_o8jcm"]
+[ext_resource type="PackedScene" uid="uid://c08h887ims0t" path="res://Scenes/HighlightTrigger.tscn" id="2_1x5gk"]
+
+[node name="Room" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_o8jcm")]
+visible = false
+position = Vector2(391, 276)
+
+[node name="HighlightTest" parent="." instance=ExtResource("2_1x5gk")]
+visible = false
+position = Vector2(529, 301)
+
+[node name="Node2D" parent="." instance=ExtResource("2_1x5gk")]
+visible = false
+position = Vector2(148, 244)
