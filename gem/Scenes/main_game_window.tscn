@@ -13,12 +13,12 @@ script = ExtResource("3_y08jc")
 position = Vector2(427, 238)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_right = 663.0
-offset_bottom = 340.0
+offset_right = 677.0
+offset_bottom = 325.0
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(665, 350)
+size = Vector2i(677, 325)
 render_target_update_mode = 4
 
 [node name="RoomMovement" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_lf1qo")]

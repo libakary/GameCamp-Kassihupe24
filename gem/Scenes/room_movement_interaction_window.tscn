@@ -9,17 +9,27 @@
 
 [node name="Player" parent="." instance=ExtResource("3_086r8")]
 z_index = 1
+position = Vector2(35, 95)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-limit_left = -650
-limit_top = -450
-limit_right = 650
-limit_bottom = 450
 editor_draw_limits = true
 
 [node name="BG" type="Sprite2D" parent="."]
 z_index = -2
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_k35ny")
+
+[node name="Hitboxes" type="Node2D" parent="BG"]
+
+[node name="Furniture" type="StaticBody2D" parent="BG/Hitboxes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
+polygon = PackedVector2Array(-174, 88, 11, -5, 218, 117, 277, 90, 649, 311, 12, -224, -652, 113, -651, 238, -552, 179, -285, 344, -105, 242, -68, 218, -237, 118)
+
+[node name="Void" type="StaticBody2D" parent="BG/Hitboxes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BG/Hitboxes/Void"]
+polygon = PackedVector2Array(-651, 239, -649, 448, 655, 453, 654, 305, 626, 295, 629, 419, -629, 423, -628, 238)
 
 [node name="TestTrigger" parent="." instance=ExtResource("3_hi6el")]
 position = Vector2(188, 92)
