@@ -1,20 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0uoighxohyq8"]
+[gd_scene load_steps=6 format=3 uid="uid://b0uoighxohyq8"]
 
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="1_wi2i8"]
 [ext_resource type="PackedScene" uid="uid://c08h887ims0t" path="res://Scenes/HighlightTrigger.tscn" id="2_jmqk0"]
-[ext_resource type="Texture2D" uid="uid://kat4hpmpdgcf" path="res://Sprites/Background/bggamewindowtest.png" id="3_mfujh"]
+[ext_resource type="Texture2D" uid="uid://cyyxcs3srj7k4" path="res://Sprites/Background/bggamewindowtest.png" id="3_mfujh"]
+[ext_resource type="PackedScene" uid="uid://qt2782tsftfw" path="res://Scenes/UserInterface.tscn" id="4_pbyqk"]
+[ext_resource type="PackedScene" uid="uid://cusp1gqua1p72" path="res://Scenes/RoomMovement.tscn" id="5_enxks"]
 
 [node name="MainGameWindow" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_wi2i8")]
-position = Vector2(391, 276)
-
-[node name="HighlightTest" parent="." instance=ExtResource("2_jmqk0")]
-position = Vector2(529, 301)
-
-[node name="Node2D" parent="." instance=ExtResource("2_jmqk0")]
-position = Vector2(148, 244)
-
 [node name="Bggamewindowtest" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(427, 240)
 texture = ExtResource("3_mfujh")
+
+[node name="RoomMovement" parent="." instance=ExtResource("5_enxks")]
+position = Vector2(-573, -760)
+
+[node name="Player" parent="." instance=ExtResource("1_wi2i8")]
+
+[node name="HighlightTest" parent="." instance=ExtResource("2_jmqk0")]
+position = Vector2(507, 225)
+
+[node name="Node2D" parent="." instance=ExtResource("2_jmqk0")]
+position = Vector2(174, 192)
+
+[node name="UserInterface" parent="." instance=ExtResource("4_pbyqk")]
+visible = false
