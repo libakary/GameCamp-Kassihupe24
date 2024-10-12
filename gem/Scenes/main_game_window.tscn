@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0uoighxohyq8"]
+[gd_scene load_steps=4 format=3 uid="uid://b0uoighxohyq8"]
 
 [ext_resource type="PackedScene" uid="uid://cusp1gqua1p72" path="res://Scenes/room_movement_interaction_window.tscn" id="2_lf1qo"]
 [ext_resource type="Script" path="res://Scripts/mastermind.gd" id="3_y08jc"]
-[ext_resource type="PackedScene" uid="uid://fr7y2h7bsg1l" path="res://Scenes/user_interface_control.tscn" id="4_mmlsh"]
 [ext_resource type="PackedScene" uid="uid://qt2782tsftfw" path="res://Scenes/user_interface.tscn" id="5_x6q2b"]
 
 [node name="MainGameWindow" type="Node2D"]
@@ -14,19 +13,16 @@ script = ExtResource("3_y08jc")
 position = Vector2(427, 238)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_right = 677.0
-offset_bottom = 325.0
+offset_left = 9.0
+offset_top = 2.0
+offset_right = 679.0
+offset_bottom = 326.0
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(677, 325)
+canvas_item_default_texture_filter = 0
+size = Vector2i(670, 324)
 render_target_update_mode = 4
 
 [node name="RoomMovement" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_lf1qo")]
 position = Vector2(325, 224)
-
-[node name="Control" parent="." instance=ExtResource("4_mmlsh")]
-offset_left = 1549.0
-offset_top = 218.0
-offset_right = 1549.0
-offset_bottom = 218.0

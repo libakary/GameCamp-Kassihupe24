@@ -6,9 +6,6 @@ func _on_body_entered(body: Node2D) -> void:
 	if (body == get_node("../../../Player")):
 		
 		#Change trigger area
-		var triggerSprite = get_node("../AreaSprite")
-		var Highlight = load("res://Sprites/AreaHighlight.png")
-		triggerSprite.texture = Highlight
 		
 		#Allow for interaction
 		inInteractionRange = true
@@ -18,9 +15,6 @@ func _on_body_exited(body: Node2D) -> void:
 	if (body == get_node("../../../Player")):
 		
 		#Change trigger area
-		var triggerSprite = get_node("../AreaSprite")
-		var RegSpirte = load("res://Sprites/AreaTrigger.png")
-		triggerSprite.texture = RegSpirte
 		
 		#Not allow for interaction
 		inInteractionRange = false
