@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var launched: bool = false
 var launchStarted: bool = false
-var launchStrength = 0
+var launchStrength = 200
 var strengthDirectionUp = true
 
 func _physics_process(delta: float) -> void:
@@ -23,16 +23,16 @@ func _input(event):
 func _ready() -> void:
 	get_node("../PowerBar").scale.y = 0
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (strengthDirectionUp and launchStarted):
-		launchStrength += 15
+		launchStrength += 5
 		get_node("../PowerBar").scale.y += 0.03
-		if launchStrength > 1000:
+		if launchStrength > 800:
 			strengthDirectionUp = false
 	elif launchStarted:
-		launchStrength -= 15
+		launchStrength -= 5
 		get_node("../PowerBar").scale.y -= 0.03
-		if launchStrength < 0:
+		if launchStrength < 200:
 			strengthDirectionUp = true
 	
 #extends CharacterBody2D

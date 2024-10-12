@@ -14,7 +14,7 @@ radius = 32.8938
 
 [node name="PowerBar" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(-273, -13)
+position = Vector2(-259, 60)
 texture = ExtResource("1_fmegu")
 offset = Vector2(0, -16)
 

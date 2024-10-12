@@ -7,7 +7,7 @@ func _ready():
 	#timer.wait_time = progressBar.value
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	#print(timer.time_left)
 	#progressBar.value = timer.time_left
 	pass
