@@ -1,21 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://cusp1gqua1p72"]
+[gd_scene load_steps=10 format=3 uid="uid://cusp1gqua1p72"]
 
 [ext_resource type="Texture2D" uid="uid://cmjuny03yqooe" path="res://Sprites/Background/RoomNight.PNG" id="2_g77em"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_086r8"]
-[ext_resource type="PackedScene" uid="uid://dtlgd7f7pwqcl" path="res://Scenes/Triggers/trigger1.tscn" id="3_hi6el"]
 [ext_resource type="Script" path="res://Scripts/fade_to_night.gd" id="3_k2qam"]
 [ext_resource type="Texture2D" uid="uid://byacfw62rysxt" path="res://Sprites/Background/RoomDay.PNG" id="3_q7rd7"]
-[ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Triggers/trigger2.tscn" id="4_i1an6"]
+[ext_resource type="Texture2D" uid="uid://ckn0kc6d4il0e" path="res://Sprites/Halos/voodi halo.PNG" id="7_dy7mn"]
+[ext_resource type="Texture2D" uid="uid://cv0yi5f2xif2q" path="res://Sprites/Halos/külmkapi halo.PNG" id="8_kceqb"]
+[ext_resource type="Texture2D" uid="uid://8febow406e3u" path="res://Sprites/Halos/kitarri halo.PNG" id="9_4vtq2"]
+[ext_resource type="Texture2D" uid="uid://bum5c8wg1c3ct" path="res://Sprites/Halos/prügikoti halo.PNG" id="10_bh2bo"]
+[ext_resource type="Texture2D" uid="uid://c3v1odweekmr0" path="res://Sprites/Halos/arvuti halo.PNG" id="11_id1kn"]
 
 [node name="RoomMovementAndInteractables" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("3_086r8")]
 z_index = 1
-position = Vector2(35, 95)
+position = Vector2(-97, 150)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-offset = Vector2(0, -150)
-zoom = Vector2(0.6, 0.6)
+offset = Vector2(0, -125)
 editor_draw_limits = true
 
 [node name="BGnight" type="Sprite2D" parent="."]
@@ -39,8 +41,19 @@ polygon = PackedVector2Array(-182, 64, -37, -19, 111, 65, 140, 56, 339, 167, 443
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BG/Hitboxes/Void"]
 polygon = PackedVector2Array(-67, 449, 284, 313, 344, 175, -56, 412)
 
-[node name="TestTrigger" parent="." instance=ExtResource("3_hi6el")]
-position = Vector2(188, 92)
+[node name="Halos" type="Node2D" parent="."]
 
-[node name="TestTrigger2" parent="." instance=ExtResource("4_i1an6")]
-position = Vector2(76, 28)
+[node name="BedHalo" type="Sprite2D" parent="Halos"]
+texture = ExtResource("7_dy7mn")
+
+[node name="FridgeHalo" type="Sprite2D" parent="Halos"]
+texture = ExtResource("8_kceqb")
+
+[node name="GuitarHalo" type="Sprite2D" parent="Halos"]
+texture = ExtResource("9_4vtq2")
+
+[node name="TrashHalo" type="Sprite2D" parent="Halos"]
+texture = ExtResource("10_bh2bo")
+
+[node name="ComputerHalo" type="Sprite2D" parent="Halos"]
+texture = ExtResource("11_id1kn")
