@@ -6,6 +6,3 @@ func _input(event):
 		if get_rect().has_point(to_local(event.position)):
 			get_node("../../MainGameWindow/Mastermind").inTask = false
 			get_node("../").queue_free()
-
-func _process(_delta: float) -> void:
-	print(get_node("../../MainGameWindow/Mastermind"))
