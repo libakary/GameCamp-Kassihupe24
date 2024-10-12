@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyyxcs3srj7k4"
-path="res://.godot/imported/bggamewindowtest.png-2d04b3e1107a1d0b022c2ade18a5a267.ctex"
+uid="uid://d2x24ybcrydgm"
+path="res://.godot/imported/room window.png-a6643c4632b6121e0e3adea3551c0258.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/bggamewindowtest.png"
-dest_files=["res://.godot/imported/bggamewindowtest.png-2d04b3e1107a1d0b022c2ade18a5a267.ctex"]
+source_file="res://Sprites/Background/room window.png"
+dest_files=["res://.godot/imported/room window.png-a6643c4632b6121e0e3adea3551c0258.ctex"]
 
 [params]
 
