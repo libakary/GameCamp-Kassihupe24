@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfyvafpx6xub"]
+[gd_scene load_steps=5 format=3 uid="uid://ccscu3w48ynt4"]
 
 [ext_resource type="Texture2D" uid="uid://cbwlvigh22f50" path="res://Sprites/TestTask/TestTaskBG.png" id="1_utttn"]
 [ext_resource type="Texture2D" uid="uid://duwr865cj6iyt" path="res://Sprites/TestTask/TestTaskButton.png" id="2_r882d"]

@@ -18,30 +18,9 @@ texture = ExtResource("1_rt0ea")
 position = Vector2(-291, -420)
 
 [node name="Player" parent="." instance=ExtResource("3_bbi3l")]
-visible = false
 position = Vector2(711, 571)
 
-[node name="HighlightTest" parent="." instance=ExtResource("4_fjupe")]
-visible = false
-position = Vector2(507, 225)
-
-[node name="Node2D" parent="." instance=ExtResource("4_fjupe")]
-visible = false
-position = Vector2(174, 192)
-
 [node name="UserInterface" parent="." instance=ExtResource("5_x6q2b")]
-position = Vector2(285, 340)
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
-handle_input_locally = false
-render_target_update_mode = 0
-
-[node name="RoomMovementAndInteractables" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_lf1qo")]
 visible = false
 
 [node name="Node2D" parent="." instance=ExtResource("5_mt8ld")]
