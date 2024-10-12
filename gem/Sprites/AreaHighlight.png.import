@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtdaf6kr66sfu"
-path="res://.godot/imported/AreaTrigger.png-be1065d3fbdcecf8d349d8884f076f19.ctex"
+uid="uid://dm3lcfda26k3t"
+path="res://.godot/imported/AreaHighlight.png-c3134f8201fe77569eb1743a640ba644.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AreaTrigger.png"
-dest_files=["res://.godot/imported/AreaTrigger.png-be1065d3fbdcecf8d349d8884f076f19.ctex"]
+source_file="res://Sprites/AreaHighlight.png"
+dest_files=["res://.godot/imported/AreaHighlight.png-c3134f8201fe77569eb1743a640ba644.ctex"]
 
 [params]
 
