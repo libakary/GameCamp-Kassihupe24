@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://fr7y2h7bsg1l"]
+[gd_scene load_steps=8 format=3 uid="uid://fr7y2h7bsg1l"]
 
 [ext_resource type="Texture2D" uid="uid://c268fj6ly4qwu" path="res://Sprites/UI/UI window.png" id="1_4e0ct"]
+[ext_resource type="Texture2D" uid="uid://cqqym4ttnnior" path="res://Sprites/UI/ui uncolored - bars and expression box.png" id="2_44udp"]
+[ext_resource type="Texture2D" uid="uid://bxl3ltv00l5ao" path="res://Sprites/UI/progressbartest.png" id="3_cysid"]
+[ext_resource type="Script" path="res://Scenes/health_bar.gd" id="3_y5nwa"]
+[ext_resource type="Texture2D" uid="uid://bpddwg6045da2" path="res://Sprites/UI/progressbarfull.png" id="4_xks0y"]
+[ext_resource type="Script" path="res://Scenes/sanity_bar.gd" id="6_ntu16"]
+[ext_resource type="Script" path="res://Scenes/work_bar.gd" id="7_28ifb"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,6 +16,87 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0140672, 0.127109, 0.431451, 1)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(428, 238)
 texture = ExtResource("1_4e0ct")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(427, 240)
+texture = ExtResource("2_44udp")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -158.605
+offset_top = 17.4
+offset_right = -20.605
+offset_bottom = -382.6
+grow_horizontal = 0
+grow_vertical = 2
+alignment_horizontal = 0
+
+[node name="HealthBar" type="Node2D" parent="AspectRatioContainer"]
+script = ExtResource("3_y5nwa")
+
+[node name="TextureProgressBarHealth" type="TextureProgressBar" parent="AspectRatioContainer/HealthBar"]
+offset_right = 40.0
+offset_bottom = 40.0
+max_value = 60.0
+step = 0.2
+value = 20.0
+fill_mode = 1
+texture_under = ExtResource("3_cysid")
+texture_progress = ExtResource("4_xks0y")
+
+[node name="TimerHealth" type="Timer" parent="AspectRatioContainer/HealthBar"]
+process_callback = 0
+one_shot = true
+
+[node name="SanityBar" type="Node2D" parent="AspectRatioContainer"]
+script = ExtResource("6_ntu16")
+
+[node name="TextureProgressBarSanity" type="TextureProgressBar" parent="AspectRatioContainer/SanityBar"]
+offset_left = -0.39502
+offset_top = 29.6
+offset_right = 137.605
+offset_bottom = 69.6
+max_value = 60.0
+step = 0.2
+value = 10.0
+fill_mode = 1
+texture_under = ExtResource("3_cysid")
+texture_progress = ExtResource("4_xks0y")
+
+[node name="TimerSanity" type="Timer" parent="AspectRatioContainer/SanityBar"]
+process_callback = 0
+one_shot = true
+
+[node name="WorkBar" type="Node2D" parent="AspectRatioContainer"]
+script = ExtResource("7_28ifb")
+
+[node name="TextureProgressBarWork" type="TextureProgressBar" parent="AspectRatioContainer/WorkBar"]
+offset_left = -0.39502
+offset_top = 60.6
+offset_right = 137.605
+offset_bottom = 100.6
+step = 20.0
+value = 20.0
+texture_under = ExtResource("3_cysid")
+texture_progress = ExtResource("4_xks0y")
+
+[connection signal="timeout" from="AspectRatioContainer/HealthBar/TimerHealth" to="AspectRatioContainer/HealthBar" method="_on_timer_health_timeout"]
+[connection signal="timeout" from="AspectRatioContainer/SanityBar/TimerSanity" to="AspectRatioContainer/SanityBar" method="_on_timer_sanity_timeout"]
