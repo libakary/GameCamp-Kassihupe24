@@ -3,6 +3,7 @@ extends CharacterBody2D
 var launched: bool = false
 var launchStarted: bool = false
 var launchStrength = 0
+var strengthDirectionUp = true
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -18,9 +19,22 @@ func _input(event):
 			else:
 				launched = true
 				velocity = Vector2(launchStrength, -launchStrength)
-			
+				
+func _ready() -> void:
+	get_node("../PowerBar").scale.y = 0
+
 func _process(delta: float) -> void:
-	launchStrength += 4
+	if (strengthDirectionUp and launchStarted):
+		launchStrength += 15
+		get_node("../PowerBar").scale.y += 0.03
+		if launchStrength > 1000:
+			strengthDirectionUp = false
+	elif launchStarted:
+		launchStrength -= 15
+		get_node("../PowerBar").scale.y -= 0.03
+		if launchStrength < 0:
+			strengthDirectionUp = true
+	
 #extends CharacterBody2D
 #
 #
