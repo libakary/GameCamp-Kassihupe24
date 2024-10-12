@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://db0fdle06bm1o"]
 
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="1_jt8wy"]
-[ext_resource type="PackedScene" uid="uid://c08h887ims0t" path="res://Scenes/HighlightTrigger.tscn" id="2_cq5ha"]
+[ext_resource type="PackedScene" uid="uid://c08h887ims0t" path="res://Scenes/highlight_trigger.tscn" id="2_cq5ha"]
 
 [node name="InteractionTest" type="Node2D"]
 
