@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cusp1gqua1p72"]
+[gd_scene load_steps=7 format=3 uid="uid://cusp1gqua1p72"]
 
 [ext_resource type="Texture2D" uid="uid://bbigu6j7vwdcq" path="res://Sprites/Background/game jam room.PNG" id="2_k35ny"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_086r8"]
 [ext_resource type="PackedScene" uid="uid://dtlgd7f7pwqcl" path="res://Scenes/Triggers/trigger1.tscn" id="3_hi6el"]
+[ext_resource type="Script" path="res://Scripts/fade_to_night.gd" id="3_k2qam"]
+[ext_resource type="Texture2D" uid="uid://6hrguftjtfjf" path="res://Sprites/NightPlaceHolder.png" id="4_a4b0f"]
 [ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Triggers/trigger2.tscn" id="4_i1an6"]
 
 [node name="RoomMovementAndInteractables" type="Node2D"]
@@ -16,9 +18,14 @@ offset = Vector2(0, -150)
 zoom = Vector2(0.6, 0.6)
 editor_draw_limits = true
 
+[node name="BGnight" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("4_a4b0f")
+
 [node name="BG" type="Sprite2D" parent="."]
 z_index = -2
 texture = ExtResource("2_k35ny")
+script = ExtResource("3_k2qam")
 
 [node name="Hitboxes" type="Node2D" parent="BG"]
 
