@@ -1,17 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0bkwy6ns55kr"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_a68po"]
-[ext_resource type="Texture2D" uid="uid://dxg5v8my7mkuw" path="res://Sprites/PlayerPlaceholder.png" id="2_0tpqq"]
+[ext_resource type="Texture2D" uid="uid://b4i62c7va74xc" path="res://Sprites/anneke v kati vm.png" id="2_w6i2k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7orwc"]
-radius = 17.0294
+radius = 24.0208
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_a68po")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_0tpqq")
+position = Vector2(0, -30)
+texture = ExtResource("2_w6i2k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 15)
+position = Vector2(-3, 4)
 shape = SubResource("CircleShape2D_7orwc")
