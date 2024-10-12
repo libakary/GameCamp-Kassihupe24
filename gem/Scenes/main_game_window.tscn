@@ -22,6 +22,7 @@ visible = false
 position = Vector2(711, 571)
 
 [node name="UserInterface" parent="." instance=ExtResource("5_x6q2b")]
+visible = false
 
 [node name="Node2D" parent="." instance=ExtResource("5_mt8ld")]
 position = Vector2(180, 212)
