@@ -1,39 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://cusp1gqua1p72"]
+[gd_scene load_steps=3 format=3 uid="uid://cusp1gqua1p72"]
 
-[ext_resource type="Texture2D" uid="uid://d2x24ybcrydgm" path="res://Sprites/Background/room window.png" id="1_fd0s2"]
-[ext_resource type="Texture2D" uid="uid://3myj54iu4sev" path="res://Sprites/Background/854 x 480 background example.png" id="2_bcrhm"]
+[ext_resource type="Texture2D" uid="uid://bbigu6j7vwdcq" path="res://Sprites/Background/game jam room.PNG" id="2_k35ny"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_086r8"]
-
-[sub_resource type="GDScript" id="GDScript_fh36i"]
-script/source = "extends Camera2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
 
 [node name="RoomMovementAndInteractables" type="Node2D"]
 
-[node name="Bggamewindowtest" type="Sprite2D" parent="."]
-texture = ExtResource("1_fd0s2")
-
-[node name="854X480BackgroundExample" type="Sprite2D" parent="."]
-position = Vector2(1000, 1000)
-texture = ExtResource("2_bcrhm")
-
 [node name="Player" parent="." instance=ExtResource("3_086r8")]
-position = Vector2(935, 1022)
 
-[node name="FollowCamera" type="Camera2D" parent="Player"]
-visible = false
-limit_left = 0
-limit_top = 0
-limit_right = 2000
-limit_bottom = 2000
-script = SubResource("GDScript_fh36i")
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = -650
+limit_top = -450
+limit_right = 650
+limit_bottom = 450
+editor_draw_limits = true
+
+[node name="BG" type="Sprite2D" parent="."]
+z_index = -2
+texture = ExtResource("2_k35ny")
