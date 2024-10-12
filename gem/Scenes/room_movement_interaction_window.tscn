@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cusp1gqua1p72"]
+[gd_scene load_steps=5 format=3 uid="uid://cusp1gqua1p72"]
 
 [ext_resource type="Texture2D" uid="uid://bbigu6j7vwdcq" path="res://Sprites/Background/game jam room.PNG" id="2_k35ny"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_086r8"]
+[ext_resource type="PackedScene" uid="uid://dtlgd7f7pwqcl" path="res://Scenes/Triggers/trigger1.tscn" id="3_hi6el"]
+[ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Triggers/trigger2.tscn" id="4_i1an6"]
 
 [node name="RoomMovementAndInteractables" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("3_086r8")]
+z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 limit_left = -650
@@ -17,3 +20,9 @@ editor_draw_limits = true
 [node name="BG" type="Sprite2D" parent="."]
 z_index = -2
 texture = ExtResource("2_k35ny")
+
+[node name="TestTrigger" parent="." instance=ExtResource("3_hi6el")]
+position = Vector2(188, 92)
+
+[node name="TestTrigger2" parent="." instance=ExtResource("4_i1an6")]
+position = Vector2(76, 28)

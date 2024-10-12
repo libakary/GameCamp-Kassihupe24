@@ -5,5 +5,4 @@
 [node name="UserInterface" type="Node2D"]
 
 [node name="UiWindowLayerTest" type="Sprite2D" parent="."]
-position = Vector2(427, 240)
 texture = ExtResource("1_ho7ed")
