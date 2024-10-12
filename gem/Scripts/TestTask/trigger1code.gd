@@ -26,10 +26,12 @@ func _on_body_exited(body: Node2D) -> void:
 		inInteractionRange = false
 		
 func _process(_delta: float) -> void:
-	
 	#Check for interaction
 	if (Input.is_action_just_pressed("interact") and inInteractionRange):
+		
 		var loadedGamePacked = load("res://Scenes/minigame_test.tscn")
 		var loadedGame = loadedGamePacked.instantiate()
 		loadedGame.position = Vector2(427, 240)
-		get_node("../../../../").add_child(loadedGame)
+		get_node("../../../../../../../").add_child(loadedGame)
+		
+		get_node("../../../../../../Mastermind").inTask = true

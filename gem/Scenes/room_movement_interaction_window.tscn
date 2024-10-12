@@ -1,39 +1,46 @@
-[gd_scene load_steps=5 format=3 uid="uid://cusp1gqua1p72"]
+[gd_scene load_steps=7 format=3 uid="uid://cusp1gqua1p72"]
 
-[ext_resource type="Texture2D" uid="uid://d2x24ybcrydgm" path="res://Sprites/Background/room window.png" id="1_fd0s2"]
-[ext_resource type="Texture2D" uid="uid://3myj54iu4sev" path="res://Sprites/Background/854 x 480 background example.png" id="2_bcrhm"]
+[ext_resource type="Texture2D" uid="uid://bbigu6j7vwdcq" path="res://Sprites/Background/game jam room.PNG" id="2_k35ny"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_086r8"]
-
-[sub_resource type="GDScript" id="GDScript_fh36i"]
-script/source = "extends Camera2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
+[ext_resource type="PackedScene" uid="uid://dtlgd7f7pwqcl" path="res://Scenes/Triggers/trigger1.tscn" id="3_hi6el"]
+[ext_resource type="Script" path="res://Scripts/fade_to_night.gd" id="3_k2qam"]
+[ext_resource type="Texture2D" uid="uid://6hrguftjtfjf" path="res://Sprites/NightPlaceHolder.png" id="4_a4b0f"]
+[ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Triggers/trigger2.tscn" id="4_i1an6"]
 
 [node name="RoomMovementAndInteractables" type="Node2D"]
 
-[node name="Bggamewindowtest" type="Sprite2D" parent="."]
-texture = ExtResource("1_fd0s2")
-
-[node name="854X480BackgroundExample" type="Sprite2D" parent="."]
-position = Vector2(1000, 1000)
-texture = ExtResource("2_bcrhm")
-
 [node name="Player" parent="." instance=ExtResource("3_086r8")]
-position = Vector2(935, 1022)
+z_index = 1
+position = Vector2(35, 95)
 
-[node name="FollowCamera" type="Camera2D" parent="Player"]
-visible = false
-limit_left = 0
-limit_top = 0
-limit_right = 2000
-limit_bottom = 2000
-script = SubResource("GDScript_fh36i")
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(0, -150)
+zoom = Vector2(0.6, 0.6)
+editor_draw_limits = true
+
+[node name="BGnight" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("4_a4b0f")
+
+[node name="BG" type="Sprite2D" parent="."]
+z_index = -2
+texture = ExtResource("2_k35ny")
+script = ExtResource("3_k2qam")
+
+[node name="Hitboxes" type="Node2D" parent="BG"]
+
+[node name="Furniture" type="StaticBody2D" parent="BG/Hitboxes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
+polygon = PackedVector2Array(-174, 88, 11, -5, 218, 117, 277, 90, 649, 311, 12, -224, -652, 113, -651, 238, -552, 179, -285, 344, -133, 261, -131, 168, -223, 117)
+
+[node name="Void" type="StaticBody2D" parent="BG/Hitboxes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BG/Hitboxes/Void"]
+polygon = PackedVector2Array(-651, 239, -649, 448, 655, 453, 654, 305, 626, 295, 629, 419, -629, 423, -628, 238)
+
+[node name="TestTrigger" parent="." instance=ExtResource("3_hi6el")]
+position = Vector2(188, 92)
+
+[node name="TestTrigger2" parent="." instance=ExtResource("4_i1an6")]
+position = Vector2(76, 28)

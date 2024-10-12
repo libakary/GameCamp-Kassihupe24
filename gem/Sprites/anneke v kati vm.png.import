@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3myj54iu4sev"
-path="res://.godot/imported/854 x 480 background example.png-c03fd292b0ac805fd1d4dcbfc229a5f8.ctex"
+uid="uid://b4i62c7va74xc"
+path="res://.godot/imported/anneke v kati vm.png-9cb4c633fe9beb404174e20ef84318fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/854 x 480 background example.png"
-dest_files=["res://.godot/imported/854 x 480 background example.png-c03fd292b0ac805fd1d4dcbfc229a5f8.ctex"]
+source_file="res://Sprites/anneke v kati vm.png"
+dest_files=["res://.godot/imported/anneke v kati vm.png-9cb4c633fe9beb404174e20ef84318fb.ctex"]
 
 [params]
 

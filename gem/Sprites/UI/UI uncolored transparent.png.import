@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2x24ybcrydgm"
-path="res://.godot/imported/room window.png-a6643c4632b6121e0e3adea3551c0258.ctex"
+uid="uid://c3xmgvaa4eun7"
+path="res://.godot/imported/UI uncolored transparent.png-c812763d2464b3dd0713649078397283.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/room window.png"
-dest_files=["res://.godot/imported/room window.png-a6643c4632b6121e0e3adea3551c0258.ctex"]
+source_file="res://Sprites/UI/UI uncolored transparent.png"
+dest_files=["res://.godot/imported/UI uncolored transparent.png-c812763d2464b3dd0713649078397283.ctex"]
 
 [params]
 

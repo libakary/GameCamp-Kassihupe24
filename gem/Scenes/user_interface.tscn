@@ -1,9 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://qt2782tsftfw"]
 
-[ext_resource type="Texture2D" uid="uid://c268fj6ly4qwu" path="res://Sprites/UI/UI window.png" id="1_ho7ed"]
+[ext_resource type="Texture2D" uid="uid://c3xmgvaa4eun7" path="res://Sprites/UI/UI uncolored transparent.png" id="1_sxms7"]
 
 [node name="UserInterface" type="Node2D"]
 
 [node name="UiWindowLayerTest" type="Sprite2D" parent="."]
-position = Vector2(427, 240)
-texture = ExtResource("1_ho7ed")
+texture = ExtResource("1_sxms7")

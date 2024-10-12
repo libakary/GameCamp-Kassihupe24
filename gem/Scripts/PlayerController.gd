@@ -21,4 +21,5 @@ func _process(_delta: float) -> void:
 	velocity = input_direction * speed
 	
 	# Use move_and_slide() in CharacterBody2D
-	move_and_slide()
+	if (!get_node("../../../../Mastermind").inTask):
+		move_and_slide()
