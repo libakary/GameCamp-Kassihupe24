@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://2eijq70h0eyu"]
+
+[ext_resource type="Script" path="res://scripts/GuitarKey.gd" id="1_5xana"]
+[ext_resource type="Texture2D" uid="uid://dsw65v2axsepl" path="res://Sprites/TestTask/Hatsune-Miku-PNG-Photos.png" id="2_xq8sd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n03vn"]
+size = Vector2(36, 36)
+
+[node name="GuitarKey_0" type="Area2D"]
+z_index = 1
+script = ExtResource("1_5xana")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 7
+scale = Vector2(0.200001, 0.200001)
+texture = ExtResource("2_xq8sd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_n03vn")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
