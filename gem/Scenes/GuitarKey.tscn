@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://2eijq70h0eyu"]
+[gd_scene load_steps=4 format=3 uid="uid://cvpm5p5o644di"]
 
 [ext_resource type="Script" path="res://scripts/GuitarKey.gd" id="1_5xana"]
 [ext_resource type="Texture2D" uid="uid://dsw65v2axsepl" path="res://Sprites/TestTask/Hatsune-Miku-PNG-Photos.png" id="2_xq8sd"]

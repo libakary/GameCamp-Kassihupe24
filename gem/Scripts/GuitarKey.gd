@@ -1,6 +1,6 @@
 extends Area2D
 
-var KeySpeed = float(2)
+var KeySpeed = float(200)
 
 func _process(delta: float) -> void:
 	position.y += KeySpeed * delta
