@@ -1,7 +1,7 @@
 extends Sprite2D
 
 var nightSprite
-var fadeSpeed: float = 0.00001
+var fadeSpeed: float = 0.001
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

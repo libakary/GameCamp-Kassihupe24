@@ -1,14 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://cusp1gqua1p72"]
+[gd_scene load_steps=11 format=3 uid="uid://cusp1gqua1p72"]
 
 [ext_resource type="Texture2D" uid="uid://cmjuny03yqooe" path="res://Sprites/Background/RoomNight.PNG" id="2_g77em"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_086r8"]
 [ext_resource type="Script" path="res://Scripts/fade_to_night.gd" id="3_k2qam"]
 [ext_resource type="Texture2D" uid="uid://byacfw62rysxt" path="res://Sprites/Background/RoomDay.PNG" id="3_q7rd7"]
 [ext_resource type="Texture2D" uid="uid://ckn0kc6d4il0e" path="res://Sprites/Halos/voodi halo.PNG" id="7_dy7mn"]
-[ext_resource type="Texture2D" uid="uid://cv0yi5f2xif2q" path="res://Sprites/Halos/külmkapi halo.PNG" id="8_kceqb"]
 [ext_resource type="Texture2D" uid="uid://8febow406e3u" path="res://Sprites/Halos/kitarri halo.PNG" id="9_4vtq2"]
 [ext_resource type="Texture2D" uid="uid://bum5c8wg1c3ct" path="res://Sprites/Halos/prügikoti halo.PNG" id="10_bh2bo"]
+[ext_resource type="PackedScene" uid="uid://dtlgd7f7pwqcl" path="res://Scenes/Triggers/trigger1.tscn" id="10_mpmu7"]
 [ext_resource type="Texture2D" uid="uid://c3v1odweekmr0" path="res://Sprites/Halos/arvuti halo.PNG" id="11_id1kn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o1kal"]
+radius = 28.1603
 
 [node name="RoomMovementAndInteractables" type="Node2D"]
 
@@ -17,7 +20,7 @@ z_index = 1
 position = Vector2(-97, 150)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-offset = Vector2(0, -125)
+offset = Vector2(0, -100)
 editor_draw_limits = true
 
 [node name="BGnight" type="Sprite2D" parent="."]
@@ -33,8 +36,15 @@ script = ExtResource("3_k2qam")
 
 [node name="Furniture" type="StaticBody2D" parent="BG/Hitboxes"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
+[node name="Furniture" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
 polygon = PackedVector2Array(-182, 64, -37, -19, 111, 65, 140, 56, 339, 167, 443, 129, 12, -224, -406, 26, -494, 131, -51, 424, -20, 418, -267.136, 236.871, -203, 199, -200, 134, -339, 47, -272, 9)
+
+[node name="Guitar" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
+polygon = PackedVector2Array(77, 191, 103, 169, 95, 152, 74.8842, 140.526, 58, 153, 53, 172)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Hitboxes/Furniture"]
+position = Vector2(214, 109)
+shape = SubResource("CircleShape2D_o1kal")
 
 [node name="Void" type="StaticBody2D" parent="BG/Hitboxes"]
 
@@ -46,9 +56,6 @@ polygon = PackedVector2Array(-67, 449, 284, 313, 344, 175, -56, 412)
 [node name="BedHalo" type="Sprite2D" parent="Halos"]
 texture = ExtResource("7_dy7mn")
 
-[node name="FridgeHalo" type="Sprite2D" parent="Halos"]
-texture = ExtResource("8_kceqb")
-
 [node name="GuitarHalo" type="Sprite2D" parent="Halos"]
 texture = ExtResource("9_4vtq2")
 
@@ -57,3 +64,6 @@ texture = ExtResource("10_bh2bo")
 
 [node name="ComputerHalo" type="Sprite2D" parent="Halos"]
 texture = ExtResource("11_id1kn")
+
+[node name="Node2D" parent="." instance=ExtResource("10_mpmu7")]
+position = Vector2(187, 135)

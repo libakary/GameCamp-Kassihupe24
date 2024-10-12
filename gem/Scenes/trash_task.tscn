@@ -1,14 +1,14 @@
 [gd_scene load_steps=8 format=3 uid="uid://pmcemip7v2xm"]
 
-[ext_resource type="Texture2D" uid="uid://3ajveal0rydk" path="res://Sprites/TrashTaskBG.png" id="1_8iiff"]
 [ext_resource type="Texture2D" uid="uid://b8iepn4xgxhpb" path="res://Sprites/PowerBarTest.png" id="1_fmegu"]
 [ext_resource type="Script" path="res://Scripts/TrashTask/TrashScript.gd" id="2_h25ys"]
-[ext_resource type="Texture2D" uid="uid://c86ooeqm2tm57" path="res://Sprites/Trash.png" id="3_nm3v0"]
+[ext_resource type="Texture2D" uid="uid://cx5dp3d3nvfth" path="res://Sprites/Tasks/TrashTask/TrashBG.PNG" id="2_s1ucj"]
+[ext_resource type="Texture2D" uid="uid://cmp5kg0kx0m6n" path="res://Sprites/Tasks/TrashTask/TrashBag.png" id="4_cdamg"]
 [ext_resource type="Script" path="res://Scripts/TrashTask/TrashTrigger.gd" id="4_woysl"]
 [ext_resource type="Script" path="res://Scripts/TrashTask/TrashScriptFail.gd" id="5_agfwy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vmeyc"]
-radius = 32.8938
+radius = 26.0
 
 [node name="TrashTask" type="Node2D"]
 position = Vector2(465, 313)
@@ -20,7 +20,7 @@ texture = ExtResource("1_fmegu")
 offset = Vector2(0, -16)
 
 [node name="BG" type="Sprite2D" parent="."]
-texture = ExtResource("1_8iiff")
+texture = ExtResource("2_s1ucj")
 
 [node name="Ball" type="CharacterBody2D" parent="."]
 unique_name_in_owner = true
@@ -28,9 +28,10 @@ position = Vector2(-259, 109)
 script = ExtResource("2_h25ys")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ball"]
-texture = ExtResource("3_nm3v0")
+texture = ExtResource("4_cdamg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+position = Vector2(0, 5)
 shape = SubResource("CircleShape2D_vmeyc")
 
 [node name="Chute" type="Node2D" parent="."]
@@ -40,13 +41,13 @@ position = Vector2(-47, 25)
 script = ExtResource("4_woysl")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chute/Area2D"]
-polygon = PackedVector2Array(191, 20, 300, -4, 306, 143)
+polygon = PackedVector2Array(261, 5, 349, 4, 347, 107, 263, 38)
 
 [node name="Area2D2" type="Area2D" parent="Chute"]
 script = ExtResource("5_agfwy")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chute/Area2D2"]
-polygon = PackedVector2Array(-351, 198, 353, 198, 571, 1, 551, -383, 498, -383, -328, -405, -329, -390, 488, -350, 506, 2, 351, 1, 301, 6, 309, 145)
+polygon = PackedVector2Array(-351, 198, 353, 198, 571, 1, 551, -383, 498, -383, -328, -405, -329, -390, 488, -350, 506, 2, 346, 5, 347, 104, 304, 66, 309, 145)
 
 [connection signal="body_entered" from="Chute/Area2D" to="Chute/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Chute/Area2D2" to="Chute/Area2D2" method="_on_body_entered"]
