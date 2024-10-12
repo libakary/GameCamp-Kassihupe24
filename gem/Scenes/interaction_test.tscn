@@ -1,15 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://db0fdle06bm1o"]
+[gd_scene load_steps=4 format=3 uid="uid://db0fdle06bm1o"]
 
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="1_jt8wy"]
-[ext_resource type="PackedScene" uid="uid://c08h887ims0t" path="res://Scenes/highlight_trigger.tscn" id="2_cq5ha"]
+[ext_resource type="PackedScene" uid="uid://dtlgd7f7pwqcl" path="res://Scenes/Triggers/trigger1.tscn" id="2_uqgeg"]
+[ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Triggers/trigger2.tscn" id="3_whiha"]
 
 [node name="InteractionTest" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_jt8wy")]
 position = Vector2(214, 207)
 
-[node name="Node2D" parent="." instance=ExtResource("2_cq5ha")]
-position = Vector2(357, 316)
+[node name="Node2D" parent="." instance=ExtResource("2_uqgeg")]
+position = Vector2(407, 180)
 
-[node name="Node2D2" parent="." instance=ExtResource("2_cq5ha")]
-position = Vector2(368, 131)
+[node name="Node2D2" parent="." instance=ExtResource("3_whiha")]
+position = Vector2(391, 305)
