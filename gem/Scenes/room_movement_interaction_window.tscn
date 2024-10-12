@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://cusp1gqua1p72"]
 
-[ext_resource type="Texture2D" uid="uid://bbigu6j7vwdcq" path="res://Sprites/Background/game jam room.PNG" id="2_k35ny"]
+[ext_resource type="Texture2D" uid="uid://cmjuny03yqooe" path="res://Sprites/Background/RoomNight.PNG" id="2_g77em"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_086r8"]
 [ext_resource type="PackedScene" uid="uid://dtlgd7f7pwqcl" path="res://Scenes/Triggers/trigger1.tscn" id="3_hi6el"]
 [ext_resource type="Script" path="res://Scripts/fade_to_night.gd" id="3_k2qam"]
-[ext_resource type="Texture2D" uid="uid://6hrguftjtfjf" path="res://Sprites/NightPlaceHolder.png" id="4_a4b0f"]
+[ext_resource type="Texture2D" uid="uid://byacfw62rysxt" path="res://Sprites/Background/RoomDay.PNG" id="3_q7rd7"]
 [ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Triggers/trigger2.tscn" id="4_i1an6"]
 
 [node name="RoomMovementAndInteractables" type="Node2D"]
@@ -20,11 +20,11 @@ editor_draw_limits = true
 
 [node name="BGnight" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-texture = ExtResource("4_a4b0f")
+texture = ExtResource("2_g77em")
 
 [node name="BG" type="Sprite2D" parent="."]
 z_index = -2
-texture = ExtResource("2_k35ny")
+texture = ExtResource("3_q7rd7")
 script = ExtResource("3_k2qam")
 
 [node name="Hitboxes" type="Node2D" parent="BG"]
@@ -32,12 +32,12 @@ script = ExtResource("3_k2qam")
 [node name="Furniture" type="StaticBody2D" parent="BG/Hitboxes"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
-polygon = PackedVector2Array(-174, 88, 11, -5, 218, 117, 277, 90, 649, 311, 12, -224, -652, 113, -651, 238, -552, 179, -285, 344, -133, 261, -131, 168, -223, 117)
+polygon = PackedVector2Array(-182, 64, -37, -19, 111, 65, 140, 56, 339, 167, 443, 129, 12, -224, -406, 26, -494, 131, -51, 424, -20, 418, -267.136, 236.871, -203, 199, -200, 134, -339, 47, -272, 9)
 
 [node name="Void" type="StaticBody2D" parent="BG/Hitboxes"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BG/Hitboxes/Void"]
-polygon = PackedVector2Array(-651, 239, -649, 448, 655, 453, 654, 305, 626, 295, 629, 419, -629, 423, -628, 238)
+polygon = PackedVector2Array(-67, 449, 284, 313, 344, 175, -56, 412)
 
 [node name="TestTrigger" parent="." instance=ExtResource("3_hi6el")]
 position = Vector2(188, 92)
