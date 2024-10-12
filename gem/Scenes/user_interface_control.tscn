@@ -17,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,10 +42,9 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -158.605
-offset_top = 17.4
-offset_right = -20.605
-offset_bottom = -382.6
+offset_left = -854.0
+offset_right = -716.0
+offset_bottom = -400.0
 grow_horizontal = 0
 grow_vertical = 2
 alignment_horizontal = 0
