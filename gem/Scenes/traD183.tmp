@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://pmcemip7v2xm"]
+
+[ext_resource type="Texture2D" uid="uid://3ajveal0rydk" path="res://Sprites/TrashTaskBG.png" id="1_8iiff"]
+[ext_resource type="Script" path="res://Scripts/TrashTask/TrashScript.gd" id="2_h25ys"]
+[ext_resource type="Texture2D" uid="uid://c86ooeqm2tm57" path="res://Sprites/Trash.png" id="3_nm3v0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vmeyc"]
+radius = 32.8938
+
+[node name="TrashTask" type="Node2D"]
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(410, 225)
+texture = ExtResource("1_8iiff")
+
+[node name="Ball" type="CharacterBody2D" parent="."]
+position = Vector2(163, 333)
+script = ExtResource("2_h25ys")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+texture = ExtResource("3_nm3v0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_vmeyc")
