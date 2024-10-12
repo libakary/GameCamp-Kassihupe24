@@ -1,24 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0bkwy6ns55kr"]
+[gd_scene load_steps=4 format=3 uid="uid://b0bkwy6ns55kr"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_a68po"]
 [ext_resource type="Texture2D" uid="uid://dxg5v8my7mkuw" path="res://Sprites/PlayerPlaceholder.png" id="2_0tpqq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qegk1"]
 size = Vector2(32, 65)
-
-[sub_resource type="GDScript" id="GDScript_iqoru"]
-script/source = "extends Camera2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_a68po")
@@ -28,10 +14,3 @@ texture = ExtResource("2_0tpqq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qegk1")
-
-[node name="FollowCamera" type="Camera2D" parent="."]
-limit_left = 0
-limit_top = 0
-limit_right = 2000
-limit_bottom = 2000
-script = SubResource("GDScript_iqoru")
