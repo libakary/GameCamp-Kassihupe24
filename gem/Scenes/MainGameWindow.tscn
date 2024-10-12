@@ -14,9 +14,10 @@ position = Vector2(427, 240)
 texture = ExtResource("3_mfujh")
 
 [node name="RoomMovement" parent="." instance=ExtResource("5_enxks")]
-position = Vector2(-573, -760)
+position = Vector2(-291, -420)
 
 [node name="Player" parent="." instance=ExtResource("1_wi2i8")]
+position = Vector2(711, 571)
 
 [node name="HighlightTest" parent="." instance=ExtResource("2_jmqk0")]
 position = Vector2(507, 225)
