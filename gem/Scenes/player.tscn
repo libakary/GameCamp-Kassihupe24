@@ -1,7 +1,58 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0bkwy6ns55kr"]
+[gd_scene load_steps=10 format=3 uid="uid://b0bkwy6ns55kr"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_a68po"]
 [ext_resource type="Texture2D" uid="uid://b4i62c7va74xc" path="res://Sprites/anneke v kati vm.png" id="2_w6i2k"]
+[ext_resource type="Texture2D" uid="uid://dkusdop2xrniw" path="res://Sprites/Player/idle1.png" id="3_11ht6"]
+[ext_resource type="Texture2D" uid="uid://dylxptu61jsks" path="res://Sprites/Player/idle2.png" id="4_v1u8a"]
+[ext_resource type="Texture2D" uid="uid://n6aqml4w7oqj" path="res://Sprites/Player/idle3.png" id="5_bwoxf"]
+[ext_resource type="Texture2D" uid="uid://csaiko88gjxl1" path="res://Sprites/Player/sprite-walk-1.png" id="6_t1idi"]
+[ext_resource type="Texture2D" uid="uid://ds1iumwic1sgy" path="res://Sprites/Player/sprite-walk-2.png" id="7_clpfx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d1q8k"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("3_11ht6")
+}, {
+"duration": 5.0,
+"texture": ExtResource("4_v1u8a")
+}, {
+"duration": 6.0,
+"texture": ExtResource("5_bwoxf")
+}, {
+"duration": 5.0,
+"texture": ExtResource("3_11ht6")
+}, {
+"duration": 4.0,
+"texture": ExtResource("5_bwoxf")
+}, {
+"duration": 6.0,
+"texture": ExtResource("4_v1u8a")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_bwoxf")
+}, {
+"duration": 6.0,
+"texture": ExtResource("4_v1u8a")
+}, {
+"duration": 4.0,
+"texture": ExtResource("3_11ht6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.7,
+"texture": ExtResource("6_t1idi")
+}, {
+"duration": 1.7,
+"texture": ExtResource("7_clpfx")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7orwc"]
 radius = 24.0208
@@ -10,8 +61,15 @@ radius = 24.0208
 script = ExtResource("1_a68po")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, -30)
 texture = ExtResource("2_w6i2k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -26)
+sprite_frames = SubResource("SpriteFrames_d1q8k")
+animation = &"idle"
+frame_progress = 0.324522
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 4)

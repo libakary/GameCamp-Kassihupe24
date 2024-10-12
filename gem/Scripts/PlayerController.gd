@@ -23,3 +23,18 @@ func _process(_delta: float) -> void:
 	# Use move_and_slide() in CharacterBody2D
 	if (!get_node("../../../../Mastermind").inTask):
 		move_and_slide()
+		
+	var direction = Input.get_axis("ui_left", "ui_right")
+	if direction:
+		velocity.x = direction * speed
+		#play walk animation + flip them based on direction
+		if velocity.x != 0:
+			$AnimatedSprite2D.play("walk")
+			$AnimatedSprite2D.flip_v = false
+			# See the note below about boolean assignment.
+			$AnimatedSprite2D.flip_h = velocity.x < 0
+			
+	else:
+		velocity.x = move_toward(velocity.x, 0, speed)
+		#movement stops and character stands... not too elegant but
+		$AnimatedSprite2D.play("idle")	
