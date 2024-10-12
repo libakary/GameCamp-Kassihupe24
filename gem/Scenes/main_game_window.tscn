@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0uoighxohyq8"]
+[gd_scene load_steps=8 format=3 uid="uid://b0uoighxohyq8"]
 
 [ext_resource type="Texture2D" uid="uid://cyyxcs3srj7k4" path="res://Sprites/Background/bggamewindowtest.png" id="1_rt0ea"]
 [ext_resource type="PackedScene" uid="uid://cusp1gqua1p72" path="res://Scenes/room_movement_interaction_window.tscn" id="2_lf1qo"]
@@ -6,11 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://dtlgd7f7pwqcl" path="res://Scenes/Triggers/trigger1.tscn" id="5_mt8ld"]
 [ext_resource type="PackedScene" uid="uid://qt2782tsftfw" path="res://Scenes/user_interface.tscn" id="5_x6q2b"]
 [ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Triggers/trigger2.tscn" id="6_4wc8a"]
+[ext_resource type="PackedScene" uid="uid://fr7y2h7bsg1l" path="res://Scenes/user_interface_control.tscn" id="7_ns3cv"]
 
 [node name="MainGameWindow" type="Node2D"]
 
 [node name="Bggamewindowtest" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(427, 240)
 texture = ExtResource("1_rt0ea")
 
@@ -18,13 +18,19 @@ texture = ExtResource("1_rt0ea")
 position = Vector2(-291, -420)
 
 [node name="Player" parent="." instance=ExtResource("3_bbi3l")]
+visible = false
 position = Vector2(711, 571)
 
 [node name="UserInterface" parent="." instance=ExtResource("5_x6q2b")]
-visible = false
 
 [node name="Node2D" parent="." instance=ExtResource("5_mt8ld")]
 position = Vector2(180, 212)
 
 [node name="Node2D2" parent="." instance=ExtResource("6_4wc8a")]
 position = Vector2(384, 230)
+
+[node name="Control" parent="." instance=ExtResource("7_ns3cv")]
+offset_left = 1120.0
+offset_top = 568.0
+offset_right = 1120.0
+offset_bottom = 568.0
