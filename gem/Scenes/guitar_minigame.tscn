@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1somljux4adq"]
+[gd_scene load_steps=3 format=3 uid="uid://r0bx44oewja8"]
 
 [ext_resource type="Script" path="res://Scenes/guitar_minigame.gd" id="1_mt573"]
 
@@ -54,6 +54,7 @@ scale = Vector2(0.559999, 0.559999)
 color = Color(0, 0.432667, 0.59, 1)
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Up2"]
+layout_mode = 0
 offset_left = 10.7142
 offset_top = -12.5001
 offset_right = 50.7142
@@ -70,6 +71,7 @@ scale = Vector2(0.559999, 0.559999)
 color = Color(0, 0.432667, 0.59, 1)
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/Up3"]
+layout_mode = 0
 offset_left = 10.7143
 offset_top = -10.7144
 offset_right = 50.7143
@@ -86,6 +88,7 @@ scale = Vector2(0.559999, 0.559999)
 color = Color(0, 0.432667, 0.59, 1)
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="CanvasLayer/Up4"]
+layout_mode = 0
 offset_left = 1.78573
 offset_top = -16.0715
 offset_right = 41.7857

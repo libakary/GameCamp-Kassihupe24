@@ -4,7 +4,7 @@ var launched: bool = false
 var launchStarted: bool = false
 var launchStrength = 0.2
 var strengthDirectionUp = true
-var powerSpeed = 5
+var powerSpeed = 4
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
