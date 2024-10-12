@@ -1,16 +1,25 @@
 [gd_scene load_steps=6 format=3 uid="uid://b0uoighxohyq8"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://cyyxcs3srj7k4" path="res://Sprites/Background/bggamewindowtest.png" id="1_rt0ea"]
 [ext_resource type="PackedScene" uid="uid://cusp1gqua1p72" path="res://Scenes/room_movement_interaction_window.tscn" id="2_lf1qo"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_bbi3l"]
 [ext_resource type="PackedScene" uid="uid://c08h887ims0t" path="res://Scenes/TaskTriggers/minigame_1_trigger.tscn" id="4_fjupe"]
 [ext_resource type="PackedScene" uid="uid://qt2782tsftfw" path="res://Scenes/user_interface.tscn" id="5_x6q2b"]
+=======
+[ext_resource type="Texture2D" uid="uid://cyyxcs3srj7k4" path="res://Sprites/Background/bggamewindowtest.png" id="1_o823n"]
+[ext_resource type="PackedScene" uid="uid://cusp1gqua1p72" path="res://Scenes/room_movement_interaction_window.tscn" id="2_q1sba"]
+[ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_ua8vd"]
+[ext_resource type="PackedScene" uid="uid://c08h887ims0t" path="res://Scenes/highlight_trigger.tscn" id="4_uqy0d"]
+[ext_resource type="PackedScene" uid="uid://qt2782tsftfw" path="res://Scenes/user_interface.tscn" id="5_ok27g"]
+>>>>>>> Stashed changes
 
 [node name="MainGameWindow" type="Node2D"]
 
 [node name="Bggamewindowtest" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(427, 240)
+<<<<<<< Updated upstream
 texture = ExtResource("1_rt0ea")
 
 [node name="RoomMovement" parent="." instance=ExtResource("2_lf1qo")]
@@ -26,4 +35,20 @@ position = Vector2(507, 225)
 position = Vector2(174, 192)
 
 [node name="UserInterface" parent="." instance=ExtResource("5_x6q2b")]
+=======
+texture = ExtResource("1_o823n")
+
+[node name="RoomMovement" parent="." instance=ExtResource("2_q1sba")]
+position = Vector2(-573, -760)
+
+[node name="Player" parent="." instance=ExtResource("3_ua8vd")]
+
+[node name="HighlightTest" parent="." instance=ExtResource("4_uqy0d")]
+position = Vector2(507, 225)
+
+[node name="Node2D" parent="." instance=ExtResource("4_uqy0d")]
+position = Vector2(174, 192)
+
+[node name="UserInterface" parent="." instance=ExtResource("5_ok27g")]
+>>>>>>> Stashed changes
 visible = false
