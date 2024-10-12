@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed: int = 400
+var speed: int = 300
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,6 +11,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	var input_direction = Vector2.ZERO
 	input_direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	input_direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	if input_direction:
 		velocity = input_direction * speed
 		#play walk animation + flip them based on direction
@@ -25,8 +26,6 @@ func _process(_delta: float) -> void:
 		#velocity.y = move_toward(velocity.y, 0, speed)
 		#movement stops and character stands... not too elegant but
 		$AnimatedSprite2D.play("idle")	
-		
-	input_direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	
 	# Normalize the direction so that diagonal movement isn't faster
 	if input_direction != Vector2.ZERO:
