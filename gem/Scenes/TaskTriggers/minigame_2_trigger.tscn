@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c08h887ims0t"]
+[gd_scene load_steps=4 format=3 uid="uid://iybj52cvsd61"]
 
-[ext_resource type="Texture2D" uid="uid://dtdaf6kr66sfu" path="res://Sprites/AreaTrigger.png" id="1_y55u2"]
-[ext_resource type="Script" path="res://Scripts/Area.gd" id="2_rq4cq"]
+[ext_resource type="Texture2D" uid="uid://dtdaf6kr66sfu" path="res://Sprites/AreaTrigger.png" id="1_7xi3p"]
+[ext_resource type="Script" path="res://Scripts/TestTask2/task_2_area.gd" id="2_txxhc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uabmd"]
 size = Vector2(128, 64)
@@ -11,10 +11,10 @@ size = Vector2(128, 64)
 [node name="AreaTriggerTest" type="Node2D" parent="."]
 
 [node name="AreaSprite" type="Sprite2D" parent="AreaTriggerTest"]
-texture = ExtResource("1_y55u2")
+texture = ExtResource("1_7xi3p")
 
 [node name="Area2D" type="Area2D" parent="AreaTriggerTest"]
-script = ExtResource("2_rq4cq")
+script = ExtResource("2_txxhc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaTriggerTest/Area2D"]
 shape = SubResource("RectangleShape2D_uabmd")
