@@ -1,10 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ds74lawo4rnrv"]
+[gd_scene load_steps=5 format=3 uid="uid://63pgfmxy66ny"]
 
 [ext_resource type="Script" path="res://Scripts/computer_game.gd" id="1_sbjbt"]
 [ext_resource type="Texture2D" uid="uid://c4dt71iga1fdy" path="res://Sprites/ComputerBG.PNG" id="1_ueeqj"]
 [ext_resource type="Texture2D" uid="uid://qdl433wbupvl" path="res://Sprites/ComputerKey.PNG" id="2_irgly"]
-[ext_resource type="AudioStream" uid="uid://b42mvnjtvw261" path="res://Audio/Keyboard1.mp3" id="4_w6wly"]
-[ext_resource type="AudioStream" uid="uid://daw7hoianlh8e" path="res://Audio/Keyboard2.mp3" id="5_n3g6b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jaqgy"]
 size = Vector2(86.5603, 58.2006)
@@ -29,9 +27,6 @@ position = Vector2(137.103, -31.4131)
 rotation = -0.0538703
 shape = SubResource("RectangleShape2D_jaqgy")
 
-[node name="SFXKey1" type="AudioStreamPlayer2D" parent="LeftButton/Area2D/CollisionShape2D"]
-stream = ExtResource("4_w6wly")
-
 [node name="RightButton" type="Sprite2D" parent="."]
 position = Vector2(403.918, 88.6703)
 rotation = 0.472905
@@ -45,9 +40,6 @@ rotation = -0.768583
 position = Vector2(531.736, 35.4811)
 rotation = 0.731371
 shape = SubResource("RectangleShape2D_jaqgy")
-
-[node name="SFXKey2" type="AudioStreamPlayer2D" parent="RightButton/Area2D2/CollisionShape2D"]
-stream = ExtResource("5_n3g6b")
 
 [node name="TERMINATION" type="Timer" parent="."]
 wait_time = 10.0
