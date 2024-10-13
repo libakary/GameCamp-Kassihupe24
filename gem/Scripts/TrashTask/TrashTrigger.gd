@@ -24,7 +24,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body == %Ball:
-		
+		$CollisionPolygon2D/TrashCrash.play()
 		#Add to health
 		healthTimer = healthTimerIn.time_left + healthMod
 		if (healthTimer > healthBarIn.max_value):
@@ -46,3 +46,7 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		get_node("../../../MainGameWindow/Mastermind").inTask = false
 		get_node("../../").queue_free()
+
+
+func _on_trash_crash_finished() -> void:
+	pass # Replace with function body.

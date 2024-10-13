@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0qtcb3vubxlx"
+path="res://.godot/imported/WedThuNight.mp3-35ae1f13b25bb0c8a7b03e01c2eff98e.mp3str"
+
+[deps]
+
+source_file="res://Audio/DAYS/3 and 4/WedThuNight.mp3"
+dest_files=["res://.godot/imported/WedThuNight.mp3-35ae1f13b25bb0c8a7b03e01c2eff98e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

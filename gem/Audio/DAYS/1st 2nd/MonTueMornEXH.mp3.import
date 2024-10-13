@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7i3w4seess6p"
+path="res://.godot/imported/MonTueMornEXH.mp3-411e7c5f2230328ccf7115a117e2ddd0.mp3str"
+
+[deps]
+
+source_file="res://Audio/DAYS/1st 2nd/MonTueMornEXH.mp3"
+dest_files=["res://.godot/imported/MonTueMornEXH.mp3-411e7c5f2230328ccf7115a117e2ddd0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
