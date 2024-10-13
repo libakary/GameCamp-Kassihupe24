@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv0yi5f2xif2q"
-path="res://.godot/imported/külmkapi halo.PNG-6209be75054f6e6be44c796303e984dd.ctex"
+uid="uid://dlk7c8wqnau0f"
+path="res://.godot/imported/valge halo ring mikrokas.PNG-9db8e47afeeb9f2185a4b1014a7db8c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Halos/külmkapi halo.PNG"
-dest_files=["res://.godot/imported/külmkapi halo.PNG-6209be75054f6e6be44c796303e984dd.ctex"]
+source_file="res://Sprites/Halos/valge halo ring mikrokas.PNG"
+dest_files=["res://.godot/imported/valge halo ring mikrokas.PNG-9db8e47afeeb9f2185a4b1014a7db8c5.ctex"]
 
 [params]
 

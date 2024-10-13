@@ -4,10 +4,12 @@ var nightBGSprite
 var dayGuitar
 var nightGuitar
 var fadeSpeed: float = 0.00003
+var Daytimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#Get refrences
+	Daytimer = get_node("../DayTimer")
 	nightBGSprite = get_node("../BGnight")
 	dayGuitar = $FurnitureOverlays/GuitarDay
 	nightGuitar = $FurnitureOverlays/GuitarNight
@@ -16,8 +18,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	#Fade BG
 	#modulate.a -= fadeSpeed
-	nightBGSprite.modulate.a += fadeSpeed
+	nightBGSprite.modulate.a = 1/(15-(Daytimer.hourValue-8))
 	
 	#Fade Guitar
 	#dayGuitar.modulate.a -= fadeSpeed
-	nightGuitar.modulate.a += fadeSpeed
+	nightGuitar.modulate.a += 1/(15-(Daytimer.hourValue-8))
