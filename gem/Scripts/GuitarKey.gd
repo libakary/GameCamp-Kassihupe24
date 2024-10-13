@@ -4,8 +4,11 @@ var KeySpeed = float(200)
 
 signal KeyKilled
 
+func _ready() -> void:
+	pass
 
 func _process(delta: float) -> void:
+	$Sprite2D.z_index = 51
 	position.y += KeySpeed * delta
 
 

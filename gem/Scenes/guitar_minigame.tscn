@@ -14,114 +14,101 @@ size = Vector2(214, 20)
 [node name="Guitar Minigame" type="Node2D"]
 script = ExtResource("1_mt573")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-visible = false
-show_behind_parent = true
-z_index = -50
-offset_right = 677.0
-offset_bottom = 325.0
-color = Color(0.89, 0.504333, 0.3115, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
-visible = false
-show_behind_parent = true
-z_index = -5
-offset_left = 258.0
-offset_top = -7.0
-offset_right = 298.0
-offset_bottom = 33.0
-scale = Vector2(3.88, 8.44)
-color = Color(0.0576, 0.0576, 0.48, 1)
-
-[node name="RichTextLabel" type="Label" parent="CanvasLayer"]
-z_index = 1
-offset_left = 266.0
-offset_top = 269.0
-offset_right = 306.0
-offset_bottom = 309.0
+[node name="RichTextLabel" type="Label" parent="."]
+z_index = 21
+offset_left = -74.0
+offset_top = 115.0
+offset_right = -34.0
+offset_bottom = 155.0
 scale = Vector2(3.01142, 3.01142)
 text = "<"
 label_settings = SubResource("LabelSettings_gq8qv")
+metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel2" type="Label" parent="CanvasLayer"]
-z_index = 1
-offset_left = 386.0
-offset_top = 268.0
-offset_right = 426.0
-offset_bottom = 308.0
+[node name="RichTextLabel2" type="Label" parent="."]
+z_index = 21
+offset_left = 46.0
+offset_top = 114.0
+offset_right = 86.0
+offset_bottom = 154.0
 scale = Vector2(3.01142, 3.01142)
 text = ">"
 label_settings = SubResource("LabelSettings_gq8qv")
+metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel3" type="Label" parent="CanvasLayer"]
-z_index = 1
-offset_left = 376.0
-offset_top = 283.0
-offset_right = 416.0
-offset_bottom = 323.0
+[node name="RichTextLabel3" type="Label" parent="."]
+z_index = 21
+offset_left = 36.0
+offset_top = 129.0
+offset_right = 76.0
+offset_bottom = 169.0
 rotation = 1.57079
 scale = Vector2(3.01142, 3.01142)
 text = ">"
 label_settings = SubResource("LabelSettings_gq8qv")
+metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel4" type="Label" parent="CanvasLayer"]
-z_index = 1
-offset_left = 294.0
-offset_top = 298.0
-offset_right = 334.0
-offset_bottom = 338.0
+[node name="RichTextLabel4" type="Label" parent="."]
+z_index = 21
+offset_left = -46.0
+offset_top = 144.0
+offset_right = -6.00003
+offset_bottom = 184.0
 rotation = -1.57079
 scale = Vector2(3.01142, 3.01142)
 text = ">"
 label_settings = SubResource("LabelSettings_gq8qv")
+metadata/_edit_use_anchors_ = true
 
-[node name="GuitarMinigameBg" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(463, 282)
+[node name="GuitarMinigameBg" type="Sprite2D" parent="."]
+z_index = 20
+position = Vector2(123, 128)
 texture = ExtResource("2_rbgqp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
 
 [node name="GuitarTimer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
 
 [node name="DeathBox" type="Area2D" parent="."]
-position = Vector2(325, 349)
+position = Vector2(-15, 195)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathBox"]
 position = Vector2(10, -1)
 shape = SubResource("RectangleShape2D_nf10q")
 
 [node name="Input_1" type="Marker2D" parent="."]
-position = Vector2(277, 289)
+position = Vector2(-63, 135)
 
 [node name="Input_2" type="Marker2D" parent="."]
-position = Vector2(314, 289)
+position = Vector2(-26, 135)
 
 [node name="Input_3" type="Marker2D" parent="."]
-position = Vector2(357, 289)
+position = Vector2(17, 135)
 
 [node name="Input_4" type="Marker2D" parent="."]
-position = Vector2(389, 289)
+position = Vector2(49, 135)
 
 [node name="Spawnpoints" type="Node2D" parent="."]
 z_index = 2
+position = Vector2(-340, -154)
 
 [node name="Point1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(277, -18)
+position = Vector2(-159, -251)
 
 [node name="Point2" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(314, -18)
+position = Vector2(-117, -254)
 
 [node name="Point3" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(357, -18)
+position = Vector2(-80, -254)
 
 [node name="Point4" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(389, -18)
+position = Vector2(-35, -247)
 
 [node name="GuitarPressed" parent="." instance=ExtResource("2_v4mhw")]
-position = Vector2(-22, -21)
+position = Vector2(-362, -175)
 
 [node name="TERMINATION" type="Timer" parent="."]
 wait_time = 10.0
