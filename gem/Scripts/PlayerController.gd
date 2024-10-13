@@ -1,11 +1,23 @@
 extends CharacterBody2D
 
+#@export var sfx_footsteps : AudioStream
+#var footstep_frames : Array = [0, 1]
+
 var speed: int = 300
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
+#func load_sfx(sfx_to_load):
+	#if %SFXPlayer.stream != sfx_to_load:
+		#%SFXPlayer.stop()
+		#%SFXPlayer.stream = sfx_to_load
+#
+#func _on_sprite_frame_changed():
+	#if %Player.animation == "idle": return
+	#load_sfx(sfx_footsteps)
+	#if %Sprite.frame in footstep_frames: %SFXPlayer.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -17,6 +29,7 @@ func _process(_delta: float) -> void:
 		#play walk animation + flip them based on direction
 		if velocity != Vector2.ZERO:
 			$AnimatedSprite2D.play("walk")
+			#$SFXPlayer.play()
 			$AnimatedSprite2D.flip_v = false
 			# See the note below about boolean assignment.
 			$AnimatedSprite2D.flip_h = velocity < Vector2.ZERO

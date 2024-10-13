@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0bkwy6ns55kr"]
+[gd_scene load_steps=10 format=3 uid="uid://b0bkwy6ns55kr"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_a68po"]
 [ext_resource type="Texture2D" uid="uid://dkusdop2xrniw" path="res://Sprites/Player/idle1.png" id="3_11ht6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://n6aqml4w7oqj" path="res://Sprites/Player/idle3.png" id="5_bwoxf"]
 [ext_resource type="Texture2D" uid="uid://csaiko88gjxl1" path="res://Sprites/Player/sprite-walk-1.png" id="6_t1idi"]
 [ext_resource type="Texture2D" uid="uid://ds1iumwic1sgy" path="res://Sprites/Player/sprite-walk-2.png" id="7_clpfx"]
+[ext_resource type="AudioStream" uid="uid://cil45by7d6c15" path="res://Audio/Footstep.mp3" id="7_dd4t5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d1q8k"]
 animations = [{
@@ -62,9 +63,12 @@ script = ExtResource("1_a68po")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2, -26)
 sprite_frames = SubResource("SpriteFrames_d1q8k")
-animation = &"idle"
-frame_progress = 0.324522
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 4)
 shape = SubResource("CircleShape2D_7orwc")
+
+[node name="SFXPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_dd4t5")
+autoplay = true
