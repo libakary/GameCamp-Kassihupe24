@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do2v067b05hc5"
-path="res://.godot/imported/StartButton.PNG-b13a859957b46065f6ba0e548cb33ecc.ctex"
+uid="uid://dlk7c8wqnau0f"
+path="res://.godot/imported/valge halo ring mikrokas.PNG-9db8e47afeeb9f2185a4b1014a7db8c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/StartButton.PNG"
-dest_files=["res://.godot/imported/StartButton.PNG-b13a859957b46065f6ba0e548cb33ecc.ctex"]
+source_file="res://Sprites/Halos/valge halo ring mikrokas.PNG"
+dest_files=["res://.godot/imported/valge halo ring mikrokas.PNG-9db8e47afeeb9f2185a4b1014a7db8c5.ctex"]
 
 [params]
 
