@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/guitar_minigame.gd" id="1_mt573"]
 [ext_resource type="Texture2D" uid="uid://5g0rm5tsh6d7" path="res://Sprites/Background/GuitarMinigameBG.PNG" id="2_rbgqp"]
-[ext_resource type="PackedScene" path="res://Scenes/guitar_pressed.tscn" id="2_v4mhw"]
+[ext_resource type="PackedScene" uid="uid://isxr15a1vllm" path="res://Scenes/guitar_pressed.tscn" id="2_v4mhw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gq8qv"]
 font_size = 10
@@ -96,16 +96,16 @@ z_index = 2
 position = Vector2(-340, -154)
 
 [node name="Point1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(-159, -251)
+position = Vector2(-150, -220)
 
 [node name="Point2" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(-117, -254)
+position = Vector2(-113, -220)
 
 [node name="Point3" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(-80, -254)
+position = Vector2(-70, -220)
 
 [node name="Point4" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(-35, -247)
+position = Vector2(-30, -220)
 
 [node name="GuitarPressed" parent="." instance=ExtResource("2_v4mhw")]
 position = Vector2(-362, -175)

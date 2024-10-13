@@ -21,19 +21,19 @@ func _on_guitar_timer_timeout() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_left"):
 		var guitarkill = guitarkey_kill.instantiate()
-		guitarkill.position = Vector2(277, 289)
+		guitarkill.position = Vector2(-62, 135)
 		add_child(guitarkill)
 	if Input.is_action_just_pressed("ui_right"):
 		var guitarkill = guitarkey_kill.instantiate()
-		guitarkill.position = Vector2(389, 289)
+		guitarkill.position = Vector2(53, 135)
 		add_child(guitarkill)
 	if Input.is_action_just_pressed("ui_down"):
 		var guitarkill = guitarkey_kill.instantiate()
-		guitarkill.position = Vector2(357, 289)
+		guitarkill.position = Vector2(14, 135)
 		add_child(guitarkill)
 	if Input.is_action_just_pressed("ui_up"):
 		var guitarkill = guitarkey_kill.instantiate()
-		guitarkill.position = Vector2(314, 289)
+		guitarkill.position = Vector2(-25, 135)
 		add_child(guitarkill)
 
 
