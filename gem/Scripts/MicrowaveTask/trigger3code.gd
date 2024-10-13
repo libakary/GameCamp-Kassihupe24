@@ -23,9 +23,9 @@ func _process(_delta: float) -> void:
 	#Check for interaction
 	if (Input.is_action_just_pressed("interact") and inInteractionRange):
 		
-		var loadedGamePacked = load("res://Scenes/trash_task.tscn")
+		var loadedGamePacked = load("res://Scenes/micro_wave_game.tscn")
 		var loadedGame = loadedGamePacked.instantiate()
-		loadedGame.position = Vector2(427, 240)
+		loadedGame.position = Vector2(0, 0)
 		get_node("../../../../../../../").add_child(loadedGame)
 		
 		get_node("../../../../../../Mastermind").inTask = true

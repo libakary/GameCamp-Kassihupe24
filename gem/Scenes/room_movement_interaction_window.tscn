@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cusp1gqua1p72"]
+[gd_scene load_steps=16 format=3 uid="uid://cusp1gqua1p72"]
 
 [ext_resource type="Texture2D" uid="uid://cmjuny03yqooe" path="res://Sprites/Background/RoomNight.PNG" id="2_g77em"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_086r8"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c3v1odweekmr0" path="res://Sprites/Halos/arvuti halo.PNG" id="11_id1kn"]
 [ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Triggers/trigger2.tscn" id="12_iac0n"]
 [ext_resource type="Script" path="res://Scripts/day_time.gd" id="13_jainw"]
+[ext_resource type="PackedScene" uid="uid://bryb7ualxm5oj" path="res://Scenes/Triggers/trigger3.tscn" id="13_t1c80"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o1kal"]
 radius = 28.1603
@@ -85,6 +86,9 @@ position = Vector2(187, 135)
 
 [node name="GuitarTrigger" parent="." instance=ExtResource("12_iac0n")]
 position = Vector2(30, 173)
+
+[node name="MicrowaveTrigger" parent="." instance=ExtResource("13_t1c80")]
+position = Vector2(47, 49)
 
 [node name="DayTimer" type="Timer" parent="."]
 script = ExtResource("13_jainw")
