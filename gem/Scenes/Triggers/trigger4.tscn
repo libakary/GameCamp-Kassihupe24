@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2x1vaetoig4"]
+
+[ext_resource type="Script" path="res://Scripts/ComputerGameTask/trigger4code.gd" id="1_dueyc"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AreaTriggerTest" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="AreaTriggerTest"]
+script = ExtResource("1_dueyc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaTriggerTest/Area2D"]
+polygon = PackedVector2Array(7, 21, 27, -5, 70, -40, 26, -59, -110, 44, -44, 65)
+
+[connection signal="body_entered" from="AreaTriggerTest/Area2D" to="AreaTriggerTest/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaTriggerTest/Area2D" to="AreaTriggerTest/Area2D" method="_on_body_exited"]
