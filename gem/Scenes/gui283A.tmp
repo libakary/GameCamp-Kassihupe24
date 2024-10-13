@@ -1,0 +1,144 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1somljux4adq"]
+
+[ext_resource type="Script" path="res://Scenes/guitar_minigame.gd" id="1_mt573"]
+[ext_resource type="PackedScene" uid="uid://2eijq70h0eyu" path="res://Scenes/GuitarKey.tscn" id="2_d1jsv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nf10q"]
+size = Vector2(214, 20)
+
+[node name="Guitar Minigame" type="Node2D"]
+script = ExtResource("1_mt573")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+show_behind_parent = true
+z_index = -50
+offset_right = 677.0
+offset_bottom = 325.0
+color = Color(0.89, 0.504333, 0.3115, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+show_behind_parent = true
+z_index = -5
+offset_left = 258.0
+offset_top = -7.0
+offset_right = 298.0
+offset_bottom = 33.0
+scale = Vector2(3.88, 8.44)
+color = Color(0.0576, 0.0576, 0.48, 1)
+
+[node name="Up" type="ColorRect" parent="CanvasLayer"]
+offset_left = 266.0
+offset_top = 279.0
+offset_right = 306.0
+offset_bottom = 319.0
+scale = Vector2(0.559999, 0.559999)
+color = Color(0, 0.432667, 0.59, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Up"]
+layout_mode = 0
+offset_left = 1.78566
+offset_top = -14.2858
+offset_right = 41.7857
+offset_bottom = 25.7142
+scale = Vector2(2.57142, 2.57142)
+text = "←"
+
+[node name="Up2" type="ColorRect" parent="CanvasLayer"]
+offset_left = 303.0
+offset_top = 279.0
+offset_right = 343.0
+offset_bottom = 319.0
+scale = Vector2(0.559999, 0.559999)
+color = Color(0, 0.432667, 0.59, 1)
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Up2"]
+layout_mode = 0
+offset_left = 10.7142
+offset_top = -12.5001
+offset_right = 50.7142
+offset_bottom = 27.4999
+scale = Vector2(2.57142, 2.57142)
+text = "↑"
+
+[node name="Up3" type="ColorRect" parent="CanvasLayer"]
+offset_left = 345.0
+offset_top = 279.0
+offset_right = 385.0
+offset_bottom = 319.0
+scale = Vector2(0.559999, 0.559999)
+color = Color(0, 0.432667, 0.59, 1)
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/Up3"]
+layout_mode = 0
+offset_left = 10.7143
+offset_top = -10.7144
+offset_right = 50.7143
+offset_bottom = 29.2856
+scale = Vector2(2.57142, 2.57142)
+text = "↓"
+
+[node name="Up4" type="ColorRect" parent="CanvasLayer"]
+offset_left = 378.0
+offset_top = 279.0
+offset_right = 418.0
+offset_bottom = 319.0
+scale = Vector2(0.559999, 0.559999)
+color = Color(0, 0.432667, 0.59, 1)
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="CanvasLayer/Up4"]
+layout_mode = 0
+offset_left = 1.78573
+offset_top = -16.0715
+offset_right = 41.7857
+offset_bottom = 23.9285
+scale = Vector2(2.57142, 2.57142)
+text = "→"
+
+[node name="GuitarTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="DeathBox" type="Area2D" parent="."]
+position = Vector2(325, 349)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathBox"]
+position = Vector2(10, -1)
+shape = SubResource("RectangleShape2D_nf10q")
+
+[node name="Input_1" type="Marker2D" parent="."]
+position = Vector2(277, 289)
+
+[node name="Input_2" type="Marker2D" parent="."]
+position = Vector2(314, 289)
+
+[node name="Input_3" type="Marker2D" parent="."]
+position = Vector2(357, 289)
+
+[node name="Input_4" type="Marker2D" parent="."]
+position = Vector2(389, 289)
+
+[node name="Spawnpoints" type="Node2D" parent="."]
+z_index = 2
+
+[node name="Point1" type="Marker2D" parent="Spawnpoints"]
+position = Vector2(277, -18)
+
+[node name="Point2" type="Marker2D" parent="Spawnpoints"]
+position = Vector2(314, -18)
+
+[node name="Point3" type="Marker2D" parent="Spawnpoints"]
+position = Vector2(357, -18)
+
+[node name="Point4" type="Marker2D" parent="Spawnpoints"]
+position = Vector2(389, -18)
+
+[node name="GuitarKey_0" parent="." instance=ExtResource("2_d1jsv")]
+position = Vector2(-42, -34)
+
+[connection signal="timeout" from="GuitarTimer" to="." method="_on_guitar_timer_timeout"]
+[connection signal="area_shape_entered" from="DeathBox" to="." method="_on_death_box_area_shape_entered"]
+[connection signal="KeyKilled" from="GuitarKey_0" to="." method="_on_guitar_key_0_key_killed"]
+[connection signal="tree_exited" from="GuitarKey_0" to="." method="_on_guitar_key_0_tree_exited"]

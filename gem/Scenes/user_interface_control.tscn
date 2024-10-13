@@ -1,12 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://fr7y2h7bsg1l"]
+[gd_scene load_steps=12 format=3 uid="uid://fr7y2h7bsg1l"]
 
 [ext_resource type="Texture2D" uid="uid://c268fj6ly4qwu" path="res://Sprites/UI/UI window.png" id="1_4e0ct"]
 [ext_resource type="Texture2D" uid="uid://cqqym4ttnnior" path="res://Sprites/UI/ui uncolored - bars and expression box.png" id="2_44udp"]
-[ext_resource type="Texture2D" uid="uid://bxl3ltv00l5ao" path="res://Sprites/UI/progressbartest.png" id="3_cysid"]
 [ext_resource type="Script" path="res://Scripts/UI/health_bar.gd" id="3_y5nwa"]
-[ext_resource type="Texture2D" uid="uid://bpddwg6045da2" path="res://Sprites/UI/progressbarfull.png" id="4_xks0y"]
+[ext_resource type="Texture2D" uid="uid://bukhom5ajghw5" path="res://Sprites/UI/healthempty.png" id="4_0yhnk"]
+[ext_resource type="Texture2D" uid="uid://cf5rxwc5xp8ul" path="res://Sprites/UI/healthbar.png" id="5_w3ih5"]
 [ext_resource type="Script" path="res://Scripts/UI/sanity_bar.gd" id="6_ntu16"]
 [ext_resource type="Script" path="res://Scripts/UI/work_bar.gd" id="7_28ifb"]
+[ext_resource type="Texture2D" uid="uid://bymcgb7tjj07v" path="res://Sprites/UI/sanitybar-nerve.png" id="7_bkuhp"]
+[ext_resource type="Texture2D" uid="uid://iqosek6l2bkd" path="res://Sprites/UI/sanityempty.png" id="7_ex8jh"]
+[ext_resource type="Texture2D" uid="uid://vacjn4tn7ssb" path="res://Sprites/UI/workprogressbar.png" id="8_bysrp"]
+[ext_resource type="Texture2D" uid="uid://bohrtr0sh3s1" path="res://Sprites/UI/workempty.png" id="10_xvfj0"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -38,7 +42,7 @@ visible = false
 position = Vector2(427, 240)
 texture = ExtResource("2_44udp")
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+[node name="WorkBars" type="AspectRatioContainer" parent="."]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -48,54 +52,55 @@ grow_horizontal = 0
 grow_vertical = 2
 alignment_horizontal = 0
 
-[node name="HealthBar" type="Node2D" parent="AspectRatioContainer"]
+[node name="HealthBar" type="Node2D" parent="WorkBars"]
 script = ExtResource("3_y5nwa")
 
-[node name="TextureProgressBarHealth" type="TextureProgressBar" parent="AspectRatioContainer/HealthBar"]
+[node name="HBar" type="TextureProgressBar" parent="WorkBars/HealthBar"]
 offset_right = 40.0
 offset_bottom = 40.0
-max_value = 60.0
-step = 0.2
+max_value = 30.0
+step = 0.01
 value = 20.0
 fill_mode = 1
-texture_under = ExtResource("3_cysid")
-texture_progress = ExtResource("4_xks0y")
+texture_under = ExtResource("4_0yhnk")
+texture_progress = ExtResource("5_w3ih5")
 
-[node name="TimerHealth" type="Timer" parent="AspectRatioContainer/HealthBar"]
+[node name="TimerHealth" type="Timer" parent="WorkBars/HealthBar"]
 process_callback = 0
 one_shot = true
 
-[node name="SanityBar" type="Node2D" parent="AspectRatioContainer"]
+[node name="SanityBar" type="Node2D" parent="WorkBars"]
 script = ExtResource("6_ntu16")
 
-[node name="TextureProgressBarSanity" type="TextureProgressBar" parent="AspectRatioContainer/SanityBar"]
+[node name="SBar" type="TextureProgressBar" parent="WorkBars/SanityBar"]
 offset_left = -0.39502
 offset_top = 29.6
 offset_right = 137.605
 offset_bottom = 69.6
-max_value = 60.0
-step = 0.2
-value = 10.0
+max_value = 50.0
+step = 0.1
+value = 45.0
 fill_mode = 1
-texture_under = ExtResource("3_cysid")
-texture_progress = ExtResource("4_xks0y")
+texture_under = ExtResource("7_ex8jh")
+texture_progress = ExtResource("7_bkuhp")
 
-[node name="TimerSanity" type="Timer" parent="AspectRatioContainer/SanityBar"]
+[node name="TimerSanity" type="Timer" parent="WorkBars/SanityBar"]
 process_callback = 0
 one_shot = true
 
-[node name="WorkBar" type="Node2D" parent="AspectRatioContainer"]
+[node name="WorkBar" type="Node2D" parent="WorkBars"]
 script = ExtResource("7_28ifb")
 
-[node name="TextureProgressBarWork" type="TextureProgressBar" parent="AspectRatioContainer/WorkBar"]
+[node name="WBar" type="TextureProgressBar" parent="WorkBars/WorkBar"]
 offset_left = -0.39502
 offset_top = 60.6
 offset_right = 137.605
 offset_bottom = 100.6
 step = 20.0
 value = 20.0
-texture_under = ExtResource("3_cysid")
-texture_progress = ExtResource("4_xks0y")
+fill_mode = 1
+texture_under = ExtResource("10_xvfj0")
+texture_progress = ExtResource("8_bysrp")
 
-[connection signal="timeout" from="AspectRatioContainer/HealthBar/TimerHealth" to="AspectRatioContainer/HealthBar" method="_on_timer_health_timeout"]
-[connection signal="timeout" from="AspectRatioContainer/SanityBar/TimerSanity" to="AspectRatioContainer/SanityBar" method="_on_timer_sanity_timeout"]
+[connection signal="timeout" from="WorkBars/HealthBar/TimerHealth" to="WorkBars/HealthBar" method="_on_timer_health_timeout"]
+[connection signal="timeout" from="WorkBars/SanityBar/TimerSanity" to="WorkBars/SanityBar" method="_on_timer_sanity_timeout"]

@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var progressBar = get_node("TextureProgressBarWork")
+@onready var progressBar = get_node("WBar")
 # Called when the node enters the scene tree for the first time.
 
 func _ready():

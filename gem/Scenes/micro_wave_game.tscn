@@ -1,0 +1,141 @@
+[gd_scene load_steps=10 format=3 uid="uid://dr535koocgyhs"]
+
+[ext_resource type="Script" path="res://Scripts/micro_wave_game.gd" id="1_1elcm"]
+[ext_resource type="Script" path="res://Scenes/hand.gd" id="1_fo7yf"]
+[ext_resource type="Texture2D" uid="uid://daqokywcew5rv" path="res://Sprites/MicrowaveButton.PNG" id="2_2wr6h"]
+[ext_resource type="Texture2D" uid="uid://chx1k8vd7o3i5" path="res://Sprites/HandPlaceHolder.png" id="2_2xs47"]
+[ext_resource type="Texture2D" uid="uid://r817j8sk4h4y" path="res://Sprites/MicrowaveBG.PNG" id="4_axqfj"]
+[ext_resource type="Script" path="res://Scripts/marker_2d.gd" id="6_fs2yf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pqwhi"]
+radius = 53.125
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h40j8"]
+size = Vector2(46, 36)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aq1d2"]
+radius = 52.4349
+
+[node name="MicroWaveGame" type="Node2D"]
+z_index = 20
+script = ExtResource("1_1elcm")
+
+[node name="Microwave button" type="Area2D" parent="."]
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Microwave button"]
+z_index = 1
+position = Vector2(706, 488)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("CircleShape2D_pqwhi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Microwave button"]
+z_index = 1
+position = Vector2(741, 470)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("CircleShape2D_pqwhi")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Microwave button"]
+z_index = 1
+position = Vector2(771, 494)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("CircleShape2D_pqwhi")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Microwave button"]
+z_index = 1
+position = Vector2(770, 531)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("CircleShape2D_pqwhi")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Microwave button"]
+z_index = 1
+position = Vector2(736, 546)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("CircleShape2D_pqwhi")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Microwave button"]
+z_index = 1
+position = Vector2(705, 526)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("CircleShape2D_pqwhi")
+
+[node name="Microwave button2" type="Area2D" parent="."]
+visible = false
+position = Vector2(-104, 82)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Microwave button2"]
+z_index = 1
+position = Vector2(548, 157)
+shape = SubResource("RectangleShape2D_h40j8")
+
+[node name="MicroButton" type="Button" parent="Microwave button2"]
+z_index = 1
+offset_left = 524.0
+offset_top = 137.0
+offset_right = 580.0
+offset_bottom = 168.0
+scale = Vector2(0.81291, 1.27167)
+disabled = true
+text = "START"
+
+[node name="HAND" type="CharacterBody2D" parent="."]
+process_mode = 1
+z_index = 1
+position = Vector2(441, 324)
+scale = Vector2(0.84, 0.84)
+script = ExtResource("1_fo7yf")
+
+[node name="HAND" type="Sprite2D" parent="HAND"]
+z_index = 1
+position = Vector2(-3.63304e-05, 60.7142)
+scale = Vector2(0.619051, 0.619051)
+texture = ExtResource("2_2xs47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HAND"]
+top_level = true
+z_index = 1
+position = Vector2(-95, 174)
+shape = SubResource("CircleShape2D_aq1d2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -5
+offset_left = -83.0
+offset_top = 11.0
+offset_right = 1069.0
+offset_bottom = 659.0
+scale = Vector2(0.76, 0.76)
+texture = ExtResource("4_axqfj")
+
+[node name="Buttontimer1" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -79.0
+offset_right = 1048.0
+offset_bottom = 821.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(694, 386.12)
+size_flags_horizontal = 4
+texture = ExtResource("2_2wr6h")
+
+[node name="Marker2D" type="Marker2D" parent="TextureRect2"]
+position = Vector2(252, 79)
+script = ExtResource("6_fs2yf")
+
+[node name="TerminationTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="mouse_entered" from="Microwave button" to="." method="_on_microwave_button_mouse_entered"]
+[connection signal="timeout" from="Buttontimer1" to="." method="_on_buttontimer_1_timeout"]
+[connection signal="timeout" from="TerminationTimer" to="." method="_on_termination_timer_timeout"]

@@ -24,7 +24,7 @@ func _process(_delta: float) -> void:
 	#Check for interaction
 	if (Input.is_action_just_pressed("interact") and inInteractionRange):
 		
-		var loadedGamePacked = load("res://Scenes/minigame_test2.tscn")
+		var loadedGamePacked = load("res://Scenes/guitar_minigame.tscn")
 		var loadedGame = loadedGamePacked.instantiate()
 		loadedGame.position = Vector2(427, 240)
 		get_node("../../../../../../../").add_child(loadedGame)

@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://qt2782tsftfw"]
+[gd_scene load_steps=3 format=3 uid="uid://qt2782tsftfw"]
 
 [ext_resource type="Texture2D" uid="uid://c3xmgvaa4eun7" path="res://Sprites/UI/UI uncolored transparent.png" id="1_sxms7"]
+[ext_resource type="FontFile" uid="uid://b1marmwyw6t8t" path="res://Sprites/Seven Segment.ttf" id="2_1j3xn"]
 
 [node name="UserInterface" type="Node2D"]
 
 [node name="UiWindowLayerTest" type="Sprite2D" parent="."]
 texture = ExtResource("1_sxms7")
+
+[node name="ClockDisplay" type="Label" parent="."]
+offset_left = 278.0
+offset_top = 59.0
+offset_right = 333.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("2_1j3xn")
