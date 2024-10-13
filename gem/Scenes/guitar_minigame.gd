@@ -62,4 +62,10 @@ func _ready():
 
 func _on_termination_timeout() -> void:
 	_ready()
+	
+	
+	
+	
+	
+	
 	queue_free()

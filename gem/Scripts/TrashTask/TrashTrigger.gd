@@ -1,16 +1,21 @@
 extends Area2D
 
+var timerIn
+var timeCost = 8
+
 var sanityBarIn
 var sanityTimerIn
 var sanityTimer
-var sanityMod = 20
+var sanityMod = 10
 
 var healthBarIn
 var healthTimerIn
 var healthTimer
-var healthMod = 20
+var healthMod = 10
 
 func _ready() -> void:
+	timerIn = get_node("../../../MainGameWindow/SubViewportContainer/SubViewport/RoomMovement/DayTimer")
+	
 	healthBarIn = get_node("../../../MainGameWindow/Control/WorkBars/HealthBar/HBar")
 	sanityBarIn = get_node("../../../MainGameWindow/Control/WorkBars/SanityBar/SBar")
 	
@@ -19,9 +24,6 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body == %Ball:
-		#print(get_node("../../../MainGameWindow/Control/WorkBars/HealthBar/HBar").value)
-		#get_node("../../../MainGameWindow/Control/WorkBars/WorkBar/WBar").value += 20
-		#print(get_node("../../../MainGameWindow/Control/WorkBars/HealthBar/HBar").value)
 		
 		#Add to health
 		healthTimer = healthTimerIn.time_left + healthMod
@@ -34,6 +36,13 @@ func _on_body_entered(body: Node2D) -> void:
 		if (sanityTimer > sanityBarIn.max_value):
 			sanityTimer = sanityBarIn.max_value
 		sanityTimerIn.start(sanityTimer)
+		
+		#Skip Time
+		var minutes = timeCost % 4
+		var hours = roundf(timeCost/4)
+		
+		timerIn.minuteValue += minutes*15
+		timerIn.hourValue += hours
 		
 		get_node("../../../MainGameWindow/Mastermind").inTask = false
 		get_node("../../").queue_free()

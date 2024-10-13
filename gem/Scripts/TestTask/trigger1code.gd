@@ -25,7 +25,7 @@ func _process(_delta: float) -> void:
 		
 		var loadedGamePacked = load("res://Scenes/trash_task.tscn")
 		var loadedGame = loadedGamePacked.instantiate()
-		loadedGame.position = Vector2(0, 0)
+		loadedGame.position = Vector2(427, 240)
 		get_node("../../../../../../../").add_child(loadedGame)
 		
 		get_node("../../../../../../Mastermind").inTask = true
