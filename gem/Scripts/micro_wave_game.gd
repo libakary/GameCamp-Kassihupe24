@@ -31,10 +31,13 @@ func _on_buttontimer_1_timeout() -> void:
 	if points == 30:
 		points = points
 	#print (points)
+	$SFXKey1.play()
 
 
 func _on_termination_timer_timeout() -> void:
+	$SFXDing.play()
 	print("now to start the thing..")
+	
 	
 	var timespent : float
 	if points != 0:

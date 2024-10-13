@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dr535koocgyhs"]
+[gd_scene load_steps=12 format=3 uid="uid://dr535koocgyhs"]
 
 [ext_resource type="Script" path="res://Scripts/micro_wave_game.gd" id="1_1elcm"]
 [ext_resource type="Script" path="res://Scenes/hand.gd" id="1_fo7yf"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://chx1k8vd7o3i5" path="res://Sprites/HandPlaceHolder.png" id="2_2xs47"]
 [ext_resource type="Texture2D" uid="uid://r817j8sk4h4y" path="res://Sprites/MicrowaveBG.PNG" id="4_axqfj"]
 [ext_resource type="Script" path="res://Scripts/marker_2d.gd" id="6_fs2yf"]
+[ext_resource type="AudioStream" uid="uid://b42mvnjtvw261" path="res://Audio/Keyboard1.mp3" id="7_8utrn"]
+[ext_resource type="AudioStream" uid="uid://d2jrq7grnfkwh" path="res://Audio/Bell.mp3" id="8_ej3y1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pqwhi"]
 radius = 53.125
@@ -136,6 +138,14 @@ script = ExtResource("6_fs2yf")
 wait_time = 10.0
 one_shot = true
 autostart = true
+
+[node name="SFXKey1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_8utrn")
+pitch_scale = 0.77
+
+[node name="SFXDing" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_ej3y1")
+volume_db = 19.809
 
 [connection signal="mouse_entered" from="Microwave button" to="." method="_on_microwave_button_mouse_entered"]
 [connection signal="timeout" from="Buttontimer1" to="." method="_on_buttontimer_1_timeout"]
