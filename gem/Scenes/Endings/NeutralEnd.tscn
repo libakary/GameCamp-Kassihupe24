@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnxdv14g2hx04"]
+
+[ext_resource type="Texture2D" uid="uid://3fn0wvpw2n70" path="res://Sprites/EndScreens/neutral end - work not done.png" id="1_b443l"]
+
+[node name="NeutralEnd" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(427, 240)
+texture = ExtResource("1_b443l")

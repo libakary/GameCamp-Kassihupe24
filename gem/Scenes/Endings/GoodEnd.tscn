@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://borfdhcri4bll"]
+
+[ext_resource type="Texture2D" uid="uid://yirwy3w4hxrp" path="res://Sprites/EndScreens/good end - all done.png" id="1_8m4ai"]
+
+[node name="GoodEnd" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(427, 240)
+texture = ExtResource("1_8m4ai")

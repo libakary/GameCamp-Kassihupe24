@@ -60,7 +60,7 @@ func _on_termination_timeout() -> void:
 		sanityTimer = sanityBarIn.max_value
 	sanityTimerIn.start(sanityTimer)
 	
-	workBar.value += points*3
+	workBar.value += points*5
 	
 	get_node("../MainGameWindow/Mastermind").inTask = false
 	queue_free()
