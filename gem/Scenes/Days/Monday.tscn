@@ -1,10 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5xwws1uf7e13"]
+[gd_scene load_steps=10 format=3 uid="uid://b5xwws1uf7e13"]
 
 [ext_resource type="Script" path="res://Scenes/Days/mastermindMonDay.gd" id="1_hcxrn"]
 [ext_resource type="PackedScene" uid="uid://decwrshrfcsuv" path="res://Scenes/Days/UIMonday.tscn" id="2_k35jq"]
 [ext_resource type="PackedScene" uid="uid://ccwk06ilarqkx" path="res://Scenes/Days/MondayGame.tscn" id="3_h4mns"]
 [ext_resource type="PackedScene" uid="uid://fr7y2h7bsg1l" path="res://Scenes/user_interface_control.tscn" id="4_jwd1k"]
-[ext_resource type="PackedScene" path="res://Scenes/expression_changes.tscn" id="5_w5ooe"]
+[ext_resource type="PackedScene" uid="uid://devt37n2pk5bl" path="res://Scenes/expression_changes.tscn" id="5_w5ooe"]
+[ext_resource type="AudioStream" uid="uid://bjfxohcv4gta7" path="res://Audio/DAYS/Final/Bad/FriMornBADF.mp3" id="6_weiqd"]
+[ext_resource type="AudioStream" uid="uid://bv5x2bnok6yb5" path="res://Audio/DAYS/Final/Bad/FriLunchBADF.mp3" id="7_hterg"]
+[ext_resource type="AudioStream" uid="uid://q325083djaf7" path="res://Audio/DAYS/Final/Bad/FriNightBAD.mp3" id="8_sj65h"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_t4m5e"]
+fade_time = 0.1
+stream_count = 3
+stream_0 = ExtResource("6_weiqd")
+stream_1 = ExtResource("7_hterg")
+stream_2 = ExtResource("8_sj65h")
 
 [node name="MainGameWindow" type="Node2D"]
 
@@ -37,3 +47,7 @@ offset_bottom = 15.0
 
 [node name="ExpressionChanges" parent="." instance=ExtResource("5_w5ooe")]
 position = Vector2(765, 398)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamPlaylist_t4m5e")
+autoplay = true
