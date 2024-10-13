@@ -3,16 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://c268fj6ly4qwu" path="res://Sprites/UI/UI window.png" id="1_4e0ct"]
 [ext_resource type="Texture2D" uid="uid://cqqym4ttnnior" path="res://Sprites/UI/ui uncolored - bars and expression box.png" id="2_44udp"]
 [ext_resource type="Texture2D" uid="uid://bxl3ltv00l5ao" path="res://Sprites/UI/progressbartest.png" id="3_cysid"]
-[ext_resource type="Script" path="res://Scenes/health_bar.gd" id="3_y5nwa"]
+[ext_resource type="Script" path="res://Scripts/UI/health_bar.gd" id="3_y5nwa"]
 [ext_resource type="Texture2D" uid="uid://bpddwg6045da2" path="res://Sprites/UI/progressbarfull.png" id="4_xks0y"]
-[ext_resource type="Script" path="res://Scenes/sanity_bar.gd" id="6_ntu16"]
-[ext_resource type="Script" path="res://Scenes/work_bar.gd" id="7_28ifb"]
+[ext_resource type="Script" path="res://Scripts/UI/sanity_bar.gd" id="6_ntu16"]
+[ext_resource type="Script" path="res://Scripts/UI/work_bar.gd" id="7_28ifb"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -854.0
+offset_bottom = -480.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -42,9 +44,6 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -854.0
-offset_right = -716.0
-offset_bottom = -400.0
 grow_horizontal = 0
 grow_vertical = 2
 alignment_horizontal = 0

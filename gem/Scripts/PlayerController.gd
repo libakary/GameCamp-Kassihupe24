@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed: int = 400
+var speed: int = 300
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,6 +12,20 @@ func _process(_delta: float) -> void:
 	var input_direction = Vector2.ZERO
 	input_direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	if input_direction:
+		velocity = input_direction * speed
+		#play walk animation + flip them based on direction
+		if velocity != Vector2.ZERO:
+			$AnimatedSprite2D.play("walk")
+			$AnimatedSprite2D.flip_v = false
+			# See the note below about boolean assignment.
+			$AnimatedSprite2D.flip_h = velocity < Vector2.ZERO
+			
+	else:
+		#velocity.x = move_toward(velocity.x, 0, speed)
+		#velocity.y = move_toward(velocity.y, 0, speed)
+		#movement stops and character stands... not too elegant but
+		$AnimatedSprite2D.play("idle")	
 	
 	# Normalize the direction so that diagonal movement isn't faster
 	if input_direction != Vector2.ZERO:
@@ -24,17 +38,5 @@ func _process(_delta: float) -> void:
 	if (!get_node("../../../../Mastermind").inTask):
 		move_and_slide()
 		
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * speed
-		#play walk animation + flip them based on direction
-		if velocity.x != 0:
-			$AnimatedSprite2D.play("walk")
-			$AnimatedSprite2D.flip_v = false
-			# See the note below about boolean assignment.
-			$AnimatedSprite2D.flip_h = velocity.x < 0
-			
-	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
-		#movement stops and character stands... not too elegant but
-		$AnimatedSprite2D.play("idle")	
+	#var direction = Input.get_axis("ui_left", "ui_right")
+	

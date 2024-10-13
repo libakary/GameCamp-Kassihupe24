@@ -1,11 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqwf41a0ffbco"]
+[gd_scene load_steps=4 format=3 uid="uid://6ob6p3r4biy7"]
 
-[ext_resource type="Script" path="res://timer.gd" id="1_rsko6"]
 [ext_resource type="Texture2D" uid="uid://bxl3ltv00l5ao" path="res://Sprites/UI/progressbartest.png" id="2_cugj7"]
 [ext_resource type="Texture2D" uid="uid://bpddwg6045da2" path="res://Sprites/UI/progressbarfull.png" id="3_l0ask"]
 
+[sub_resource type="GDScript" id="GDScript_cetsi"]
+script/source = "extends Node2D
+
+@onready var timer = get_node(\"Timer\")
+@onready var progressBar = get_node(\"TextureProgressBar\")
+# Called when the node enters the scene tree for the first time.
+
+func _ready():
+	timer.wait_time = progressBar.value
+	$Timer.start()
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	print(timer.time_left)
+	progressBar.value = timer.time_left
+
+#siia tuleks siis if timer on 30 then all kinds of shit h
+
+#iga node eraldi kutsuda ja kirjutada mis sellega juhtub
+
+func _on_timer_timeout():
+	print(\"Health 0\")
+"
+
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_rsko6")
+script = SubResource("GDScript_cetsi")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 offset_right = 40.0
