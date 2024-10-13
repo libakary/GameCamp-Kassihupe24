@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cusp1gqua1p72"]
+[gd_scene load_steps=19 format=3 uid="uid://cusp1gqua1p72"]
 
 [ext_resource type="Texture2D" uid="uid://cmjuny03yqooe" path="res://Sprites/Background/RoomNight.PNG" id="2_g77em"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_086r8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dycueqqeucwh4" path="res://Sprites/Background/Guitar Day.PNG" id="5_n8s4h"]
 [ext_resource type="Texture2D" uid="uid://bkk4h0jchdylv" path="res://Sprites/Background/Guitar Night.PNG" id="6_dm6bl"]
 [ext_resource type="Texture2D" uid="uid://ckn0kc6d4il0e" path="res://Sprites/Halos/voodi halo.PNG" id="7_dy7mn"]
+[ext_resource type="Texture2D" uid="uid://dlk7c8wqnau0f" path="res://Sprites/Halos/valge halo ring mikrokas.PNG" id="8_o4ir6"]
 [ext_resource type="Texture2D" uid="uid://8febow406e3u" path="res://Sprites/Halos/kitarri halo.PNG" id="9_4vtq2"]
 [ext_resource type="Texture2D" uid="uid://bum5c8wg1c3ct" path="res://Sprites/Halos/prügikoti halo.PNG" id="10_bh2bo"]
 [ext_resource type="PackedScene" uid="uid://dtlgd7f7pwqcl" path="res://Scenes/Triggers/trigger1.tscn" id="10_mpmu7"]
@@ -14,7 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Triggers/trigger2.tscn" id="12_iac0n"]
 [ext_resource type="Script" path="res://Scripts/day_time.gd" id="13_jainw"]
 [ext_resource type="PackedScene" uid="uid://bryb7ualxm5oj" path="res://Scenes/Triggers/trigger3.tscn" id="13_t1c80"]
-[ext_resource type="PackedScene" path="res://Scenes/Triggers/trigger4.tscn" id="15_c106h"]
+[ext_resource type="PackedScene" uid="uid://c2x1vaetoig4" path="res://Scenes/Triggers/trigger4.tscn" id="15_c106h"]
+[ext_resource type="PackedScene" uid="uid://y36gyikpa2et" path="res://Scenes/Triggers/trigger5.tscn" id="17_ifurc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o1kal"]
 radius = 28.1603
@@ -73,6 +75,9 @@ texture = ExtResource("6_dm6bl")
 [node name="BedHalo" type="Sprite2D" parent="Halos"]
 texture = ExtResource("7_dy7mn")
 
+[node name="MikroHalo" type="Sprite2D" parent="Halos"]
+texture = ExtResource("8_o4ir6")
+
 [node name="GuitarHalo" type="Sprite2D" parent="Halos"]
 texture = ExtResource("9_4vtq2")
 
@@ -96,3 +101,6 @@ script = ExtResource("13_jainw")
 
 [node name="Node2D" parent="." instance=ExtResource("15_c106h")]
 position = Vector2(-89, 23)
+
+[node name="Node2D2" parent="." instance=ExtResource("17_ifurc")]
+position = Vector2(-177, 169)
