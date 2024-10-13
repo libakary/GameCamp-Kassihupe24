@@ -27,6 +27,10 @@ func _on_termination_timer_timeout() -> void:
 	await get_tree().create_timer(3).timeout
 	get_tree().paused = true
 	var timespent : float
-	timespent = 10 * ((2 / (points/ 10)) +1)
+	if points != 0:
+		timespent = 10 * ((2 / (points/ 10)) +1)
+	else:
+		timespent = 40
+	
 	print (timespent)
 	queue_free()
