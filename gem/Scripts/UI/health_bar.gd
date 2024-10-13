@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var timer = get_node("TimerHealth")
-@onready var progressBar = get_node("TextureProgressBarHealth")
+@onready var progressBar = get_node("HBar")
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
