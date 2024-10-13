@@ -20,10 +20,11 @@ autostart = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = 2
-offset_left = -20.0
+offset_left = -20.5882
 offset_top = -19.0
-offset_right = 20.0
+offset_right = 19.4118
 offset_bottom = 21.0
+scale = Vector2(1.04821, 1)
 texture = SubResource("CanvasTexture_durr6")
 
 [connection signal="timeout" from="DecayTimer" to="." method="_on_decay_timer_timeout"]

@@ -1,11 +1,12 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=3 format=3 uid="uid://r0bx44oewja8"]
-=======
-[gd_scene load_steps=4 format=3 uid="uid://c1somljux4adq"]
->>>>>>> Stashed changes
+[gd_scene load_steps=6 format=3 uid="uid://r0bx44oewja8"]
 
 [ext_resource type="Script" path="res://Scenes/guitar_minigame.gd" id="1_mt573"]
-[ext_resource type="PackedScene" uid="uid://2eijq70h0eyu" path="res://Scenes/GuitarKey.tscn" id="2_d1jsv"]
+[ext_resource type="Texture2D" uid="uid://5g0rm5tsh6d7" path="res://Sprites/Background/GuitarMinigameBG.PNG" id="2_rbgqp"]
+[ext_resource type="PackedScene" uid="uid://cu5v52xnfx723" path="res://Scenes/guitar_pressed.tscn" id="2_v4mhw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gq8qv"]
+font_size = 10
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nf10q"]
 size = Vector2(214, 20)
@@ -17,6 +18,7 @@ script = ExtResource("1_mt573")
 layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 show_behind_parent = true
 z_index = -50
 offset_right = 677.0
@@ -24,6 +26,7 @@ offset_bottom = 325.0
 color = Color(0.89, 0.504333, 0.3115, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+visible = false
 show_behind_parent = true
 z_index = -5
 offset_left = 258.0
@@ -33,73 +36,51 @@ offset_bottom = 33.0
 scale = Vector2(3.88, 8.44)
 color = Color(0.0576, 0.0576, 0.48, 1)
 
-[node name="Up" type="ColorRect" parent="CanvasLayer"]
+[node name="RichTextLabel" type="Label" parent="CanvasLayer"]
+z_index = 1
 offset_left = 266.0
-offset_top = 279.0
+offset_top = 269.0
 offset_right = 306.0
-offset_bottom = 319.0
-scale = Vector2(0.559999, 0.559999)
-color = Color(0, 0.432667, 0.59, 1)
+offset_bottom = 309.0
+scale = Vector2(3.01142, 3.01142)
+text = "<"
+label_settings = SubResource("LabelSettings_gq8qv")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Up"]
-layout_mode = 0
-offset_left = 1.78566
-offset_top = -14.2858
-offset_right = 41.7857
-offset_bottom = 25.7142
-scale = Vector2(2.57142, 2.57142)
-text = "←"
+[node name="RichTextLabel2" type="Label" parent="CanvasLayer"]
+z_index = 1
+offset_left = 386.0
+offset_top = 268.0
+offset_right = 426.0
+offset_bottom = 308.0
+scale = Vector2(3.01142, 3.01142)
+text = ">"
+label_settings = SubResource("LabelSettings_gq8qv")
 
-[node name="Up2" type="ColorRect" parent="CanvasLayer"]
-offset_left = 303.0
-offset_top = 279.0
-offset_right = 343.0
-offset_bottom = 319.0
-scale = Vector2(0.559999, 0.559999)
-color = Color(0, 0.432667, 0.59, 1)
+[node name="RichTextLabel3" type="Label" parent="CanvasLayer"]
+z_index = 1
+offset_left = 376.0
+offset_top = 283.0
+offset_right = 416.0
+offset_bottom = 323.0
+rotation = 1.57079
+scale = Vector2(3.01142, 3.01142)
+text = ">"
+label_settings = SubResource("LabelSettings_gq8qv")
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Up2"]
-layout_mode = 0
-offset_left = 10.7142
-offset_top = -12.5001
-offset_right = 50.7142
-offset_bottom = 27.4999
-scale = Vector2(2.57142, 2.57142)
-text = "↑"
+[node name="RichTextLabel4" type="Label" parent="CanvasLayer"]
+z_index = 1
+offset_left = 294.0
+offset_top = 298.0
+offset_right = 334.0
+offset_bottom = 338.0
+rotation = -1.57079
+scale = Vector2(3.01142, 3.01142)
+text = ">"
+label_settings = SubResource("LabelSettings_gq8qv")
 
-[node name="Up3" type="ColorRect" parent="CanvasLayer"]
-offset_left = 345.0
-offset_top = 279.0
-offset_right = 385.0
-offset_bottom = 319.0
-scale = Vector2(0.559999, 0.559999)
-color = Color(0, 0.432667, 0.59, 1)
-
-[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/Up3"]
-layout_mode = 0
-offset_left = 10.7143
-offset_top = -10.7144
-offset_right = 50.7143
-offset_bottom = 29.2856
-scale = Vector2(2.57142, 2.57142)
-text = "↓"
-
-[node name="Up4" type="ColorRect" parent="CanvasLayer"]
-offset_left = 378.0
-offset_top = 279.0
-offset_right = 418.0
-offset_bottom = 319.0
-scale = Vector2(0.559999, 0.559999)
-color = Color(0, 0.432667, 0.59, 1)
-
-[node name="RichTextLabel4" type="RichTextLabel" parent="CanvasLayer/Up4"]
-layout_mode = 0
-offset_left = 1.78573
-offset_top = -16.0715
-offset_right = 41.7857
-offset_bottom = 23.9285
-scale = Vector2(2.57142, 2.57142)
-text = "→"
+[node name="GuitarMinigameBg" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(463, 282)
+texture = ExtResource("2_rbgqp")
 
 [node name="GuitarTimer" type="Timer" parent="."]
 wait_time = 0.5
@@ -139,10 +120,15 @@ position = Vector2(357, -18)
 [node name="Point4" type="Marker2D" parent="Spawnpoints"]
 position = Vector2(389, -18)
 
-[node name="GuitarKey_0" parent="." instance=ExtResource("2_d1jsv")]
-position = Vector2(-42, -34)
+[node name="GuitarPressed" parent="." instance=ExtResource("2_v4mhw")]
+position = Vector2(-22, -21)
+
+[node name="TERMINATION" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
 
 [connection signal="timeout" from="GuitarTimer" to="." method="_on_guitar_timer_timeout"]
-[connection signal="area_shape_entered" from="DeathBox" to="." method="_on_death_box_area_shape_entered"]
-[connection signal="KeyKilled" from="GuitarKey_0" to="." method="_on_guitar_key_0_key_killed"]
-[connection signal="tree_exited" from="GuitarKey_0" to="." method="_on_guitar_key_0_tree_exited"]
+[connection signal="area_entered" from="DeathBox" to="." method="_on_death_box_area_entered"]
+[connection signal="area_entered" from="GuitarPressed" to="." method="_on_guitar_pressed_area_entered"]
+[connection signal="timeout" from="TERMINATION" to="." method="_on_termination_timeout"]

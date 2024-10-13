@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=854
 window/size/viewport_height=480
-window/size/mode=3
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
 window/vsync/vsync_mode=0
