@@ -58,9 +58,9 @@ script = ExtResource("3_y5nwa")
 [node name="HBar" type="TextureProgressBar" parent="WorkBars/HealthBar"]
 offset_right = 40.0
 offset_bottom = 40.0
-max_value = 30.0
-step = 0.01
-value = 20.0
+max_value = 50.0
+step = 0.1
+value = 50.0
 fill_mode = 1
 texture_under = ExtResource("4_0yhnk")
 texture_progress = ExtResource("5_w3ih5")

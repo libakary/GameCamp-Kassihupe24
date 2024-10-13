@@ -3,7 +3,7 @@ extends Sprite2D
 var nightBGSprite
 var dayGuitar
 var nightGuitar
-var fadeSpeed: float = 0.0001
+var fadeSpeed: float = 0.00003
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

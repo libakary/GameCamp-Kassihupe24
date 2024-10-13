@@ -5,6 +5,15 @@ var buttoncadence = 0.2
 var buttoncooldown = 0.0
 var lastButtonPressed
 
+var timerIn
+var timeCost = 8
+
+var workBar
+
+var sanityBarIn
+var sanityTimerIn
+var sanityTimer
+var sanityMod = -10
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -26,13 +35,32 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	
 
 func _ready():
-	pass
-
-
+	timerIn = get_node("../MainGameWindow/SubViewportContainer/SubViewport/RoomMovement/DayTimer")
+	
+	workBar = get_node("../MainGameWindow/Control/WorkBars/WorkBar/WBar")
+	
+	sanityTimerIn = get_node("../MainGameWindow/Control/WorkBars/SanityBar/TimerSanity")
+	sanityBarIn = get_node("../MainGameWindow/Control/WorkBars/SanityBar/SBar")
+	
 func _on_termination_timeout() -> void:
 	var timespent : float
 	timespent = 10 * ((2 / (points/ 5)) +1)
 	print (timespent)
+	
+	#Skip Time
+	var minutes = timeCost % 4
+	var hours = roundf(timeCost/4)
+	
+	timerIn.minuteValue += minutes*15
+	timerIn.hourValue += hours
+	
+	#Add to sanity
+	sanityTimer = sanityTimerIn.time_left + sanityMod
+	if (sanityTimer > sanityBarIn.max_value):
+		sanityTimer = sanityBarIn.max_value
+	sanityTimerIn.start(sanityTimer)
+	
+	workBar.value += 40
 	
 	get_node("../MainGameWindow/Mastermind").inTask = false
 	queue_free()
