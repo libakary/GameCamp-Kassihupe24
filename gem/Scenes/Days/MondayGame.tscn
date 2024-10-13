@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://ccwk06ilarqkx"]
+[gd_scene load_steps=20 format=3 uid="uid://ccwk06ilarqkx"]
 
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="1_qnx80"]
 [ext_resource type="Texture2D" uid="uid://cmjuny03yqooe" path="res://Sprites/Background/RoomNight.PNG" id="2_0wp4e"]
+[ext_resource type="Texture2D" uid="uid://6hrguftjtfjf" path="res://Sprites/NightPlaceHolder.png" id="2_4yxm1"]
 [ext_resource type="Texture2D" uid="uid://byacfw62rysxt" path="res://Sprites/Background/RoomDay.PNG" id="3_ohmjs"]
 [ext_resource type="Script" path="res://Scripts/fade_to_night.gd" id="4_8qjpg"]
 [ext_resource type="Texture2D" uid="uid://dycueqqeucwh4" path="res://Sprites/Background/Guitar Day.PNG" id="5_0rw7g"]
@@ -30,6 +31,11 @@ position = Vector2(-140, 99)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -100)
 editor_draw_limits = true
+
+[node name="nightFadeBG" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 50
+texture = ExtResource("2_4yxm1")
 
 [node name="BGnight" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)

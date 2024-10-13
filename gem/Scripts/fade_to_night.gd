@@ -18,8 +18,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	#Fade BG
 	#modulate.a -= fadeSpeed
-	nightBGSprite.modulate.a = 1/(15-(Daytimer.hourValue-8))
+	nightBGSprite.modulate.a = 1/(16-(Daytimer.hourValue-8))
 	
 	#Fade Guitar
 	#dayGuitar.modulate.a -= fadeSpeed
-	nightGuitar.modulate.a = 1/(15-(Daytimer.hourValue-8))
+	nightGuitar.modulate.a = 1/(16-(Daytimer.hourValue-8))

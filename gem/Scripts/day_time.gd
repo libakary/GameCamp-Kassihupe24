@@ -37,8 +37,8 @@ func _process(delta: float) -> void:
 	if (hourValue >= 23):	
 		nightFade.modulate.a += 0.001
 		minuteValue = 0
-		
-		#get_tree().change_scene_to_file("res://Scenes/Days/Monday.tscn")
+	if (nightFade.modulate.a >= 1):
+		get_tree().change_scene_to_file("res://Scenes/Days/Monday.tscn")
 	
 	
 	lastTime = roundf(time_left)

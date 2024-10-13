@@ -59,13 +59,11 @@ polygon = PackedVector2Array(-351, 198, 353, 198, 571, 1, 551, -383, 498, -383, 
 stream = ExtResource("6_rd32j")
 max_distance = 4000.0
 
-
 [node name="TrashCrash" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-132.5, -50)
 stream = ExtResource("6_rd32j")
 autoplay = true
 max_distance = 4000.0
-
 
 [connection signal="body_entered" from="Chute/Area2D" to="Chute/Area2D" method="_on_body_entered"]
 [connection signal="finished" from="Chute/Area2D/CollisionPolygon2D/TrashCrash" to="Chute/Area2D" method="_on_trash_crash_finished"]
