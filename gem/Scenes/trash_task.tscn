@@ -15,16 +15,17 @@ position = Vector2(465, 313)
 
 [node name="PowerBar" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(-259, 60)
+position = Vector2(-344.5, -15)
 texture = ExtResource("1_fmegu")
 offset = Vector2(0, -16)
 
 [node name="BG" type="Sprite2D" parent="."]
+position = Vector2(-85.5, -75)
 texture = ExtResource("2_s1ucj")
 
 [node name="Ball" type="CharacterBody2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-259, 109)
+position = Vector2(-344.5, 34)
 script = ExtResource("2_h25ys")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ball"]
@@ -35,7 +36,7 @@ position = Vector2(0, 5)
 shape = SubResource("CircleShape2D_vmeyc")
 
 [node name="Chute" type="Node2D" parent="."]
-position = Vector2(-47, 25)
+position = Vector2(-132.5, -50)
 
 [node name="Area2D" type="Area2D" parent="Chute"]
 script = ExtResource("4_woysl")
