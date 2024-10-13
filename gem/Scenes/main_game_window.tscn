@@ -5,8 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://fr7y2h7bsg1l" path="res://Scenes/user_interface_control.tscn" id="4_mhfx8"]
 [ext_resource type="PackedScene" uid="uid://devt37n2pk5bl" path="res://Scenes/expression_changes.tscn" id="5_2860e"]
 [ext_resource type="PackedScene" uid="uid://qt2782tsftfw" path="res://Scenes/user_interface.tscn" id="5_x6q2b"]
-<<<<<<< Updated upstream
-=======
+
 [ext_resource type="AudioStream" uid="uid://brf4434ohyef6" path="res://Audio/DAYS/1st 2nd/MonTueMorn.mp3" id="6_ux8gy"]
 [ext_resource type="AudioStream" uid="uid://dclvjbad3br87" path="res://Audio/DAYS/1st 2nd/MonTueLunch.mp3" id="7_3knrq"]
 [ext_resource type="AudioStream" uid="uid://crs28xfar1qqj" path="res://Audio/DAYS/1st 2nd/TueNight.mp3" id="8_qke1n"]
@@ -18,7 +17,6 @@ stream_count = 3
 stream_0 = ExtResource("6_ux8gy")
 stream_1 = ExtResource("7_3knrq")
 stream_2 = ExtResource("8_qke1n")
->>>>>>> Stashed changes
 
 [node name="MainGameWindow" type="Node2D"]
 
@@ -51,10 +49,7 @@ offset_bottom = 15.0
 
 [node name="ExpressionChanges" parent="." instance=ExtResource("5_2860e")]
 position = Vector2(765, 398)
-<<<<<<< Updated upstream
-=======
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamPlaylist_57vu2")
 autoplay = true
->>>>>>> Stashed changes
