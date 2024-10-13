@@ -5,7 +5,7 @@ extends Node2D
 
 @onready var guitarkey_positions = $Spawnpoints
 
-var points_total = 20
+var points_total = 16
 var points_lost = 0
 var points_gained = 0
 var points = points_total - points_lost
@@ -51,14 +51,14 @@ func _process(delta: float) -> void:
 	#GainPoint()
 
 func _on_death_box_area_entered(area: Area2D) -> void:
-	print("U missed")
+
 	points_lost += 1
 	points_total - points_lost
 	#print(points_lost)
 	#print(points_total - points_lost)
 
 func _ready():
-	print(points_total - points_lost)
+	pass
 
 var timerIn
 var timeCost = 8
@@ -66,11 +66,27 @@ var timeCost = 8
 var sanityBarIn
 var sanityTimerIn
 var sanityTimer
-var sanityMod = -5
+var sanityMod
+
 
 func _on_termination_timeout() -> void:
 	_ready()
 	get_node("../MainGameWindow/Mastermind").inTask = false
 	
+	timerIn = get_node("../MainGameWindow/SubViewportContainer/SubViewport/RoomMovement/DayTimer")
+	
+	sanityBarIn = get_node("../MainGameWindow/Control/WorkBars/SanityBar/SBar")
+	sanityTimerIn = get_node("../MainGameWindow/Control/WorkBars/SanityBar/TimerSanity")
+	sanityMod = points_total-points_lost*1.5
+	sanityTimer = sanityTimerIn.time_left + sanityMod
+	if (sanityTimer > sanityBarIn.max_value):
+		sanityTimer = sanityBarIn.max_value
+	sanityTimerIn.start(sanityTimer)
+	
+	var minutes = timeCost % 4
+	var hours = roundf(timeCost/4)
+	
+	timerIn.minuteValue += minutes*15
+	timerIn.hourValue += hours
 	
 	queue_free()

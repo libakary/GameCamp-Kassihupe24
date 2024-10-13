@@ -19,8 +19,8 @@ func _ready() -> void:
 	healthBarIn = get_node("../../../MainGameWindow/Control/WorkBars/HealthBar/HBar")
 	sanityBarIn = get_node("../../../MainGameWindow/Control/WorkBars/SanityBar/SBar")
 	
-	healthTimerIn = get_node("../../../MainGameWindow/Control/WorkBars/HealthBar/TimerHealth") 
-	sanityTimerIn = get_node("../../../MainGameWindow/Control/WorkBars/SanityBar/TimerSanity") 
+	healthTimerIn = get_node("../../../MainGameWindow/Control/WorkBars/HealthBar/TimerHealth")
+	sanityTimerIn = get_node("../../../MainGameWindow/Control/WorkBars/SanityBar/TimerSanity")
 
 func _on_body_entered(body: Node2D) -> void:
 	if body == %Ball:
