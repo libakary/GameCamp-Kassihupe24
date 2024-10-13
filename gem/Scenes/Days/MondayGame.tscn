@@ -1,0 +1,106 @@
+[gd_scene load_steps=19 format=3 uid="uid://ccwk06ilarqkx"]
+
+[ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="1_qnx80"]
+[ext_resource type="Texture2D" uid="uid://cmjuny03yqooe" path="res://Sprites/Background/RoomNight.PNG" id="2_0wp4e"]
+[ext_resource type="Texture2D" uid="uid://byacfw62rysxt" path="res://Sprites/Background/RoomDay.PNG" id="3_ohmjs"]
+[ext_resource type="Script" path="res://Scripts/fade_to_night.gd" id="4_8qjpg"]
+[ext_resource type="Texture2D" uid="uid://dycueqqeucwh4" path="res://Sprites/Background/Guitar Day.PNG" id="5_0rw7g"]
+[ext_resource type="Texture2D" uid="uid://bkk4h0jchdylv" path="res://Sprites/Background/Guitar Night.PNG" id="6_tvxfy"]
+[ext_resource type="Texture2D" uid="uid://ckn0kc6d4il0e" path="res://Sprites/Halos/voodi halo.PNG" id="7_j3e1k"]
+[ext_resource type="Texture2D" uid="uid://dlk7c8wqnau0f" path="res://Sprites/Halos/valge halo ring mikrokas.PNG" id="8_ukrhs"]
+[ext_resource type="Texture2D" uid="uid://8febow406e3u" path="res://Sprites/Halos/kitarri halo.PNG" id="9_njtyg"]
+[ext_resource type="Texture2D" uid="uid://bum5c8wg1c3ct" path="res://Sprites/Halos/prügikoti halo.PNG" id="10_8ripa"]
+[ext_resource type="Texture2D" uid="uid://c3v1odweekmr0" path="res://Sprites/Halos/arvuti halo.PNG" id="11_8h8ty"]
+[ext_resource type="PackedScene" uid="uid://dtlgd7f7pwqcl" path="res://Scenes/Triggers/trigger1.tscn" id="12_rya58"]
+[ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Triggers/trigger2.tscn" id="13_5ykl6"]
+[ext_resource type="PackedScene" uid="uid://bryb7ualxm5oj" path="res://Scenes/Triggers/trigger3.tscn" id="14_tfeb3"]
+[ext_resource type="Script" path="res://Scripts/day_time.gd" id="15_d06ep"]
+[ext_resource type="PackedScene" uid="uid://c2x1vaetoig4" path="res://Scenes/Triggers/trigger4.tscn" id="16_sh205"]
+[ext_resource type="PackedScene" uid="uid://y36gyikpa2et" path="res://Scenes/Triggers/trigger5.tscn" id="17_wp6e2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o1kal"]
+radius = 28.1603
+
+[node name="RoomMovementAndInteractables" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_qnx80")]
+z_index = 1
+position = Vector2(-97, 150)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(0, -100)
+editor_draw_limits = true
+
+[node name="BGnight" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("2_0wp4e")
+
+[node name="BG" type="Sprite2D" parent="."]
+z_index = -2
+texture = ExtResource("3_ohmjs")
+script = ExtResource("4_8qjpg")
+
+[node name="Hitboxes" type="Node2D" parent="BG"]
+
+[node name="Furniture" type="StaticBody2D" parent="BG/Hitboxes"]
+
+[node name="Furniture" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
+polygon = PackedVector2Array(-182, 64, -37, -19, 111, 65, 140, 56, 339, 167, 443, 129, 12, -224, -406, 26, -494, 131, -51, 424, -20, 418, -267.136, 236.871, -203, 199, -200, 134, -339, 47, -272, 9)
+
+[node name="Guitar" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
+polygon = PackedVector2Array(77, 191, 103, 169, 102, 116, 79, 111, 57, 114, 53, 172)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Hitboxes/Furniture"]
+position = Vector2(214, 109)
+shape = SubResource("CircleShape2D_o1kal")
+
+[node name="Void" type="StaticBody2D" parent="BG/Hitboxes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BG/Hitboxes/Void"]
+polygon = PackedVector2Array(-67, 449, 284, 313, 344, 175, -56, 412)
+
+[node name="FurnitureOverlays" type="Node2D" parent="BG"]
+
+[node name="GuitarDay" type="Sprite2D" parent="BG/FurnitureOverlays"]
+z_index = 10
+texture = ExtResource("5_0rw7g")
+
+[node name="GuitarNight" type="Sprite2D" parent="BG/FurnitureOverlays"]
+modulate = Color(1, 1, 1, 0)
+z_index = 11
+texture = ExtResource("6_tvxfy")
+
+[node name="Halos" type="Node2D" parent="."]
+
+[node name="BedHalo" type="Sprite2D" parent="Halos"]
+texture = ExtResource("7_j3e1k")
+
+[node name="MikroHalo" type="Sprite2D" parent="Halos"]
+texture = ExtResource("8_ukrhs")
+
+[node name="GuitarHalo" type="Sprite2D" parent="Halos"]
+texture = ExtResource("9_njtyg")
+
+[node name="TrashHalo" type="Sprite2D" parent="Halos"]
+texture = ExtResource("10_8ripa")
+
+[node name="ComputerHalo" type="Sprite2D" parent="Halos"]
+texture = ExtResource("11_8h8ty")
+
+[node name="TrashTrigger" parent="." instance=ExtResource("12_rya58")]
+position = Vector2(187, 135)
+
+[node name="GuitarTrigger" parent="." instance=ExtResource("13_5ykl6")]
+position = Vector2(30, 173)
+
+[node name="MicrowaveTrigger" parent="." instance=ExtResource("14_tfeb3")]
+position = Vector2(47, 49)
+
+[node name="DayTimer" type="Timer" parent="."]
+script = ExtResource("15_d06ep")
+
+[node name="PCTrigger" parent="." instance=ExtResource("16_sh205")]
+position = Vector2(-89, 23)
+
+[node name="BedTrigger" parent="." instance=ExtResource("17_wp6e2")]
+position = Vector2(-177, 169)

@@ -23,7 +23,7 @@ func _process(_delta: float) -> void:
 	#Check for interaction
 	if (Input.is_action_just_pressed("interact") and inInteractionRange):
 		
-		get_tree().change_scene_to_file("res://Scenes/start_menu_window.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Days/Monday.tscn")
 		
 		#var loadedGamePacked = load("res://Scenes/micro_wave_game.tscn")
 		#var loadedGame = loadedGamePacked.instantiate()

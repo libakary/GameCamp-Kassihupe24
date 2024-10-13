@@ -22,4 +22,4 @@ func _process(_delta: float) -> void:
 	
 	#Fade Guitar
 	#dayGuitar.modulate.a -= fadeSpeed
-	nightGuitar.modulate.a += 1/(15-(Daytimer.hourValue-8))
+	nightGuitar.modulate.a = 1/(15-(Daytimer.hourValue-8))

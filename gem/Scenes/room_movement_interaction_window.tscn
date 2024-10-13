@@ -99,8 +99,8 @@ position = Vector2(47, 49)
 [node name="DayTimer" type="Timer" parent="."]
 script = ExtResource("13_jainw")
 
-[node name="Node2D" parent="." instance=ExtResource("15_c106h")]
+[node name="PCTrigger" parent="." instance=ExtResource("15_c106h")]
 position = Vector2(-89, 23)
 
-[node name="Node2D2" parent="." instance=ExtResource("17_ifurc")]
+[node name="BedTrigger" parent="." instance=ExtResource("17_ifurc")]
 position = Vector2(-177, 169)
