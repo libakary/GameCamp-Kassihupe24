@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cusp1gqua1p72"]
+[gd_scene load_steps=13 format=3 uid="uid://cusp1gqua1p72"]
 
 [ext_resource type="Texture2D" uid="uid://cmjuny03yqooe" path="res://Sprites/Background/RoomNight.PNG" id="2_g77em"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_086r8"]
 [ext_resource type="Script" path="res://Scripts/fade_to_night.gd" id="3_k2qam"]
 [ext_resource type="Texture2D" uid="uid://byacfw62rysxt" path="res://Sprites/Background/RoomDay.PNG" id="3_q7rd7"]
+[ext_resource type="Texture2D" uid="uid://dycueqqeucwh4" path="res://Sprites/Background/Guitar Day.PNG" id="5_n8s4h"]
+[ext_resource type="Texture2D" uid="uid://bkk4h0jchdylv" path="res://Sprites/Background/Guitar Night.PNG" id="6_dm6bl"]
 [ext_resource type="Texture2D" uid="uid://ckn0kc6d4il0e" path="res://Sprites/Halos/voodi halo.PNG" id="7_dy7mn"]
 [ext_resource type="Texture2D" uid="uid://8febow406e3u" path="res://Sprites/Halos/kitarri halo.PNG" id="9_4vtq2"]
 [ext_resource type="Texture2D" uid="uid://bum5c8wg1c3ct" path="res://Sprites/Halos/prügikoti halo.PNG" id="10_bh2bo"]
@@ -40,7 +42,7 @@ script = ExtResource("3_k2qam")
 polygon = PackedVector2Array(-182, 64, -37, -19, 111, 65, 140, 56, 339, 167, 443, 129, 12, -224, -406, 26, -494, 131, -51, 424, -20, 418, -267.136, 236.871, -203, 199, -200, 134, -339, 47, -272, 9)
 
 [node name="Guitar" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
-polygon = PackedVector2Array(77, 191, 103, 169, 95, 152, 74.8842, 140.526, 58, 153, 53, 172)
+polygon = PackedVector2Array(77, 191, 103, 169, 102, 116, 79, 111, 57, 114, 53, 172)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Hitboxes/Furniture"]
 position = Vector2(214, 109)
@@ -50,6 +52,17 @@ shape = SubResource("CircleShape2D_o1kal")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BG/Hitboxes/Void"]
 polygon = PackedVector2Array(-67, 449, 284, 313, 344, 175, -56, 412)
+
+[node name="FurnitureOverlays" type="Node2D" parent="BG"]
+
+[node name="GuitarDay" type="Sprite2D" parent="BG/FurnitureOverlays"]
+z_index = 10
+texture = ExtResource("5_n8s4h")
+
+[node name="GuitarNight" type="Sprite2D" parent="BG/FurnitureOverlays"]
+modulate = Color(1, 1, 1, 0)
+z_index = 11
+texture = ExtResource("6_dm6bl")
 
 [node name="Halos" type="Node2D" parent="."]
 
