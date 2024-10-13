@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://r0bx44oewja8"]
+[gd_scene load_steps=6 format=3 uid="uid://b8thd0afb5hn"]
 
 [ext_resource type="Script" path="res://Scenes/guitar_minigame.gd" id="1_mt573"]
 [ext_resource type="Texture2D" uid="uid://5g0rm5tsh6d7" path="res://Sprites/Background/GuitarMinigameBG.PNG" id="2_rbgqp"]
-[ext_resource type="PackedScene" uid="uid://cu5v52xnfx723" path="res://Scenes/guitar_pressed.tscn" id="2_v4mhw"]
+[ext_resource type="PackedScene" path="res://Scenes/guitar_pressed.tscn" id="2_v4mhw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gq8qv"]
 font_size = 10
