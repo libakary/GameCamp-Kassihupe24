@@ -24,7 +24,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body == %Ball:
-		$CollisionPolygon2D/TrashCrash.play()
+		#$CollisionPolygon2D/TrashCrash.play()
 		#Add to health
 		healthTimer = healthTimerIn.time_left + healthMod
 		if (healthTimer > healthBarIn.max_value):

@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://b02h8llr6qgtw"]
+[gd_scene load_steps=2 format=3 uid="uid://b02h8llr6qgtw"]
+
+[ext_resource type="FontFile" uid="uid://c8d11s2ifxftf" path="res://FIXEDSYS EXCELSIOR.TTF" id="1_y5iny"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 179.0
+offset_top = 154.0
+offset_right = 445.0
+offset_bottom = 237.0
+text = "FONT TEST
+font test"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_right = 164.0
+offset_bottom = 107.0
+theme_override_fonts/normal_font = ExtResource("1_y5iny")
+text = "Normal Font"
