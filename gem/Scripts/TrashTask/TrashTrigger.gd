@@ -5,7 +5,6 @@ var timeCost = 8
 
 var sanityBarIn
 var sanityTimerIn
-var sanityBarIn
 var sanityTimer
 var sanityMod = 10
 

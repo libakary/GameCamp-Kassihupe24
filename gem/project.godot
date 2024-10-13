@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="Most Stable GirlEmployee"
+config/version="0.1"
 run/main_scene="res://Scenes/main_game_window.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/image="res://Sprites/Hyppekass_logo3.png"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -26,6 +28,10 @@ window/size/viewport_height=480
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
 window/vsync/vsync_mode=0
+
+[gui]
+
+theme/custom_font="res://FIXEDSYS EXCELSIOR.TTF"
 
 [input]
 
