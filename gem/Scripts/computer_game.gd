@@ -71,5 +71,5 @@ func _on_area_2d_2_input_event(viewport: Node, event: InputEvent, shape_idx: int
 		points += 1
 		print (points)
 		lastButtonPressed = "right"
-		$RightButton/Area2D2/CollisionShape2D/SFXKey2.play()
+		#$RightButton/Area2D2/CollisionShape2D/SFXKey2.play()
 		#await get_tree().create_timer(0.5).timeout
