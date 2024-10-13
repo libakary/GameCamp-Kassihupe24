@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://b5bb4ognyul83"]
+[gd_scene load_steps=2 format=3 uid="uid://b5bb4ognyul83"]
+
+[ext_resource type="Texture2D" uid="uid://bpay2y0dw7847" path="res://Sprites/UI/MenuBG.PNG" id="1_66usr"]
 
 [node name="StartMenuWindow" type="Node2D"]
+
+[node name="MenuBg" type="Sprite2D" parent="."]
+position = Vector2(514, 268)
+texture = ExtResource("1_66usr")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 743.0
+offset_top = 86.0
+offset_right = 824.0
+offset_bottom = 121.0
