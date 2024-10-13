@@ -1,7 +1,7 @@
 extends Area2D
 
-var sanityBarIn
 var sanityTimerIn
+var sanityBarIn
 var sanityTimer
 var sanityMod = 20
 

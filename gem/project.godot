@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="PlayerController"
+config/name="Most Stable GirlEmployee"
 run/main_scene="res://Scenes/main_game_window.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+global="*res://global_script.gd"
 
 [display]
 

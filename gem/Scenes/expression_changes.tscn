@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://devt37n2pk5bl"]
+[gd_scene load_steps=8 format=3 uid="uid://devt37n2pk5bl"]
 
+[ext_resource type="Script" path="res://Scripts/UI/expression_changes.gd" id="1_cx2ee"]
 [ext_resource type="Texture2D" uid="uid://ceblc76y7886x" path="res://Sprites/Player/expr1-good.png" id="1_ek1s3"]
+[ext_resource type="Texture2D" uid="uid://o1bmahg7b7yp" path="res://Sprites/Player/expr5-manic.png" id="2_bfp7i"]
 [ext_resource type="Texture2D" uid="uid://5ngbs7facxpu" path="res://Sprites/Player/expr2-neutral.png" id="3_3ip4k"]
+[ext_resource type="Texture2D" uid="uid://2nacwlyy576g" path="res://Sprites/Player/expr4-panic.png" id="4_7byjs"]
 [ext_resource type="Texture2D" uid="uid://b08r7ln8sh57g" path="res://Sprites/Player/expr3-sad.png" id="5_tqkcg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7kc0q"]
@@ -14,7 +17,10 @@ animations = [{
 "name": &"good",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bfp7i")
+}],
 "loop": true,
 "name": &"manic",
 "speed": 5.0
@@ -27,7 +33,10 @@ animations = [{
 "name": &"neutral",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7byjs")
+}],
 "loop": true,
 "name": &"panic",
 "speed": 5.0
@@ -42,7 +51,8 @@ animations = [{
 }]
 
 [node name="ExpressionChanges" type="Node2D"]
+script = ExtResource("1_cx2ee")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7kc0q")
-animation = &"panic"
+animation = &"manic"
