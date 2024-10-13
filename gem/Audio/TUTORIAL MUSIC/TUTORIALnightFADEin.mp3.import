@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnl1fc27frn82"
+path="res://.godot/imported/TUTORIALnightFADEin.mp3-96d04a648cee93de1b689276fa86630a.mp3str"
+
+[deps]
+
+source_file="res://Audio/TUTORIAL MUSIC/TUTORIALnightFADEin.mp3"
+dest_files=["res://.godot/imported/TUTORIALnightFADEin.mp3-96d04a648cee93de1b689276fa86630a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

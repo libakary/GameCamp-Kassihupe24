@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://crs28xfar1qqj"
+path="res://.godot/imported/TueNight.mp3-8f90774c5ecb6979c384468cdebddbf3.mp3str"
+
+[deps]
+
+source_file="res://Audio/DAYS/1st 2nd/TueNight.mp3"
+dest_files=["res://.godot/imported/TueNight.mp3-8f90774c5ecb6979c384468cdebddbf3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

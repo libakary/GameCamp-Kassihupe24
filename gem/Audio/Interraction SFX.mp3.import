@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvq6khui0ola6"
+path="res://.godot/imported/Interraction SFX.mp3-e47a31d734f2e192cdbdccea64b9bbfe.mp3str"
+
+[deps]
+
+source_file="res://Audio/Interraction SFX.mp3"
+dest_files=["res://.godot/imported/Interraction SFX.mp3-e47a31d734f2e192cdbdccea64b9bbfe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
