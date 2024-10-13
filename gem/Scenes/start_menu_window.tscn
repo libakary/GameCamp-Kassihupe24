@@ -1,10 +1,17 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=6 format=3 uid="uid://b5bb4ognyul83"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://b5bb4ognyul83"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://bpay2y0dw7847" path="res://Sprites/UI/MenuBG.PNG" id="1_66usr"]
 [ext_resource type="Texture2D" uid="uid://do2v067b05hc5" path="res://Sprites/UI/StartButton.PNG" id="2_ravqh"]
 [ext_resource type="Script" path="res://Scenes/StartButton.gd" id="3_c4j8l"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://crc61gjwfbaly" path="res://Sprites/UI/QuitButton.PNG" id="4_klwo7"]
 [ext_resource type="Script" path="res://Scenes/quit_butt.gd" id="5_6akcd"]
+=======
+>>>>>>> Stashed changes
 
 [node name="StartMenuWindow" type="Node2D"]
 
@@ -12,8 +19,13 @@
 position = Vector2(514, 268)
 texture = ExtResource("1_66usr")
 
+<<<<<<< Updated upstream
 [node name="StartButt" type="Sprite2D" parent="."]
 position = Vector2(764, 182)
+=======
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(737, 246)
+>>>>>>> Stashed changes
 texture = ExtResource("2_ravqh")
 script = ExtResource("3_c4j8l")
 
@@ -27,8 +39,11 @@ theme_override_icons/icon = ExtResource("2_ravqh")
 action_mode = 0
 keep_pressed_outside = true
 icon = ExtResource("2_ravqh")
+<<<<<<< Updated upstream
 
 [node name="QuitButt" type="Sprite2D" parent="."]
 position = Vector2(766, 275)
 texture = ExtResource("4_klwo7")
 script = ExtResource("5_6akcd")
+=======
+>>>>>>> Stashed changes
