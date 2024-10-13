@@ -60,12 +60,17 @@ func _on_death_box_area_entered(area: Area2D) -> void:
 func _ready():
 	print(points_total - points_lost)
 
+var timerIn
+var timeCost = 8
+
+var sanityBarIn
+var sanityTimerIn
+var sanityTimer
+var sanityMod = -5
+
 func _on_termination_timeout() -> void:
 	_ready()
-	
-	
-	
-	
+	get_node("../MainGameWindow/Mastermind").inTask = false
 	
 	
 	queue_free()
