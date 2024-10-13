@@ -1,6 +1,11 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=3 format=3 uid="uid://r0bx44oewja8"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://c1somljux4adq"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://Scenes/guitar_minigame.gd" id="1_mt573"]
+[ext_resource type="PackedScene" uid="uid://2eijq70h0eyu" path="res://Scenes/GuitarKey.tscn" id="2_d1jsv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nf10q"]
 size = Vector2(214, 20)
@@ -134,4 +139,10 @@ position = Vector2(357, -18)
 [node name="Point4" type="Marker2D" parent="Spawnpoints"]
 position = Vector2(389, -18)
 
+[node name="GuitarKey_0" parent="." instance=ExtResource("2_d1jsv")]
+position = Vector2(-42, -34)
+
 [connection signal="timeout" from="GuitarTimer" to="." method="_on_guitar_timer_timeout"]
+[connection signal="area_shape_entered" from="DeathBox" to="." method="_on_death_box_area_shape_entered"]
+[connection signal="KeyKilled" from="GuitarKey_0" to="." method="_on_guitar_key_0_key_killed"]
+[connection signal="tree_exited" from="GuitarKey_0" to="." method="_on_guitar_key_0_tree_exited"]
