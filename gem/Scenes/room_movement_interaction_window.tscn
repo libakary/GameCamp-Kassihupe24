@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Triggers/trigger2.tscn" id="12_iac0n"]
 [ext_resource type="Script" path="res://Scripts/day_time.gd" id="13_jainw"]
 [ext_resource type="PackedScene" uid="uid://bryb7ualxm5oj" path="res://Scenes/Triggers/trigger3.tscn" id="13_t1c80"]
-[ext_resource type="PackedScene" uid="uid://c2x1vaetoig4" path="res://Scenes/Triggers/trigger4.tscn" id="15_c106h"]
+[ext_resource type="PackedScene" path="res://Scenes/Triggers/trigger4.tscn" id="15_c106h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o1kal"]
 radius = 28.1603
