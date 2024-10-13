@@ -16,7 +16,7 @@ position = Vector2(465, 313)
 
 [node name="PowerBar" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(-344.5, -15)
+position = Vector2(-390, -15)
 texture = ExtResource("1_fmegu")
 offset = Vector2(0, -16)
 

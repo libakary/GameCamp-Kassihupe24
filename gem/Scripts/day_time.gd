@@ -5,6 +5,8 @@ var minuteClock
 var lastTime = 60
 var newTime = 60
 
+var nightFade
+
 var minuteValue = 0
 var hourValue = 8
 
@@ -12,7 +14,7 @@ var hourValue = 8
 func _ready() -> void:
 	hourClock = get_node("../../../../UserInterface/ClockDisplayHours")
 	minuteClock = get_node("../../../../UserInterface/ClockDisplayMinutes")
-	
+	nightFade = get_node("../nightFadeBG")
 		
 	wait_time = 60
 	start()
@@ -32,5 +34,11 @@ func _process(delta: float) -> void:
 	if (minuteValue == 60):
 		minuteValue = 0
 		hourValue += 1
+	if (hourValue >= 23):	
+		nightFade.modulate.a += 0.001
+		minuteValue = 0
+		
+		#get_tree().change_scene_to_file("res://Scenes/Days/Monday.tscn")
+	
 	
 	lastTime = roundf(time_left)

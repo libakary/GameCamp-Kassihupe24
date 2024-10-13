@@ -44,7 +44,7 @@ func _ready():
 	
 func _on_termination_timeout() -> void:
 	var timespent : float
-	timespent = 10 * ((2 / (points/ 5)) +1)
+	if points != 0: timespent = 10 * ((2 / (points/ 5)) +1)
 	print (timespent)
 	
 	#Skip Time
@@ -60,7 +60,7 @@ func _on_termination_timeout() -> void:
 		sanityTimer = sanityBarIn.max_value
 	sanityTimerIn.start(sanityTimer)
 	
-	workBar.value += 40
+	workBar.value += points*3
 	
 	get_node("../MainGameWindow/Mastermind").inTask = false
 	queue_free()

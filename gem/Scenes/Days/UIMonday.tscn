@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://decwrshrfcsuv"]
+
+[ext_resource type="Texture2D" uid="uid://c3xmgvaa4eun7" path="res://Sprites/UI/UI uncolored transparent.png" id="1_sqiay"]
+[ext_resource type="FontFile" uid="uid://b1marmwyw6t8t" path="res://Sprites/Seven Segment.ttf" id="2_dnvtq"]
+
+[node name="UserInterface" type="Node2D"]
+
+[node name="UiWindowLayerTest" type="Sprite2D" parent="."]
+texture = ExtResource("1_sqiay")
+
+[node name="ClockDisplayHours" type="Label" parent="."]
+offset_left = 256.0
+offset_top = -16.0
+offset_right = 328.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.370364, 0.370364, 0.370364, 1)
+theme_override_fonts/font = ExtResource("2_dnvtq")
+theme_override_font_sizes/font_size = 60
+text = "45"
+horizontal_alignment = 2
+
+[node name="ClockDisplayMinutes" type="Label" parent="."]
+offset_left = 343.0
+offset_top = -16.0
+offset_right = 443.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.368627, 0.368627, 0.368627, 1)
+theme_override_fonts/font = ExtResource("2_dnvtq")
+theme_override_font_sizes/font_size = 60
+text = "45
+"
+
+[node name="ClockDisplayColon" type="Label" parent="."]
+offset_left = 332.0
+offset_top = -27.0
+offset_right = 385.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0.368627, 0.368627, 0.368627, 1)
+theme_override_fonts/font = ExtResource("2_dnvtq")
+theme_override_font_sizes/font_size = 60
+text = ":"
+
+[node name="DayDisplay" type="Label" parent="."]
+offset_left = 277.0
+offset_top = 49.0
+offset_right = 397.0
+offset_bottom = 154.0
+theme_override_colors/font_color = Color(0.368627, 0.368627, 0.368627, 1)
+theme_override_fonts/font = ExtResource("2_dnvtq")
+theme_override_font_sizes/font_size = 40
+text = "Monday
+"
+horizontal_alignment = 1

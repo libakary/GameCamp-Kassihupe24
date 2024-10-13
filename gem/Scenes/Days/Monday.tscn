@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b5xwws1uf7e13"]
 
 [ext_resource type="Script" path="res://Scripts/mastermind.gd" id="1_usulj"]
-[ext_resource type="PackedScene" uid="uid://qt2782tsftfw" path="res://Scenes/user_interface.tscn" id="2_vwx1i"]
+[ext_resource type="PackedScene" uid="uid://decwrshrfcsuv" path="res://Scenes/Days/UIMonday.tscn" id="2_k35jq"]
 [ext_resource type="PackedScene" uid="uid://ccwk06ilarqkx" path="res://Scenes/Days/MondayGame.tscn" id="3_h4mns"]
 [ext_resource type="PackedScene" uid="uid://fr7y2h7bsg1l" path="res://Scenes/user_interface_control.tscn" id="4_jwd1k"]
 [ext_resource type="PackedScene" path="res://Scenes/expression_changes.tscn" id="5_w5ooe"]
@@ -11,10 +11,11 @@
 [node name="Mastermind" type="Node2D" parent="."]
 script = ExtResource("1_usulj")
 
-[node name="UserInterface" parent="." instance=ExtResource("2_vwx1i")]
+[node name="UserInterface" parent="." instance=ExtResource("2_k35jq")]
 position = Vector2(427, 238)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+z_index = -1
 offset_left = 9.0
 offset_top = 2.0
 offset_right = 679.0

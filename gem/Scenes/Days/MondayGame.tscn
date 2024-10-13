@@ -25,7 +25,7 @@ radius = 28.1603
 
 [node name="Player" parent="." instance=ExtResource("1_qnx80")]
 z_index = 1
-position = Vector2(-97, 150)
+position = Vector2(-140, 99)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -100)
