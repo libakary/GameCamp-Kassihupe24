@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cusp1gqua1p72" path="res://Scenes/room_movement_interaction_window.tscn" id="2_lf1qo"]
 [ext_resource type="Script" path="res://Scripts/mastermind.gd" id="3_y08jc"]
 [ext_resource type="PackedScene" uid="uid://fr7y2h7bsg1l" path="res://Scenes/user_interface_control.tscn" id="4_mhfx8"]
-[ext_resource type="PackedScene" path="res://Scenes/expression_changes.tscn" id="5_2860e"]
+[ext_resource type="PackedScene" uid="uid://devt37n2pk5bl" path="res://Scenes/expression_changes.tscn" id="5_2860e"]
 [ext_resource type="PackedScene" uid="uid://qt2782tsftfw" path="res://Scenes/user_interface.tscn" id="5_x6q2b"]
 
 [node name="MainGameWindow" type="Node2D"]
