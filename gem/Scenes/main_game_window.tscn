@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cusp1gqua1p72" path="res://Scenes/room_movement_interaction_window.tscn" id="2_lf1qo"]
 [ext_resource type="Script" path="res://Scripts/mastermind.gd" id="3_y08jc"]
 [ext_resource type="PackedScene" uid="uid://fr7y2h7bsg1l" path="res://Scenes/user_interface_control.tscn" id="4_mhfx8"]
-[ext_resource type="PackedScene" uid="uid://devt37n2pk5bl" path="res://Scenes/expression_changes.tscn" id="5_2860e"]
+[ext_resource type="PackedScene" path="res://Scenes/expression_changes.tscn" id="5_2860e"]
 [ext_resource type="PackedScene" uid="uid://qt2782tsftfw" path="res://Scenes/user_interface.tscn" id="5_x6q2b"]
 [ext_resource type="AudioStream" uid="uid://brf4434ohyef6" path="res://Audio/DAYS/1st 2nd/MonTueMorn.mp3" id="6_15d0u"]
 [ext_resource type="AudioStream" uid="uid://dclvjbad3br87" path="res://Audio/DAYS/1st 2nd/MonTueLunch.mp3" id="7_cgpch"]
