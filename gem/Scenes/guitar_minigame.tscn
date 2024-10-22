@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8thd0afb5hn"]
 
-[ext_resource type="Script" path="res://Scenes/guitar_minigame.gd" id="1_mt573"]
+[ext_resource type="Script" path="res://Scenes/guitar_minigame.gd" id="1_hmw48"]
 [ext_resource type="Texture2D" uid="uid://5g0rm5tsh6d7" path="res://Sprites/Background/GuitarMinigameBG.PNG" id="2_rbgqp"]
 [ext_resource type="PackedScene" uid="uid://isxr15a1vllm" path="res://Scenes/guitar_pressed.tscn" id="2_v4mhw"]
 
@@ -12,7 +12,7 @@ font_color = Color(0, 0, 0, 1)
 size = Vector2(214, 20)
 
 [node name="Guitar Minigame" type="Node2D"]
-script = ExtResource("1_mt573")
+script = ExtResource("1_hmw48")
 
 [node name="RichTextLabel" type="Label" parent="."]
 z_index = 21

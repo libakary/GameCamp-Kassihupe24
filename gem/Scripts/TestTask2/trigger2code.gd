@@ -28,5 +28,4 @@ func _process(_delta: float) -> void:
 		var loadedGame = loadedGamePacked.instantiate()
 		loadedGame.position = Vector2(427, 240)
 		get_node("../../../../../../../").add_child(loadedGame)
-		
 		get_node("../../../../../../Mastermind").inTask = true

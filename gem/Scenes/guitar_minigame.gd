@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var guitarkey_scene = preload("res://Scenes/GuitarKey.tscn")
-@onready var guitarkey_kill = preload("res://Scenes/guitar_pressed.tscn")
+@onready var guitarkey_scene = load("res://Scenes/guitar_key.tscn")
+@onready var guitarkey_kill = load("res://Scenes/guitar_pressed.tscn")
 
 @onready var guitarkey_positions = $Spawnpoints
 
@@ -58,6 +58,7 @@ func _on_death_box_area_entered(area: Area2D) -> void:
 	#print(points_total - points_lost)
 
 func _ready():
+	#get_tree().quit()
 	pass
 
 var timerIn
