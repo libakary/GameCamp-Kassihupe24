@@ -18,7 +18,7 @@ func _on_guitar_timer_timeout() -> void:
 	guitarkey.global_position = random_guitarkey_position.global_position
 	add_child(guitarkey)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_left"):
 		var guitarkill = guitarkey_kill.instantiate()
 		guitarkill.position = Vector2(-62, 135)
@@ -50,12 +50,9 @@ func _process(delta: float) -> void:
 #func _on_guitar_key_0_key_killed() -> void:
 	#GainPoint()
 
-func _on_death_box_area_entered(area: Area2D) -> void:
+func _on_death_box_area_entered(_area: Area2D) -> void:
 
 	points_lost += 1
-	points_total - points_lost
-	#print(points_lost)
-	#print(points_total - points_lost)
 
 func _ready():
 	#get_tree().quit()

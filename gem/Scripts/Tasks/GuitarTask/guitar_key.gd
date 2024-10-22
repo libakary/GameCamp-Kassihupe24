@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	position.y += KeySpeed * delta
 
 
-func _on_area_entered(area: Area2D) -> void:
+func _on_area_entered(_area: Area2D) -> void:
 	emit_signal("KeyKilled")
 	queue_free()
 	

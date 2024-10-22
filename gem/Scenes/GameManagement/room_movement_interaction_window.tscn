@@ -51,7 +51,7 @@ script = ExtResource("3_k2qam")
 [node name="Furniture" type="StaticBody2D" parent="BG/Hitboxes"]
 
 [node name="Furniture" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
-polygon = PackedVector2Array(-182, 64, -37, -19, 111, 65, 140, 56, 339, 167, 443, 129, 12, -224, -406, 26, -494, 131, -51, 424, -20, 418, -267.136, 236.871, -203, 199, -200, 134, -339, 47, -272, 9)
+polygon = PackedVector2Array(-182, 64, -37, -19, 111, 65, 140, 56, 339, 167, 364, 153, -35, -109, -192, -11, -267, -58, -406, 26, -494, 131, -51, 424, -20, 418, -267.136, 236.871, -203, 199, -200, 134, -339, 47, -272, 9)
 
 [node name="Guitar" type="CollisionPolygon2D" parent="BG/Hitboxes/Furniture"]
 polygon = PackedVector2Array(77, 191, 103, 169, 102, 116, 79, 111, 57, 114, 53, 172)
