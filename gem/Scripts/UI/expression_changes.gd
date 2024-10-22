@@ -10,7 +10,7 @@ func _ready():
 	sanityTimerIn = get_node("../Control/WorkBars/SanityBar/TimerSanity") 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta: float):
 	
 	if (sanityTimerIn.time_left > 40):
 		$AnimatedSprite2D.play("good")

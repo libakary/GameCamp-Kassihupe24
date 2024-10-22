@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://isxr15a1vllm"]
+
+[ext_resource type="Script" path="res://Scripts/Tasks/GuitarTask/guitar_pressed.gd" id="1_221jw"]
+[ext_resource type="AudioStream" uid="uid://dvq6khui0ola6" path="res://Audio/Interraction SFX.mp3" id="2_jim8o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w04r8"]
+size = Vector2(40, 38)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_durr6"]
+
+[node name="GuitarPressed" type="Area2D"]
+z_index = 59
+scale = Vector2(0.68, 0.68)
+script = ExtResource("1_221jw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w04r8")
+
+[node name="DecayTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 2
+offset_left = -20.5882
+offset_top = -19.0
+offset_right = 19.4118
+offset_bottom = 21.0
+scale = Vector2(1.04821, 1)
+texture = SubResource("CanvasTexture_durr6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jim8o")
+autoplay = true
+
+[connection signal="timeout" from="DecayTimer" to="." method="_on_decay_timer_timeout"]

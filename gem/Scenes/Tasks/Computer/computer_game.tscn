@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds74lawo4rnrv"]
+
+[ext_resource type="Script" path="res://Scripts/Tasks/ComputerGameTask/computer_game.gd" id="1_vemwn"]
+[ext_resource type="Texture2D" uid="uid://c4dt71iga1fdy" path="res://Sprites/ComputerBG.PNG" id="2_oh87u"]
+[ext_resource type="Texture2D" uid="uid://qdl433wbupvl" path="res://Sprites/ComputerKey.PNG" id="3_803g5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jaqgy"]
+size = Vector2(86.5603, 58.2006)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(467, 291)
+script = ExtResource("1_vemwn")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(460.918, 286.67)
+texture = ExtResource("2_oh87u")
+
+[node name="LeftButton" type="Sprite2D" parent="."]
+position = Vector2(21.9177, 243.67)
+rotation = -0.295677
+texture = ExtResource("3_803g5")
+
+[node name="Area2D" type="Area2D" parent="LeftButton"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftButton/Area2D"]
+position = Vector2(137.103, -31.4131)
+rotation = -0.0538703
+shape = SubResource("RectangleShape2D_jaqgy")
+
+[node name="RightButton" type="Sprite2D" parent="."]
+position = Vector2(403.918, 88.6703)
+rotation = 0.472905
+texture = ExtResource("3_803g5")
+
+[node name="Area2D2" type="Area2D" parent="RightButton"]
+position = Vector2(-269.476, 311.98)
+rotation = -0.768583
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightButton/Area2D2"]
+position = Vector2(531.736, 35.4811)
+rotation = 0.731371
+shape = SubResource("RectangleShape2D_jaqgy")
+
+[node name="TERMINATION" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="ButtonCooldown" type="Timer" parent="."]
+process_callback = 0
+one_shot = true
+
+[connection signal="input_event" from="LeftButton/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="RightButton/Area2D2" to="." method="_on_area_2d_2_input_event"]
+[connection signal="timeout" from="TERMINATION" to="." method="_on_termination_timeout"]

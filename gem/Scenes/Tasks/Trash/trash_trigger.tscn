@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtlgd7f7pwqcl"]
+
+[ext_resource type="Script" path="res://Scripts/Tasks/TrashTask/trash_trigger_code.gd" id="1_ye5pk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AreaTriggerTest" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="AreaTriggerTest"]
+script = ExtResource("1_ye5pk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaTriggerTest/Area2D"]
+polygon = PackedVector2Array(16, -46, -24, -64, -70, -18, 36, 51, 99, 1, 66, -21)
+
+[connection signal="body_entered" from="AreaTriggerTest/Area2D" to="AreaTriggerTest/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaTriggerTest/Area2D" to="AreaTriggerTest/Area2D" method="_on_body_exited"]

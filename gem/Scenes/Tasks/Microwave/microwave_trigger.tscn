@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bryb7ualxm5oj"]
+
+[ext_resource type="Script" path="res://Scripts/Tasks/MicrowaveTask/microwave_trigger_code.gd" id="1_3hyhs"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AreaTriggerTest" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="AreaTriggerTest"]
+script = ExtResource("1_3hyhs")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaTriggerTest/Area2D"]
+polygon = PackedVector2Array(18, 6, 42, 16, 65, 11, 34, 0, 11, -16, -10, -39, -18, -30, -6, -7)
+
+[connection signal="body_entered" from="AreaTriggerTest/Area2D" to="AreaTriggerTest/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaTriggerTest/Area2D" to="AreaTriggerTest/Area2D" method="_on_body_exited"]

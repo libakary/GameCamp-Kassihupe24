@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://b0bkwy6ns55kr"]
 
-[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_a68po"]
+[ext_resource type="Script" path="res://Scripts/GameManagement/PlayerController.gd" id="1_a68po"]
 [ext_resource type="Texture2D" uid="uid://dkusdop2xrniw" path="res://Sprites/Player/idle1.png" id="3_11ht6"]
 [ext_resource type="Texture2D" uid="uid://dylxptu61jsks" path="res://Sprites/Player/idle2.png" id="4_v1u8a"]
 [ext_resource type="Texture2D" uid="uid://n6aqml4w7oqj" path="res://Sprites/Player/idle3.png" id="5_bwoxf"]
