@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://b0uoighxohyq8"]
 
-[ext_resource type="PackedScene" uid="uid://cusp1gqua1p72" path="res://Scenes/room_movement_interaction_window.tscn" id="2_lf1qo"]
+[ext_resource type="PackedScene" uid="uid://cusp1gqua1p72" path="res://Scenes/GameManagement/room_movement_interaction_window.tscn" id="2_lf1qo"]
 [ext_resource type="Script" path="res://Scripts/GameManagement/mastermind.gd" id="3_y08jc"]
 [ext_resource type="PackedScene" uid="uid://fr7y2h7bsg1l" path="res://Scenes/UI/user_interface_control.tscn" id="4_mhfx8"]
 [ext_resource type="PackedScene" uid="uid://devt37n2pk5bl" path="res://Scenes/UI/expression_changes.tscn" id="5_2860e"]

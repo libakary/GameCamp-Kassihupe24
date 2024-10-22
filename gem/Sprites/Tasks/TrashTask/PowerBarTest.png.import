@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv2pgubq5pxdj"
-path="res://.godot/imported/MicroPlaceholder.png-7736d0e0172e779836644ea91439330a.ctex"
+uid="uid://b8iepn4xgxhpb"
+path="res://.godot/imported/PowerBarTest.png-8db815fdc5a32ec41ed8dbd663efbfb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/MicroPlaceholder.png"
-dest_files=["res://.godot/imported/MicroPlaceholder.png-7736d0e0172e779836644ea91439330a.ctex"]
+source_file="res://Sprites/Tasks/TrashTask/PowerBarTest.png"
+dest_files=["res://.godot/imported/PowerBarTest.png-8db815fdc5a32ec41ed8dbd663efbfb0.ctex"]
 
 [params]
 

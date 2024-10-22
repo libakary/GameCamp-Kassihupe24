@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvotfk5fv0t7g"
-path="res://.godot/imported/Note.PNG-34182c7a84c2f4aca574a4e8d9a2bad4.ctex"
+uid="uid://5g0rm5tsh6d7"
+path="res://.godot/imported/GuitarMinigameBG.PNG-41caae95e8c3e973b11ca433d0c6ceec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Note.PNG"
-dest_files=["res://.godot/imported/Note.PNG-34182c7a84c2f4aca574a4e8d9a2bad4.ctex"]
+source_file="res://Sprites/Tasks/GuitarTask/GuitarMinigameBG.PNG"
+dest_files=["res://.godot/imported/GuitarMinigameBG.PNG-41caae95e8c3e973b11ca433d0c6ceec.ctex"]
 
 [params]
 

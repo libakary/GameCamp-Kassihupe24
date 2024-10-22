@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtdaf6kr66sfu"
-path="res://.godot/imported/AreaTrigger.png-567df0b21d8ec2ec2338599217160d02.ctex"
+uid="uid://c4dt71iga1fdy"
+path="res://.godot/imported/ComputerBG.PNG-4f912cd25abd247e5856366bc319614a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/AreaTrigger.png"
-dest_files=["res://.godot/imported/AreaTrigger.png-567df0b21d8ec2ec2338599217160d02.ctex"]
+source_file="res://Sprites/Tasks/ComputerTask/ComputerBG.PNG"
+dest_files=["res://.godot/imported/ComputerBG.PNG-4f912cd25abd247e5856366bc319614a.ctex"]
 
 [params]
 

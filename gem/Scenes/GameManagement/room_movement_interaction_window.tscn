@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://cusp1gqua1p72"]
 
-[ext_resource type="Texture2D" uid="uid://6hrguftjtfjf" path="res://Sprites/NightPlaceHolder.png" id="2_3efwc"]
+[ext_resource type="Texture2D" uid="uid://6hrguftjtfjf" path="res://Sprites/Background/NightPlaceHolder.png" id="2_3efwc"]
 [ext_resource type="Texture2D" uid="uid://cmjuny03yqooe" path="res://Sprites/Background/RoomNight.PNG" id="2_g77em"]
 [ext_resource type="PackedScene" uid="uid://b0bkwy6ns55kr" path="res://Scenes/player.tscn" id="3_086r8"]
 [ext_resource type="Script" path="res://Scripts/ChangingTime/fade_to_night.gd" id="3_k2qam"]
@@ -17,7 +17,7 @@
 [ext_resource type="Script" path="res://Scripts/ChangingTime/day_time.gd" id="13_jainw"]
 [ext_resource type="PackedScene" uid="uid://bryb7ualxm5oj" path="res://Scenes/Tasks/Microwave/microwave_trigger.tscn" id="13_t1c80"]
 [ext_resource type="PackedScene" uid="uid://c2x1vaetoig4" path="res://Scenes/Tasks/Computer/computer_trigger.tscn" id="15_c106h"]
-[ext_resource type="PackedScene" uid="uid://y36gyikpa2et" path="res://Scenes/bed_trigger.tscn" id="17_ifurc"]
+[ext_resource type="PackedScene" uid="uid://y36gyikpa2et" path="res://Scenes/GameManagement/bed_trigger.tscn" id="17_ifurc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o1kal"]
 radius = 28.1603

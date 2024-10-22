@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5g0rm5tsh6d7"
-path="res://.godot/imported/GuitarMinigameBG.PNG-fdb750bbdf84ee0e1d3fe8f0c8e05bc5.ctex"
+uid="uid://r817j8sk4h4y"
+path="res://.godot/imported/MicrowaveBG.PNG-120365893434821664da323534730424.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/GuitarMinigameBG.PNG"
-dest_files=["res://.godot/imported/GuitarMinigameBG.PNG-fdb750bbdf84ee0e1d3fe8f0c8e05bc5.ctex"]
+source_file="res://Sprites/Tasks/MicrowaveTask/MicrowaveBG.PNG"
+dest_files=["res://.godot/imported/MicrowaveBG.PNG-120365893434821664da323534730424.ctex"]
 
 [params]
 

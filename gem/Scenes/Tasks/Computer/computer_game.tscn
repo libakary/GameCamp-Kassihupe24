@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://ds74lawo4rnrv"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks/ComputerGameTask/computer_game.gd" id="1_vemwn"]
-[ext_resource type="Texture2D" uid="uid://c4dt71iga1fdy" path="res://Sprites/ComputerBG.PNG" id="2_oh87u"]
-[ext_resource type="Texture2D" uid="uid://qdl433wbupvl" path="res://Sprites/ComputerKey.PNG" id="3_803g5"]
+[ext_resource type="Texture2D" uid="uid://c4dt71iga1fdy" path="res://Sprites/Tasks/ComputerTask/ComputerBG.PNG" id="2_oh87u"]
+[ext_resource type="Texture2D" uid="uid://qdl433wbupvl" path="res://Sprites/Tasks/ComputerTask/ComputerKey.PNG" id="3_803g5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jaqgy"]
 size = Vector2(86.5603, 58.2006)

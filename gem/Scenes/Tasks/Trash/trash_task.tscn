@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://pmcemip7v2xm"]
 
-[ext_resource type="Texture2D" uid="uid://b8iepn4xgxhpb" path="res://Sprites/PowerBarTest.png" id="1_fmegu"]
+[ext_resource type="Texture2D" uid="uid://b8iepn4xgxhpb" path="res://Sprites/Tasks/TrashTask/PowerBarTest.png" id="1_fmegu"]
 [ext_resource type="Script" path="res://Scripts/Tasks/TrashTask/TrashScript.gd" id="2_h25ys"]
 [ext_resource type="Texture2D" uid="uid://cx5dp3d3nvfth" path="res://Sprites/Tasks/TrashTask/TrashBG.PNG" id="2_s1ucj"]
 [ext_resource type="Texture2D" uid="uid://cmp5kg0kx0m6n" path="res://Sprites/Tasks/TrashTask/TrashBag.png" id="4_cdamg"]

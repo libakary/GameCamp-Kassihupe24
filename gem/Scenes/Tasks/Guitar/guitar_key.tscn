@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvpm5p5o644di"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks/GuitarTask/guitar_key.gd" id="1_ts5rk"]
-[ext_resource type="Texture2D" uid="uid://cvotfk5fv0t7g" path="res://Sprites/Note.PNG" id="2_y0og7"]
+[ext_resource type="Texture2D" uid="uid://cvotfk5fv0t7g" path="res://Sprites/Tasks/GuitarTask/Note.PNG" id="2_y0og7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n03vn"]
 size = Vector2(36, 36)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daqokywcew5rv"
-path="res://.godot/imported/MicrowaveButton.PNG-0bc969579a43786a66875a0e25749a49.ctex"
+uid="uid://cvotfk5fv0t7g"
+path="res://.godot/imported/Note.PNG-dd08909968b890bd786938403524b96d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/MicrowaveButton.PNG"
-dest_files=["res://.godot/imported/MicrowaveButton.PNG-0bc969579a43786a66875a0e25749a49.ctex"]
+source_file="res://Sprites/Tasks/GuitarTask/Note.PNG"
+dest_files=["res://.godot/imported/Note.PNG-dd08909968b890bd786938403524b96d.ctex"]
 
 [params]
 

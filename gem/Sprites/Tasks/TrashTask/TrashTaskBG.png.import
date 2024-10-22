@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3ajveal0rydk"
-path="res://.godot/imported/TrashTaskBG.png-1ed9d21684de591b84d3b41e8adc323a.ctex"
+path="res://.godot/imported/TrashTaskBG.png-c288221a311e1ba24e1a48419d6cd4b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/TrashTaskBG.png"
-dest_files=["res://.godot/imported/TrashTaskBG.png-1ed9d21684de591b84d3b41e8adc323a.ctex"]
+source_file="res://Sprites/Tasks/TrashTask/TrashTaskBG.png"
+dest_files=["res://.godot/imported/TrashTaskBG.png-c288221a311e1ba24e1a48419d6cd4b7.ctex"]
 
 [params]
 

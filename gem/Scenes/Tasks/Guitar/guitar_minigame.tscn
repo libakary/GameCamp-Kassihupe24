@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8thd0afb5hn"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks/GuitarTask/guitar_minigame.gd" id="1_y5sts"]
-[ext_resource type="Texture2D" uid="uid://5g0rm5tsh6d7" path="res://Sprites/Background/GuitarMinigameBG.PNG" id="2_rbgqp"]
+[ext_resource type="Texture2D" uid="uid://5g0rm5tsh6d7" path="res://Sprites/Tasks/GuitarTask/GuitarMinigameBG.PNG" id="2_rbgqp"]
 [ext_resource type="PackedScene" uid="uid://isxr15a1vllm" path="res://Scenes/Tasks/Guitar/guitar_pressed.tscn" id="2_v4mhw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gq8qv"]

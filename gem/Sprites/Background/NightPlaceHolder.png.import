@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbwlvigh22f50"
-path="res://.godot/imported/TestTaskBG.png-083c0019dda2cf389504dac75bc0e5bb.ctex"
+uid="uid://6hrguftjtfjf"
+path="res://.godot/imported/NightPlaceHolder.png-be438437eaa6a07f78d54ba6089eb11d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/TestTask/TestTaskBG.png"
-dest_files=["res://.godot/imported/TestTaskBG.png-083c0019dda2cf389504dac75bc0e5bb.ctex"]
+source_file="res://Sprites/Background/NightPlaceHolder.png"
+dest_files=["res://.godot/imported/NightPlaceHolder.png-be438437eaa6a07f78d54ba6089eb11d.ctex"]
 
 [params]
 

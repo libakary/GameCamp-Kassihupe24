@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm3lcfda26k3t"
-path="res://.godot/imported/AreaHighlight.png-c3134f8201fe77569eb1743a640ba644.ctex"
+uid="uid://cv2pgubq5pxdj"
+path="res://.godot/imported/MicroPlaceholder.png-377b0652585dc5b52517584a7fea0c70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/AreaHighlight.png"
-dest_files=["res://.godot/imported/AreaHighlight.png-c3134f8201fe77569eb1743a640ba644.ctex"]
+source_file="res://Sprites/Tasks/MicrowaveTask/MicroPlaceholder.png"
+dest_files=["res://.godot/imported/MicroPlaceholder.png-377b0652585dc5b52517584a7fea0c70.ctex"]
 
 [params]
 

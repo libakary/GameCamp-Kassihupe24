@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://dr535koocgyhs"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks/MicrowaveTask/micro_wave_game.gd" id="1_1elcm"]
-[ext_resource type="Texture2D" uid="uid://daqokywcew5rv" path="res://Sprites/MicrowaveButton.PNG" id="2_2wr6h"]
-[ext_resource type="Texture2D" uid="uid://chx1k8vd7o3i5" path="res://Sprites/HandPlaceHolder.png" id="2_2xs47"]
+[ext_resource type="Texture2D" uid="uid://daqokywcew5rv" path="res://Sprites/Tasks/MicrowaveTask/MicrowaveButton.PNG" id="2_2wr6h"]
+[ext_resource type="Texture2D" uid="uid://chx1k8vd7o3i5" path="res://Sprites/Tasks/MicrowaveTask/HandPlaceHolder.png" id="2_2xs47"]
 [ext_resource type="Script" path="res://Scripts/Tasks/MicrowaveTask/hand.gd" id="2_n4rl3"]
-[ext_resource type="Texture2D" uid="uid://r817j8sk4h4y" path="res://Sprites/MicrowaveBG.PNG" id="4_axqfj"]
+[ext_resource type="Texture2D" uid="uid://r817j8sk4h4y" path="res://Sprites/Tasks/MicrowaveTask/MicrowaveBG.PNG" id="4_axqfj"]
 [ext_resource type="AudioStream" uid="uid://b42mvnjtvw261" path="res://Audio/Keyboard1.mp3" id="7_8utrn"]
 [ext_resource type="AudioStream" uid="uid://d2jrq7grnfkwh" path="res://Audio/Bell.mp3" id="8_ej3y1"]
 
