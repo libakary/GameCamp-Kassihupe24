@@ -20,6 +20,12 @@ func _ready() -> void:
 	start()
 
 
+func fadeToMorning() -> void:
+	#while(nightFade.modulate.a < 1):
+	#	nightFade.modulate.a += 0.0001
+	minuteValue = 0
+	hourValue = 8
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	newTime = roundf(time_left)
@@ -35,8 +41,7 @@ func _process(_delta: float) -> void:
 		minuteValue = 0
 		hourValue += 1
 	if (hourValue >= 23):	
-		nightFade.modulate.a += 0.001
-		minuteValue = 0
+		fadeToMorning()
 	if (nightFade.modulate.a >= 1):
 		pass
 	
