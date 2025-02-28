@@ -1,5 +1,10 @@
 extends Timer
 
+var mastermind
+
+var healthBar
+var sanityBar
+
 var hourClock
 var minuteClock
 var dayClock
@@ -18,13 +23,22 @@ func _ready() -> void:
 	minuteClock = get_node("../../../../UserInterface/ClockDisplayMinutes")
 	dayClock = get_node("../../../../UserInterface/DayDisplay")
 	nightFade = get_node("../nightFadeBG")
-		
+	mastermind = get_node("../../../../Mastermind")
+	
+	healthBar = get_node("../../../../Control/WorkBars/HealthBar/TimerHealth")
+	sanityBar = get_node("../../../../Control/WorkBars/SanityBar/TimerSanity")
+	
 	wait_time = 60
 	start()
 
 
 func fadeToMorning() -> void:
 	fadeStage = 1 #Start fading to black
+	mastermind.inTask = true #Locks moving during moving
+	paused = true #Pauses the clock
+	#Stop the bars during night time
+	healthBar.paused = true 
+	sanityBar.paused = true
 	#Clock is reset in _process
 
 func setDay(dayNumber: int) -> String:
@@ -57,7 +71,7 @@ func _process(_delta: float) -> void:
 	lastTime = roundf(time_left)
 	
 	#Handles fading to black during day switch
-	if nightFade.modulate.a >= 1.5 && fadeStage == 1: #Start fading to colour
+	if nightFade.modulate.a >= 1.75 && fadeStage == 1: #Start fading to colour
 		fadeStage = 2
 		#Reset the clock after day start
 		minuteValue = 0
@@ -66,9 +80,14 @@ func _process(_delta: float) -> void:
 		
 	if nightFade.modulate.a <= 0 && fadeStage == 2: #Stop fading to colour
 		fadeStage = 0
-	
+		mastermind.inTask = false #Unlocks movement
+		paused = false #Starts the clock
+		#Resume the bars after the night
+		healthBar.paused = false 
+		sanityBar.paused = false
+	var fadeSpeed = 0.0005
 	if fadeStage == 1: #Fade to black
-		nightFade.modulate.a += 0.001
+		nightFade.modulate.a += fadeSpeed
 	if fadeStage == 2: #Fade to colour
-		nightFade.modulate.a -= 0.001
+		nightFade.modulate.a -= fadeSpeed
 	

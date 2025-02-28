@@ -6,10 +6,12 @@ var healthBar
 var maxSpeed: int = 200 #w/o modifier
 var speed: int = 300
 
+var mastermind
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	healthBar = get_node("../../../../Control/WorkBars/HealthBar/HBar")
-
+	mastermind = get_node("../../../../Mastermind")
 #func load_sfx(sfx_to_load):
 	#if %SFXPlayer.stream != sfx_to_load:
 		#%SFXPlayer.stop()
@@ -22,6 +24,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	if mastermind.inTask: #Stop walking animation when entered into task
+		$AnimatedSprite2D.play("idle")
+	
 	speed = 100+healthBar.value*2/100*maxSpeed
 	var input_direction = Vector2.ZERO
 	input_direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -29,7 +34,7 @@ func _process(_delta: float) -> void:
 	if input_direction:
 		velocity = input_direction * speed
 		#play walk animation + flip them based on direction
-		if velocity != Vector2.ZERO:
+		if velocity != Vector2.ZERO && !mastermind.inTask:
 			$AnimatedSprite2D.play("walk")
 			#$SFXPlayer.play()
 			$AnimatedSprite2D.flip_v = false
@@ -40,7 +45,7 @@ func _process(_delta: float) -> void:
 		#velocity.x = move_toward(velocity.x, 0, speed)
 		#velocity.y = move_toward(velocity.y, 0, speed)
 		#movement stops and character stands... not too elegant but
-		$AnimatedSprite2D.play("idle")	
+		$AnimatedSprite2D.play("idle")
 	
 	# Normalize the direction so that diagonal movement isn't faster
 	if input_direction != Vector2.ZERO:
@@ -50,7 +55,7 @@ func _process(_delta: float) -> void:
 	velocity = input_direction * speed
 	
 	# Use move_and_slide() in CharacterBody2D
-	if (!get_node("../../../../Mastermind").inTask):
+	if (!mastermind.inTask):
 		move_and_slide()
 		
 	#var direction = Input.get_axis("ui_left", "ui_right")
