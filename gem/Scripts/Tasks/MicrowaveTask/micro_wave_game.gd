@@ -6,7 +6,7 @@ var points = 0
 @onready var mouseFollowerRect = $TextureRect2 
 
 var timerIn
-var timeCost: int = 8
+var timeCost: int = 0
 
 var healthBarIn
 var healthTimerIn

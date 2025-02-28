@@ -59,7 +59,7 @@ func _ready():
 	pass
 
 var timerIn
-var timeCost = 8
+var timeCost = 0
 
 var sanityBarIn
 var sanityTimerIn

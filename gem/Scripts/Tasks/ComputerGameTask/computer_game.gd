@@ -6,7 +6,7 @@ var buttoncooldown = 0.0
 var lastButtonPressed
 
 var timerIn
-var timeCost = 8
+var timeCost = 0
 
 var workBar
 
