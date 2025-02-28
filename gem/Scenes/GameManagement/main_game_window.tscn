@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/GameManagement/mastermind.gd" id="3_y08jc"]
 [ext_resource type="PackedScene" uid="uid://fr7y2h7bsg1l" path="res://Scenes/UI/user_interface_control.tscn" id="4_mhfx8"]
 [ext_resource type="PackedScene" uid="uid://devt37n2pk5bl" path="res://Scenes/UI/expression_changes.tscn" id="5_2860e"]
-[ext_resource type="PackedScene" uid="uid://qt2782tsftfw" path="res://Scenes/UI/user_interface.tscn" id="5_x6q2b"]
+[ext_resource type="PackedScene" uid="uid://bleuguq8t6ytl" path="res://Scenes/UI/user_interface.tscn" id="5_x6q2b"]
 [ext_resource type="AudioStream" uid="uid://brf4434ohyef6" path="res://Audio/DAYS/1st 2nd/MonTueMorn.mp3" id="6_ux8gy"]
 [ext_resource type="AudioStream" uid="uid://dclvjbad3br87" path="res://Audio/DAYS/1st 2nd/MonTueLunch.mp3" id="7_3knrq"]
 [ext_resource type="AudioStream" uid="uid://crs28xfar1qqj" path="res://Audio/DAYS/1st 2nd/TueNight.mp3" id="8_qke1n"]
@@ -18,6 +18,7 @@ stream_1 = ExtResource("7_3knrq")
 stream_2 = ExtResource("8_qke1n")
 
 [node name="MainGameWindow" type="Node2D"]
+position = Vector2(-1, 4)
 
 [node name="Mastermind" type="Node2D" parent="."]
 script = ExtResource("3_y08jc")
@@ -30,6 +31,7 @@ offset_left = 9.0
 offset_top = 2.0
 offset_right = 679.0
 offset_bottom = 326.0
+metadata/_edit_use_anchors_ = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
@@ -45,6 +47,7 @@ offset_left = 695.0
 offset_top = 15.0
 offset_right = 695.0
 offset_bottom = 15.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ExpressionChanges" parent="." instance=ExtResource("5_2860e")]
 position = Vector2(765, 398)

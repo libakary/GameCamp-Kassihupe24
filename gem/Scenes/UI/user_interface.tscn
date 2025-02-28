@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://qt2782tsftfw"]
+[gd_scene load_steps=3 format=3 uid="uid://bleuguq8t6ytl"]
 
 [ext_resource type="Texture2D" uid="uid://c3xmgvaa4eun7" path="res://Sprites/UI/UI uncolored transparent.png" id="1_sxms7"]
 [ext_resource type="FontFile" uid="uid://b1marmwyw6t8t" path="res://Sprites/Seven Segment.ttf" id="2_1j3xn"]
@@ -41,12 +41,12 @@ theme_override_font_sizes/font_size = 60
 text = ":"
 
 [node name="DayDisplay" type="Label" parent="."]
-offset_left = 277.0
-offset_top = 49.0
-offset_right = 397.0
-offset_bottom = 154.0
+offset_left = 247.0
+offset_top = 51.0
+offset_right = 428.0
+offset_bottom = 95.0
 theme_override_colors/font_color = Color(0.368627, 0.368627, 0.368627, 1)
 theme_override_fonts/font = ExtResource("2_1j3xn")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 32
 text = "Sunday"
 horizontal_alignment = 1

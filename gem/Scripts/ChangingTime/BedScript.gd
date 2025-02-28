@@ -2,15 +2,16 @@ extends Area2D
 
 var inInteractionRange: bool = false
 var earliestSleepTime = 8
+var GameHolder #Gameholder node
+var DayTimer #DayTimer node
+
+func _ready() -> void:
+	GameHolder = get_node("../../../../../../../../GameHolder")
+	DayTimer = get_node("../../../DayTimer")
 
 func resetDay() -> void:
-	var Mastermind = get_node("../../../../../../Mastermind")
-	var DayTimer = get_node("../../../DayTimer")
-	Mastermind.CurrentDay += 1 #Change the Day
+	GameHolder.currentDay += 1 #Change the Day
 	DayTimer.fadeToMorning()
-	
-	
-	
 
 func _on_body_entered(body: Node2D) -> void:
 	if (body == get_node("../../../Player")):

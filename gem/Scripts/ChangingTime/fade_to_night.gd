@@ -16,11 +16,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	#Fade BG
-	#modulate.a -= fadeSpeed
-	nightBGSprite.modulate.a += fadeSpeed#1/(16-(Daytimer.hourValue-8))
-	print(nightBGSprite.modulate)
+	var BGfadeValue = (Daytimer.hourValue - 7)/16
 	
+	#Fade BG
+	nightBGSprite.modulate.a = BGfadeValue
 	#Fade Guitar
-	#dayGuitar.modulate.a -= fadeSpeed
-	nightGuitar.modulate.a += fadeSpeed#1/(16-(Daytimer.hourValue-8))
+	nightGuitar.modulate.a = BGfadeValue
