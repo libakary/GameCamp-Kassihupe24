@@ -24,7 +24,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if mastermind.inTask: #Stop walking animation when entered into task
+	if mastermind.inTask: #Stop walking animation when entered into taskb
 		$AnimatedSprite2D.play("idle")
 	
 	speed = 100+healthBar.value*2/100*maxSpeed

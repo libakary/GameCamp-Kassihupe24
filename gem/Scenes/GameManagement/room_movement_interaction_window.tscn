@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cusp1gqua1p72"]
+[gd_scene load_steps=26 format=3 uid="uid://cusp1gqua1p72"]
 
 [ext_resource type="Texture2D" uid="uid://6hrguftjtfjf" path="res://Sprites/Background/NightPlaceHolder.png" id="2_3efwc"]
 [ext_resource type="Texture2D" uid="uid://cmjuny03yqooe" path="res://Sprites/Background/RoomNight.PNG" id="2_g77em"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dycueqqeucwh4" path="res://Sprites/Background/Guitar Day.PNG" id="5_n8s4h"]
 [ext_resource type="Texture2D" uid="uid://bkk4h0jchdylv" path="res://Sprites/Background/Guitar Night.PNG" id="6_dm6bl"]
 [ext_resource type="Texture2D" uid="uid://ckn0kc6d4il0e" path="res://Sprites/Halos/voodi halo.PNG" id="7_dy7mn"]
+[ext_resource type="Script" path="res://Scripts/GameManagement/haloManagement.gd" id="8_cqvia"]
 [ext_resource type="Texture2D" uid="uid://dlk7c8wqnau0f" path="res://Sprites/Halos/valge halo ring mikrokas.PNG" id="8_o4ir6"]
 [ext_resource type="Texture2D" uid="uid://8febow406e3u" path="res://Sprites/Halos/kitarri halo.PNG" id="9_4vtq2"]
 [ext_resource type="Texture2D" uid="uid://bum5c8wg1c3ct" path="res://Sprites/Halos/prügikoti halo.PNG" id="10_bh2bo"]
@@ -15,9 +16,14 @@
 [ext_resource type="Texture2D" uid="uid://c3v1odweekmr0" path="res://Sprites/Halos/arvuti halo.PNG" id="11_id1kn"]
 [ext_resource type="PackedScene" uid="uid://d3fovir6hp6la" path="res://Scenes/Tasks/Guitar/guitar_trigger.tscn" id="12_iac0n"]
 [ext_resource type="Script" path="res://Scripts/ChangingTime/day_time.gd" id="13_jainw"]
+[ext_resource type="Texture2D" uid="uid://c0j7hm4utcmmc" path="res://Sprites/Halos/valge halo voodi.PNG" id="13_p1ybo"]
 [ext_resource type="PackedScene" uid="uid://bryb7ualxm5oj" path="res://Scenes/Tasks/Microwave/microwave_trigger.tscn" id="13_t1c80"]
+[ext_resource type="Texture2D" uid="uid://bley8tl2oiue5" path="res://Sprites/Halos/valge halo mikrokas.PNG" id="14_mkt3g"]
 [ext_resource type="PackedScene" uid="uid://c2x1vaetoig4" path="res://Scenes/Tasks/Computer/computer_trigger.tscn" id="15_c106h"]
+[ext_resource type="Texture2D" uid="uid://b7vfx1ujp10lv" path="res://Sprites/Halos/valge halo kitarr.PNG" id="15_sb4o8"]
+[ext_resource type="Texture2D" uid="uid://dlei7ax6l0xb7" path="res://Sprites/Halos/valge halo prügikott.PNG" id="16_scddh"]
 [ext_resource type="PackedScene" uid="uid://y36gyikpa2et" path="res://Scenes/GameManagement/bed_trigger.tscn" id="17_ifurc"]
+[ext_resource type="Texture2D" uid="uid://dximkqyuuf80p" path="res://Sprites/Halos/valge halo arvuti.PNG" id="17_l45h4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o1kal"]
 radius = 28.1603
@@ -47,6 +53,7 @@ texture = ExtResource("3_q7rd7")
 script = ExtResource("3_k2qam")
 
 [node name="Hitboxes" type="Node2D" parent="BG"]
+visible = false
 
 [node name="Furniture" type="StaticBody2D" parent="BG/Hitboxes"]
 
@@ -78,6 +85,7 @@ texture = ExtResource("6_dm6bl")
 
 [node name="Halos" type="Node2D" parent="."]
 z_index = 3
+script = ExtResource("8_cqvia")
 
 [node name="BedHalo" type="Sprite2D" parent="Halos"]
 z_index = 3
@@ -99,20 +107,48 @@ texture = ExtResource("10_bh2bo")
 z_index = 3
 texture = ExtResource("11_id1kn")
 
+[node name="BedHaloFilled" type="Sprite2D" parent="Halos"]
+visible = false
+texture = ExtResource("13_p1ybo")
+
+[node name="MikroHaloFilled" type="Sprite2D" parent="Halos"]
+visible = false
+texture = ExtResource("14_mkt3g")
+
+[node name="GuitarHaloFilled" type="Sprite2D" parent="Halos"]
+visible = false
+z_index = 5
+texture = ExtResource("15_sb4o8")
+
+[node name="TrashHaloFilled" type="Sprite2D" parent="Halos"]
+visible = false
+texture = ExtResource("16_scddh")
+
+[node name="ComputerHaloFilled" type="Sprite2D" parent="Halos"]
+visible = false
+texture = ExtResource("17_l45h4")
+
+[node name="HaloTimer" type="Timer" parent="Halos"]
+
 [node name="TrashTrigger" parent="." instance=ExtResource("10_mpmu7")]
+visible = false
 position = Vector2(187, 135)
 
 [node name="GuitarTrigger" parent="." instance=ExtResource("12_iac0n")]
+visible = false
 position = Vector2(30, 173)
 
 [node name="MicrowaveTrigger" parent="." instance=ExtResource("13_t1c80")]
+visible = false
 position = Vector2(47, 49)
 
 [node name="DayTimer" type="Timer" parent="."]
 script = ExtResource("13_jainw")
 
 [node name="PCTrigger" parent="." instance=ExtResource("15_c106h")]
+visible = false
 position = Vector2(-89, 23)
 
 [node name="BedTrigger" parent="." instance=ExtResource("17_ifurc")]
+visible = false
 position = Vector2(-177, 169)

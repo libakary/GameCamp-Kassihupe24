@@ -1,9 +1,12 @@
 extends Timer
 
 var mastermind
+var gameHolder
 
 var healthBar
+var healthBarParent
 var sanityBar
+var sanityBarParent
 
 var hourClock
 var minuteClock
@@ -24,9 +27,12 @@ func _ready() -> void:
 	dayClock = get_node("../../../../UserInterface/DayDisplay")
 	nightFade = get_node("../nightFadeBG")
 	mastermind = get_node("../../../../Mastermind")
+	gameHolder = get_node("../../../../../../GameHolder")
 	
 	healthBar = get_node("../../../../Control/WorkBars/HealthBar/TimerHealth")
+	healthBarParent = get_node("../../../../Control/WorkBars/HealthBar")
 	sanityBar = get_node("../../../../Control/WorkBars/SanityBar/TimerSanity")
+	sanityBarParent = get_node("../../../../Control/WorkBars/SanityBar")
 	
 	wait_time = 60
 	start()
@@ -34,21 +40,23 @@ func _ready() -> void:
 
 func fadeToMorning() -> void:
 	fadeStage = 1 #Start fading to black
+	gameHolder.currentDay += 1 #Change the Day
 	mastermind.inTask = true #Locks moving during moving
 	paused = true #Pauses the clock
+	
 	#Stop the bars during night time
 	healthBar.paused = true 
 	sanityBar.paused = true
+	
+	healthBarParent.dayNumber = gameHolder.currentDay #Updates the day count in the timer
+	healthBarParent.resetWaitTime() #Restarts the timer from the appropriate value
+	sanityBarParent.dayNumber = gameHolder.currentDay #Updates the day count in the timer
+	sanityBarParent.resetWaitTime() #Restarts the timer from the appropriate value
 	#Clock is reset in _process
 
 func setDay(dayNumber: int) -> String:
-	if dayNumber == 1: return "Monday"
-	elif dayNumber == 2: return "Tuesday"
-	elif dayNumber == 3: return "WedensDay"
-	elif dayNumber == 4: return "Thursday"
-	elif dayNumber == 5: return "Friday"
-	elif dayNumber == 6: return "Saturday"
-	else: return "Sunday"
+	var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+	return days[dayNumber]
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -76,7 +84,7 @@ func _process(_delta: float) -> void:
 		#Reset the clock after day start
 		minuteValue = 0
 		hourValue = 8
-		dayClock.text = setDay(get_node("../../../../../../GameHolder").currentDay)
+		dayClock.text = setDay(gameHolder.currentDay)
 		
 	if nightFade.modulate.a <= 0 && fadeStage == 2: #Stop fading to colour
 		fadeStage = 0

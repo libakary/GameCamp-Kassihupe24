@@ -3,18 +3,21 @@ extends Node2D
 @onready var timer = get_node("TimerHealth")
 @onready var progressBar = get_node("HBar")
 # Called when the node enters the scene tree for the first time.
+var healthDecreaseValues = [2.2, 1.9, 1.6, 1.3, 1, 0.7, 0.4] #How many second per tick down. Sunday is first value, monday next, etc
+var dayNumber
+
+#ElMo
+func resetWaitTime():
+	timer.wait_time = progressBar.value*healthDecreaseValues[dayNumber] #Set the appropriate time for the daily multiplier
+	timer.start() #Starts the timer
 
 func _ready():
-	timer.wait_time = progressBar.value
-	timer.start()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	#The rest of the timer config takes place in fadeToMorning in day_time.gd
+	dayNumber = get_node("../../../../../GameHolder").currentDay #Set the first day number
+	resetWaitTime() #Start the timer
+	
 func _process(_delta):
-	#print(timer.time_left)
-	progressBar.value = timer.time_left
-
-#siia tuleks siis if timer on 30 then all kinds of shit h
-
-#iga node eraldi kutsuda ja kirjutada mis sellega juhtub
+	progressBar.value = timer.time_left/healthDecreaseValues[dayNumber] #Update the progress bar to match the timer
 
 
 func _on_timer_health_timeout():

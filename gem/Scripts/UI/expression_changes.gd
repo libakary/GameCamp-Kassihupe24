@@ -1,26 +1,25 @@
 extends Node2D
 
-var sanityBarIn
-var sanityTimerIn
-var sanityTimer
-var sanityMod = 20
+var sanityBar
+var sanityBarValue
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sanityTimerIn = get_node("../Control/WorkBars/SanityBar/TimerSanity") 
+	sanityBar = get_node("../Control/WorkBars/SanityBar/SBar")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float):
-	
-	if (sanityTimerIn.time_left > 40):
+	if (sanityBarValue == 35): print(sanityBarValue)
+	sanityBarValue = sanityBar.value
+	if (sanityBarValue > 40):
 		$AnimatedSprite2D.play("good")
-	if (sanityTimerIn.time_left < 35):
+	if (sanityBarValue < 35):
 		$AnimatedSprite2D.play("neutral")
-	if (sanityTimerIn.time_left < 25):
+	if (sanityBarValue < 25):
 		$AnimatedSprite2D.play("sad")
-	if (sanityTimerIn.time_left < 15):
+	if (sanityBarValue < 15):
 		$AnimatedSprite2D.play("panic")
-	if (sanityTimerIn.time_left < 5):
+	if (sanityBarValue < 5):
 		$AnimatedSprite2D.play("manic")
 		
 
